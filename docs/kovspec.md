@@ -29,3 +29,5 @@ Követelménylista
 Fogalomszótár
 -------------
 - __Sakk__: Kétszemélyes játék, melyet egy 8x8-as táblán játszanak. Mind a két játékos 16 bábuval rendelkezik. A játék célja, hogy az ellenfél király bábuja ne tudjun lépni. A játék ezen állapotát nevezik sakknak. Bővebben: [https://hu.wikipedia.org/wiki/Sakk](https://hu.wikipedia.org/wiki/Sakk)
+- __Malom__: Kétszemélyes táblás játék. Mindkét játékosnak 9 babbuja. A bábukkal függőlegesen vagy vízszintesen lehet lépni. Cél, hogy az ellenfél összes bábuját levegyük, vagy olyan helyzetben hozzuk, hogy ne tudjon sehova lépni megmaradt bábuival. Bábut levenni akkor lehet, ha malmot rakunk ki, vagyis egy sorba, vagy egy oszlopban van 3 bábuja.
+Bővebben: [https://hu.wikipedia.org/wiki/Malom_(játék)](https://hu.wikipedia.org/wiki/Malom_(j%C3%A1t%C3%A9k)).
