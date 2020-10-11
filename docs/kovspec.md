@@ -28,3 +28,4 @@ Követelménylista
 
 Fogalomszótár
 -------------
+- __Sakk__: Kétszemélyes játék, melyet egy 8x8-as táblán játszanak. Mind a két játékos 16 bábuval rendelkezik. A játék célja, hogy az ellenfél király bábuja ne tudjun lépni. A játék ezen állapotát nevezik sakknak. Bővebben: [https://hu.wikipedia.org/wiki/Sakk](https://hu.wikipedia.org/wiki/Sakk)
