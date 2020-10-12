@@ -13,6 +13,12 @@ Rendszer céljai, nem céljai
 - alternatívákat nyújtson a már jól ismert logikai játékok mellett.
 - az elért eredmények egyszerűen visszakövethetőek legyenek.
 
+### A rendszernek nem célja, hogy:
+- teljes mértékben kiváltsa a szakkörön használt hagyományos társasjátékokat.
+- az elért eredményeket online adatbázisba gyűjtse.
+- a játékosok online tudjanak játszani egymás ellen.
+- Windows mellett egyéb platformokon is tökéletes funkcionalitást biztosítson.
+
 Jelenlegi helyzet leírása
 -------------------------
 A megrendelő iskola egy átlagos általános iskola, egy pályázat keretében szeretne az egyik szakkörre egy játék összeállítást készíttetni. A szakkör alapjába véve a matematikai, illetve logikai készségeket kívánja fejleszteni. A matematikai és logikai feladatokon túl a gyerekeknek mindig van a szakkör végén idő egy kis kötetlen, szabad játékra. Ezek olyan fejlesztő játékok, melyekkel a gyerekek játékosan csiszolhatják az elméjüket, és egy kis versenyszellemet is ébreszt bennük. Ilyen játékok például a sakk, malom, amőba, illetve jónéhány táblás játék és logikai társasjáték is rendelkezésükre áll (Pentago, Kabaleo, Scrabble, Fedőnevek, Aranyásók, stb...). A játékok között az egyszemélyes játékokon kívül számos páros-, és csapatjáték található, hogy az összedolgozás, csapatmunka készségek is fejlődhessenek.
