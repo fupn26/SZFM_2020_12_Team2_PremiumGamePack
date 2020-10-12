@@ -23,6 +23,14 @@ Igényelt üzleti folyamatok
 
 Követelménylista
 ----------------
+- K01: Intuitív, felhasználóbarát UI
+- K02: Grafikus megjelenítés
+- K03: Kellemes színvilág
+- K04: Eredménytárolás adatbázisban
+    - Játékosnév
+    - Pontszám/győztes játékos
+    - Dátum
+- K05: Singleplayer és multiplayer játékok
 
 Használati esetek
 -----------------
