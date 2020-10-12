@@ -3,6 +3,15 @@ Funkcionális specifikáció
 
 Rendszer céljai, nem céljai
 ---------------------------
+### A rendszer célja, hogy:
+- segítse a szakkörön résztvevők logikai készségeinek fejlődését.
+- játékosan vezesse be a résztvevőket a szakkör tematikájába.
+- csapatjátékok esetén növelje az együttműködési képességüket.
+- hozzászoktassa a résztvevőket a versenyhelyzetekhez, és azok helyes kezeléséhez.
+- javítsa koncentrálóképességüket.
+- fejlessze a résztvevők számítógépes ismereteit.
+- alternatívákat nyújtson a már jól ismert logikai játékok mellett.
+- az elért eredmények egyszerűen visszakövethetőek legyenek.
 
 Jelenlegi helyzet leírása
 -------------------------
