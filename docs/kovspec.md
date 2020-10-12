@@ -14,7 +14,9 @@ Jelenlegi üzleti folyamatok
 
 Igényelt üzleti folyamatok
 --------------------------
+- __Játék elindítása__: program megnyitása &rarr; választás az elérhető játékok között &rarr; annak eldöntése, hogy egyedül, vagy többen szeretnénk játszani &rarr; játékos nevek megadása &rarr; játék elkezdése
 
+- __Korábbi eredmények megtekintés__: program megnyitása &rarr; eredménylista megnyitása &rarr; játék kiválasztása, melynek az eredményeire kíváncsiak vagyunk
 
 A rendszerre vonatkozó szabályok
 --------------------------------
