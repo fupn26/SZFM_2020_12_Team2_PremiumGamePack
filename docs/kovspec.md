@@ -26,6 +26,14 @@ A program tárolhatja a játékosok neveit (akár valódi, akár játékosnév),
 
 Követelménylista
 ----------------
+- K01: Szép, könnyen használható felület
+- K02: Grafikus megjelenítés
+- K03: Kellemes színvilág
+- K04: Korábbi játékok eredményeinek tárolása
+    - Játékosnév megadása, tárolása
+    - Pontszám/győztes játékos tárolása
+    - Eredmény dátumának tárolása
+- K05: Egy- és többszemélyes játékok
 
 Fogalomszótár
 -------------
