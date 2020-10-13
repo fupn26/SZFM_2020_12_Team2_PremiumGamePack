@@ -8,6 +8,7 @@ Fontos célja még a szakkörnek a fiatal diákok érdeklődésének felkeltése
 
 Vágyálom rendszer
 -----------------
+A gyerekek szakkörös tevékenységének, fejlődésének elősegítése céljából szeretnénk egy különféle logikai játékokat tartalmazó szoftvert. A játékok legyenek egy- és többszemélyesek. E szempont célja, hogy több különféle helyzetben törekedjenek a gondolkodásra, például a többszemélyes játékok esetén az előre gondolkodás, előre látás képességét is elsajátíthassák.
 
 Jelenlegi üzleti folyamatok
 ---------------------------
