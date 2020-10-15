@@ -61,6 +61,8 @@ Lépegetnek, logikáznak, mig nem egyszer csak úgy alakul az állás, hogy Feri
 Géza nem hagyja az állást annyiban, ezért játszanak egy visszavágót.
 
 <!--Péter-->
+A szakkör két diákja, Anett és Szilvi úgy dönt, hogy Dao game-el fognak játszani. Elindítják a szoftvert és az előválasztó menüben kiválasztják a Dao game-et. Nevük megadása után elkezdődik a játék. Amelyikük elsőnek adta meg a nevét, kék színnel játszik, a másik pedig a pirossal. Ezután felváltva lépnek a bábuikkal. Szilvi olyan mezőre szeretne lépni, ahol az ellenfél bábuja van, de a program ezt nem engedi, ezért egy másikat választ. 
+Addig-addig játszanak míg nem Anett úgy lép, hogy Szilvi bábuját sarokba szorítja. Ekkor a játék véget ér, és Szilvi győz. Anett nem hagyja annyiban a dolgot, és játszanak egy újabb menetet. Ezúttal Anett jobban figyel, nem követ el buta hibát. Végül sikerül függőlegesen egy sorba állítania a bábuit, így legyőzi Szilvit.  
 
 <!--Botond-->
 
