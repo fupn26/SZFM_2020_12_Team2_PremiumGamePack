@@ -21,7 +21,7 @@ Igényelt üzleti folyamatok
 --------------------------
 ![A diagram showing the steps of starting a game.](./images/jatekinditasa.png "Flow chart for starting a game")
 
-- __Korábbi eredmények megtekintés__: program megnyitása &rarr; eredménylista megnyitása &rarr; játék kiválasztása, melynek az eredményeire kíváncsiak vagyunk
+![A diagram showing the steps of checking the previous results.](./images/eredmenyekellenorzese.png "Flow chart for checking results' history")
 
 A rendszerre vonatkozó szabályok
 --------------------------------
