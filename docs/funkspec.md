@@ -74,4 +74,7 @@ Funkció-követelmény megfeleltetés
 Fogalomszótár
 -------------
 - __Java__: Objektumorientált programozási nyelv. melyet a Sun Microsystem fejleszett ki. Az első kiadása 1995-ben jelent meg. A Sun Microsystems felvásárlását követően a 2009-től kezdve az Oracle biztosít hozzá támogatást. Népszerűsége mind a mai napig töretlen, hiszen egyike a legelterjedtebb programozási nyelveknek. Segítségével könnyen megvalósítható a platformfüggetlenség, ugyanis a Java programok egy virtuális gépen, a JVM-en futnak. 
-Bővebben: [https://hu.wikipedia.org/wiki/Java_(programozási_nyelv)](https://hu.wikipedia.org/wiki/Java_(programoz%C3%A1si_nyelv))
+*Bővebben: [https://hu.wikipedia.org/wiki/Java_(programozási_nyelv)](https://hu.wikipedia.org/wiki/Java_(programoz%C3%A1si_nyelv))*
+
+- __Maven__: Szoftver, melyet szoftvermendzselésre és build folyamat automatizálására fejlesztettek ki. Az első verziója 2002-ben jelent meg Jason van Zyle által és jelenleg az Apache Software Foundation által érhető el. A build-elési folyamatot, valamint az ahhoz szükséges függőségeket a POM fájl tartalmazza. Nagy előnye a Maven-nek, hogy a függőségeket automaitkusan letölti a központi tárolóból, és elérhetővé teszi azt a szoftver számára a classpath-ban. Főleg Java programokhoz szokták használni, de elérhető például C++ projektekhez is. A Java programozási nyelvhez hasonlóan ez is platformfüggetlen.
+*Bővebben: [https://hu.wikipedia.org/wiki/Apache_Maven](https://hu.wikipedia.org/wiki/Apache_Maven)*  
