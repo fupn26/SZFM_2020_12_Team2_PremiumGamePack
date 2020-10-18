@@ -35,6 +35,7 @@ Jelenlegi üzleti folyamatok
 
 Igényelt üzleti folyamatok
 --------------------------
+![A diagram showing the steps of gaming.](./images/jatek_lefolytatasa_funkspec.png "Flow chart for gaming")
 
 Követelménylista
 ----------------
