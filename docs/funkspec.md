@@ -88,5 +88,8 @@ Fogalomszótár
 - __H2 adatbázis__: Egy egyszerű nyílt forráskódú relációs adatbáziskezelő rendszer, mely Java nyelven lett megírva. Első kiadása 2005-ben jelent meg. Használata nagyon intuitív és kiválóan alkalmas egyszerűbb alkalmazások, játékok eredményeinek eltárolására.
 *Bővebben: [https://en.wikipedia.org/wiki/H2_(DBMS)](https://en.wikipedia.org/wiki/H2_(DBMS))*
 
+- __JDBC__: Egy alkalmazás programozási interfész (API), melynek segítségével relációs adatbázisokhoz tudunk csatlakozni. Tartalmazza a szükséges osztályokat és metódusokat ahhoz, hogy lekérdezéseket és módosításokat tudjunk végrehajtani az adatbázisban. Kifejezetten a Java programozási nyelvhez készült, Java nyelven.
+*Bővebben: [https://hu.wikipedia.org/wiki/Java_Database_Connectivity](https://hu.wikipedia.org/wiki/Java_Database_Connectivity)* 
+
 - __Platformfüggetlen__: A platformfüggetlen programok általában Windows, Linux és macOS operációs rendszereken érhetőek el. Hasonló fogalom a többplatformosság, mely annyit jelent, hogy a szoftver egynél több platformon érhető el. Fejlesztői szempontból azért előnyös így elkészíteni egy programot, mert a program forrása azonos tud maradni, nem kell jelentősen átírni egy esetleges jövőbeli platformbővítés esetén.
 *Bővebben: [https://hu.wikipedia.org/wiki/Platformfüggetlenség](https://hu.wikipedia.org/wiki/Platformf%C3%BCggetlens%C3%A9g)*
