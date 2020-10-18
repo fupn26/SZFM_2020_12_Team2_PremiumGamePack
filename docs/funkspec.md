@@ -37,6 +37,8 @@ Igényelt üzleti folyamatok
 --------------------------
 ![A diagram showing the steps of gaming.](./images/jatek_lefolytatasa_funkspec.png "Flow chart for gaming")
 
+![A diagram showing the steps of checking the previous results.](./images/eredmenyek_ellenorzese_funkspec.png "Flow chart for checking results' history")
+
 Követelménylista
 ----------------
 - K01: Intuitív, felhasználóbarát UI
