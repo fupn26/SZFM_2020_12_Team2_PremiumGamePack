@@ -73,23 +73,23 @@ Funkció-követelmény megfeleltetés
 
 Fogalomszótár
 -------------
-- __Java__: Objektumorientált programozási nyelv. melyet a Sun Microsystem fejlesztett ki. Az első kiadása 1995-ben jelent meg. A Sun Microsystems felvásárlását követően a 2009-től kezdve az Oracle biztosít hozzá támogatást. Népszerűsége mind a mai napig töretlen, hiszen egyike a legelterjedtebb programozási nyelveknek. Segítségével könnyen megvalósítható a platformfüggetlenség, ugyanis a Java programok egy virtuális gépen, a JVM-en futnak. 
-*Bővebben: [https://hu.wikipedia.org/wiki/Java_(programozási_nyelv)](https://hu.wikipedia.org/wiki/Java_(programoz%C3%A1si_nyelv))*
-
-- __Maven__: Szoftver, melyet szoftvermendzselésre és build folyamat automatizálására fejlesztettek ki. Az első verziója 2002-ben jelent meg Jason van Zyle által és jelenleg az Apache Software Foundation által érhető el. A build-elési folyamatot, valamint az ahhoz szükséges függőségeket a POM fájl tartalmazza. Nagy előnye a Maven-nek, hogy a függőségeket automatikusan letölti a központi tárolóból, és elérhetővé teszi azt a szoftver számára a classpath-ban. Főleg Java programokhoz szokták használni, de elérhető például C++ projektekhez is. A Java programozási nyelvhez hasonlóan ez is platformfüggetlen.
-*Bővebben: [https://hu.wikipedia.org/wiki/Apache_Maven](https://hu.wikipedia.org/wiki/Apache_Maven)*
+- __H2 adatbázis__: Egy egyszerű nyílt forráskódú relációs adatbáziskezelő rendszer, mely Java nyelven lett megírva. Első kiadása 2005-ben jelent meg. Használata nagyon intuitív és kiválóan alkalmas egyszerűbb alkalmazások, játékok eredményeinek eltárolására.
+*Bővebben: [https://en.wikipedia.org/wiki/H2_(DBMS)](https://en.wikipedia.org/wiki/H2_(DBMS))*
 
 - __Hibernate__: Olyan programkönyvtár, mely a program objektumai és az adatbázistábla rekordjai közti átjárást segíti. Lehetőséget biztosít arra, hogy a programunkban lévő objektumokat át tudjuk alakítani rekordokká, és viszont. Ennek jelentősége abban rejlik, hogy jelentősen megkönnyíti a programozók munkáját, ugyanis azoknak nem szükséges beható SQL ismeretekkel rendelkezniük. A szükséges a SQL lekérdezéseket a Hibernate automatikusan legenerálja. Sima Java programokhoz is használható, de főleg a Java EE (2019 óta Jakarta EE) környezetben használják.
 *Bővebben: [https://hu.wikipedia.org/wiki/Hibernate](https://hu.wikipedia.org/wiki/Hibernate)*
 
+- __Java__: Objektumorientált programozási nyelv. melyet a Sun Microsystem fejlesztett ki. Az első kiadása 1995-ben jelent meg. A Sun Microsystems felvásárlását követően a 2009-től kezdve az Oracle biztosít hozzá támogatást. Népszerűsége mind a mai napig töretlen, hiszen egyike a legelterjedtebb programozási nyelveknek. Segítségével könnyen megvalósítható a platformfüggetlenség, ugyanis a Java programok egy virtuális gépen, a JVM-en futnak. 
+*Bővebben: [https://hu.wikipedia.org/wiki/Java_(programozási_nyelv)](https://hu.wikipedia.org/wiki/Java_(programoz%C3%A1si_nyelv))*
+
 - __JavaFX (OpenJFX)__: Olyan programkönyvtár melynek segítségével kliens oldali asztali alkalmazásokat lehet készíteni, melyet 2008-ban fejlesztett ki a Sun Microsystems. Lényegében a Java Swing-et helyettesíteni hivatott GUI könyvtár. Előnye, hogy platformfüggetlen, elérhető Windows, Linux és macOS operációs rendszereken, valamint Anroid-on, iOS-en és webböngészőkben is. 2011-ig a Java JDK része volt, azóta az OpenJFX projekt keretében érhető el. Segítségével a modell-nézet-vezérlő architektúrális minta implementálása könnyen megvalósítható. A felhasználói felületet egy XML szerű fxml fájl írja le. Annak könnyebb szerkeszthetősége érdekében készítette el a Gluon cég a [Scene Builder](https://gluonhq.com/products/scene-builder/) szoftvert.
 *Bővebben: [https://en.wikipedia.org/wiki/JavaFX](https://en.wikipedia.org/wiki/JavaFX)*
 
-- __H2 adatbázis__: Egy egyszerű nyílt forráskódú relációs adatbáziskezelő rendszer, mely Java nyelven lett megírva. Első kiadása 2005-ben jelent meg. Használata nagyon intuitív és kiválóan alkalmas egyszerűbb alkalmazások, játékok eredményeinek eltárolására.
-*Bővebben: [https://en.wikipedia.org/wiki/H2_(DBMS)](https://en.wikipedia.org/wiki/H2_(DBMS))*
-
 - __JDBC__: Egy alkalmazás programozási interfész (API), melynek segítségével relációs adatbázisokhoz tudunk csatlakozni. Tartalmazza a szükséges osztályokat és metódusokat ahhoz, hogy lekérdezéseket és módosításokat tudjunk végrehajtani az adatbázisban. Kifejezetten a Java programozási nyelvhez készült, Java nyelven.
 *Bővebben: [https://hu.wikipedia.org/wiki/Java_Database_Connectivity](https://hu.wikipedia.org/wiki/Java_Database_Connectivity)* 
+
+- __Maven__: Szoftver, melyet szoftvermendzselésre és build folyamat automatizálására fejlesztettek ki. Az első verziója 2002-ben jelent meg Jason van Zyle által és jelenleg az Apache Software Foundation által érhető el. A build-elési folyamatot, valamint az ahhoz szükséges függőségeket a POM fájl tartalmazza. Nagy előnye a Maven-nek, hogy a függőségeket automatikusan letölti a központi tárolóból, és elérhetővé teszi azt a szoftver számára a classpath-ban. Főleg Java programokhoz szokták használni, de elérhető például C++ projektekhez is. A Java programozási nyelvhez hasonlóan ez is platformfüggetlen.
+*Bővebben: [https://hu.wikipedia.org/wiki/Apache_Maven](https://hu.wikipedia.org/wiki/Apache_Maven)*
 
 - __Platformfüggetlen__: A platformfüggetlen programok általában Windows, Linux és macOS operációs rendszereken érhetőek el. Hasonló fogalom a többplatformosság, mely annyit jelent, hogy a szoftver egynél több platformon érhető el. Fejlesztői szempontból azért előnyös így elkészíteni egy programot, mert a program forrása azonos tud maradni, nem kell jelentősen átírni egy esetleges jövőbeli platformbővítés esetén.
 *Bővebben: [https://hu.wikipedia.org/wiki/Platformfüggetlenség](https://hu.wikipedia.org/wiki/Platformf%C3%BCggetlens%C3%A9g)*
