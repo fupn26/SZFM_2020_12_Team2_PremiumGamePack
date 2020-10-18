@@ -85,5 +85,8 @@ Fogalomszótár
 - __JavaFX (OpenJFX)__: Olyan programkönyvtár melynek segítségével kliens oldali asztali alkalmazásokat lehet készíteni, melyet 2008-ban fejlesztett ki a Sun Microsystems. Lényegében a Java Swing-et helyettesíteni hivatott GUI könyvtár. Előnye, hogy platformfüggetlen, elérhető Windows, Linux és macOS operációs rendszereken, valamint Anroid-on, iOS-en és webböngészőkben is. 2011-ig a Java JDK része volt, azóta az OpenJFX projekt keretében érhető el. Segítségével a modell-nézet-vezérlő architektúrális minta implementálása könnyen megvalósítható. A felhasználói felületet egy XML szerű fxml fájl írja le. Annak könnyebb szerkeszthetősége érdekében készítette el a Gluon cég a [Scene Builder](https://gluonhq.com/products/scene-builder/) szoftvert.
 *Bővebben: [https://en.wikipedia.org/wiki/JavaFX](https://en.wikipedia.org/wiki/JavaFX)*
 
+- __H2 adatbázis__: Egy egyszerű nyílt forráskódú relációs adatbáziskezelő rendszer, mely Java nyelven lett megírva. Első kiadása 2005-ben jelent meg. Használata nagyon intuitív és kiválóan alkalmas egyszerűbb alkalmazások, játékok eredményeinek eltárolására.
+*Bővebben: [https://en.wikipedia.org/wiki/H2_(DBMS)](https://en.wikipedia.org/wiki/H2_(DBMS))*
+
 - __Platformfüggetlen__: A platformfüggetlen programok általában Windows, Linux és macOS operációs rendszereken érhetőek el. Hasonló fogalom a többplatformosság, mely annyit jelent, hogy a szoftver egynél több platformon érhető el. Fejlesztői szempontból azért előnyös így elkészíteni egy programot, mert a program forrása azonos tud maradni, nem kell jelentősen átírni egy esetleges jövőbeli platformbővítés esetén.
 *Bővebben: [https://hu.wikipedia.org/wiki/Platformfüggetlenség](https://hu.wikipedia.org/wiki/Platformf%C3%BCggetlens%C3%A9g)*
