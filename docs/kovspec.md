@@ -18,6 +18,8 @@ A szoftver eredmény tárolása két részből kellene álljon. Egy részről sz
 Jelenlegi üzleti folyamatok
 ---------------------------
 
+![A diagram showing how the process of starting a game works in the current situation.](./images/jelenlegi_jatek_elkezdes.png "Flow chart of current way of game starting")
+
 Igényelt üzleti folyamatok
 --------------------------
 ![A diagram showing the steps of starting a game.](./images/jatekinditasa.png "Flow chart for starting a game")
