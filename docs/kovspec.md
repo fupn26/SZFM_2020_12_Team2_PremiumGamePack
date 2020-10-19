@@ -22,6 +22,8 @@ Jelenlegi üzleti folyamatok
 
 ![A diagram showing how the process of recording results works in the current situation.](./images/jelenlegi_eredmenyek_rogzitese.png "Flow chart of current way of result recording")
 
+![A diagram showing how the process of a championship in the current situation.](./images/jelenlegi_bajnoksag_menete.png "Flow chart of current flow of championship")
+
 Igényelt üzleti folyamatok
 --------------------------
 ![A diagram showing the steps of starting a game.](./images/jatekinditasa.png "Flow chart for starting a game")
