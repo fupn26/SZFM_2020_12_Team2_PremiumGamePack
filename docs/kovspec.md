@@ -8,19 +8,19 @@ Fontos célja még a szakkörnek a fiatal diákok érdeklődésének felkeltése
 
 Vágyálom rendszer
 -----------------
-A gyerekek szakkörös tevékenységének, fejlődésének elősegítése céljából szeretnénk egy különféle logikai játékokat tartalmazó szoftvert. A szoftver célja, hogy a hagyományos típusú, kézzel fogható játkok mellett alternatívát nyújtson a játékos tanulásra.
+A gyerekek szakkörös tevékenységének, fejlődésének elősegítése céljából szeretnénk egy különféle logikai játékokat tartalmazó szoftvert. A szoftver célja, hogy a hagyományos típusú, kézzel fogható játékok mellett alternatívát nyújtson a játékos tanulásra.
 
-Azon felül, hogy egy újabb, gyerekek számára manapság sokkal izgalmasabbnak tűnő világban játszva fejleszthetik logikai képességeiket, gondolkodásukat, fontos kiemelni, hogy ezzel a lehetőséggel a gyerekek digitális képességeinek gyaraposását is elősegítik. Ez ebben a digitális korban egyre inkább alapkövetelmény, mint kiemelendő képesség. Úgy érezzük, hogy iskola lévén kötelességünk ilyen téren is oktatni a gyerekeket. Ez további lehetőséget biztosít arra, hogy azon felül, hogy tudják is használni a rendelkezésükre álló eszközöket, felelős felhasználók legyenek.
+Azon felül, hogy egy újabb, gyerekek számára manapság sokkal izgalmasabbnak tűnő világban játszva fejleszthetik logikai képességeiket, gondolkodásukat, fontos kiemelni, hogy ezzel a lehetőséggel a gyerekek digitális képességeinek gyarapodását is elősegítik. Ez ebben a digitális korban egyre inkább alapkövetelmény, mint kiemelendő képesség. Úgy érezzük, hogy iskola lévén kötelességünk ilyen téren is oktatni a gyerekeket. Ez további lehetőséget biztosít arra, hogy azon felül, hogy tudják is használni a rendelkezésükre álló eszközöket, felelős felhasználók legyenek.
 
 A játékok legyenek egy- és többszemélyesek. E szempont célja, hogy több különféle helyzetben törekedjenek a gondolkodásra, például a többszemélyes játékok esetén az előre gondolkodás, előre látás képességét is elsajátíthassák.
 
-Szeretnénk, ha a játékok közel hasonló stílussal rendelkezzenek, mely elősegítheti azt a folyamatot, mely során a gyerekek elsajátítják egy-egy új játék alapjait. Ez azért fontos, hogy egy új játék kipróbálása során ne az új stílusok befogadása és megértése kösse le a figyelmüket, hanem egy már jól ismert *világban* nézhessenek szembe az újabb kihívásokkal. A megjelenítéssel kapcsolatos további igény az egységen kívül az az, hogy egy gyerekek számára alkalmas kellemes környezetben jelenjenek meg a játékok.
+Szeretnénk, ha a játékok közel hasonló stílussal rendelkeznének, mely elősegítheti azt a folyamatot, mely során a gyerekek elsajátítják egy-egy új játék alapjait. Ez azért fontos, hogy egy új játék kipróbálása során ne az új stílusok befogadása és megértése kösse le a figyelmüket, hanem egy már jól ismert *világban* nézhessenek szembe az újabb kihívásokkal. A megjelenítéssel kapcsolatos további igény az egységen kívül az az, hogy egy gyerekek számára alkalmas kellemes környezetben jelenjenek meg a játékok.
 
 Amit szívesen látnánk még a szoftver által nyújtott lehetőségek palettáján, az az eredménykövetés. Időről időre egy kisebb szakkörön belüli bajnokságot is szeretnénk szervezni a gyerekek versenyszellemének fejlesztése céljából. Ezért fontos lenne minden játékhoz egy eredményjelző tábla, hogy a játékban elért eredményket ne papíron kelljen nyomon követni.
 
 A szoftver eredmény tárolása két részből kellene álljon. Egy részről szükséges lenne egy olyan funkció, amely törli az aktuális tárolt eredményeket. Erre azért lenne szükség, hogy ha például egy kis házi bajnokságot szervezünk, akkor ott csak a bajnokság eredményei legyenek láthatóak.
 
-Másrészről lehetne egy olyan része is az adatbázisnak, amely minden játékhoz a mindenkori legjobb 5 eredményt tartalmazza, és erre a fentebb említett adatbázis törlő gombnak nincs ráhatása. Ennek azért lenne jelentősége, hogy a gyerekeket ösztönözze arra, hogy minél jobban teljesítsenek. Ez a bajnokságon kívüli egészséges versenyhelyzet pedig a gyerekek további fejlődését hivatott elősegíteni.
+Másrészről lehetne egy olyan része is az eredmények tárolásának, amely minden játékhoz a mindenkori legjobb 5 eredményt tartalmazza, és erre a fentebb említett törlő gombnak nincs ráhatása. Ennek azért lenne jelentősége, hogy a gyerekeket ösztönözze arra, hogy minél jobban teljesítsenek. Ez a bajnokságon kívüli egészséges versenyhelyzet pedig a gyerekek további fejlődését hivatott elősegíteni.
 
 Jelenlegi üzleti folyamatok
 ---------------------------
