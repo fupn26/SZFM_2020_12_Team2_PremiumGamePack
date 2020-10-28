@@ -77,6 +77,9 @@ Képernyőtervek
 - A harmadik tervezett játék kezdőképernyő prototípusa
 ![A prototype of the third game's welcome screen.](./images/game3_welcome.png "Game3's welcome screen")
 
+- A harmadik tervezett játék menet közbeni prototípusa
+![A prototype of the third game's ingame screen.](./images/game3_ingame.png "Game3's ingame screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
