@@ -89,6 +89,9 @@ Képernyőtervek
 - A negyedik tervezett játék menet közbeni prototípusa
 ![A prototype of the fourth game's ingame screen.](./images/game4_ingame.png "Game4's ingame screen")
 
+- A negyedik tervezett játék eredményjelző prototípusa
+![A prototype of the fourth game's highscores screen.](./images/game4_highscores.png "Game4's highscores screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
