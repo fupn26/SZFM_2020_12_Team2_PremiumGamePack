@@ -133,6 +133,9 @@ A szakkör két diákja, Anett és Szilvi úgy dönt, hogy Dao game-el fognak j�
 Addig-addig játszanak míg nem Anett úgy lép, hogy Szilvi bábuját sarokba szorítja. Ekkor a játék véget ér, és Szilvi győz. Anett nem hagyja annyiban a dolgot, és játszanak egy újabb menetet. Ezúttal Anett jobban figyel, nem követ el buta hibát. Végül sikerül függőlegesen egy sorba állítania a bábuit, így legyőzi Szilvit.  
 
 <!--Botond-->
+A szakkör vége felé közeledve a szakkört vezető tanár elrendeli a közös játékot. Két diák, Denerisz és Aragorn úgy döntenek, hogy a PUCKG nevű korongos logikai játékkal szeretnének egymás ellen játszani. Elindítják az iskolai számítógépen a szoftvert, majd kiválasztják a játékot.
+Még mielőtt beírnák a nevüket, elolvassák a szabályzatot, mert nem biztosak abban, hogy mikor is van vége a játéknak. Persze ez érthető is, még csak most játszanak másodjára a játékkal, és az előző alkalom is 2 hete volt, a tavaszi szünet miatt. Miután tisztázták a szabályokat, beírják a nevüket, és el is kezdik a játékot.
+A piros játékos kezdi a játékot, és felváltva lépegetnek. Egy lépésben vagy letesznek egy új korongot egy már meglévő koronggal nyolcszomszédos helyre, vagy áthelyeznek egy meglévő korongot két pozícióval odébb átlósan függőlegesen vagy vízszintesen. Minden egyes újonnan elhelyezett korong nyolcszomszédos mezőiben lévő ellenfélhez tartozó korong átszíneződik az adott játékos színére. Ezek szerinte haladnak, taktikáznak.
 
 <!--Balázs-->
 
