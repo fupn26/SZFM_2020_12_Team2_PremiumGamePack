@@ -59,6 +59,9 @@ Képernyőtervek
 - Az első tervezett játék kezdőképernyője
 ![A prototype of the first game's welcome screen.](./images/game1_welcome.png "Game1's welcome screen")
 
+- Az első tervezett játék játék közbeni képe
+![A prototype of the first game's ingame screen.](./images/game1_ingame.png "Game1's ingame screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
