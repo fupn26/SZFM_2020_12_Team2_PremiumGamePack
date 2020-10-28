@@ -32,9 +32,15 @@ A program tárolhatja a játékosok neveit (akár valódi, akár játékosnév),
 
 Jelenlegi üzleti folyamatok
 ----------------------------
+<p align="center">Játék menete</p>
+
 ![A diagram showing how the process of playing a game works in the current situation.](./images/jelenlegi_jatek_menete_reszletes.png "Flow chart of current way of game starting")
 
+<p align="center">Eredmények rögzítése</p>
+
 ![A diagram showing how the process of recording results works in the current situation.](./images/jelenlegi_eredmenyek_rogzitese_reszletes.png "Flow chart of current way of result recording")
+
+<p align="center">Bajnokság menete</p>
 
 ![A diagram showing how the process of a championship in the current situation.](./images/jelenlegi_bajnoksag_menete_reszletes.png "Flow chart of current flow of championship")
 
