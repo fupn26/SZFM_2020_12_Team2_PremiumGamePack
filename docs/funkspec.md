@@ -56,6 +56,11 @@ Használati esetek
 Képernyőtervek
 --------------
 
+ - A játékválasztó képernyő prototípusa
+ <p align="center">
+    <img src="./images/game_selection_screen.png" title="Game selection screen">
+</p>
+
 - Az első tervezett játék kezdőképernyő prototípusa
 <p align="center">
     <img src="./images/game1_welcome.png" title="Game1's welcome screen">
