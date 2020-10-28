@@ -71,6 +71,9 @@ Képernyőtervek
 - A második tervezett játék menet közbeni prototípusa
 ![A prototype of the second game's ingame screen.](./images/game2_ingame.png "Game2's ingame screen")
 
+- A második tervezett játék eredményjelző prototípusa
+![A prototype of the second game's highscores screen.](./images/game2_highscores.png "Game2's highscores screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
