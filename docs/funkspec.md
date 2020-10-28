@@ -32,6 +32,7 @@ A program tárolhatja a játékosok neveit (akár valódi, akár játékosnév),
 
 Jelenlegi üzleti folyamatok
 ----------------------------
+![A diagram showing how the process of playing a game works in the current situation.](./images/jelenlegi_jatek_menete_reszletes.png "Flow chart of current way of game starting")
 
 Igényelt üzleti folyamatok
 --------------------------
