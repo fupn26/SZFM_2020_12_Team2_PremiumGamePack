@@ -65,6 +65,9 @@ Képernyőtervek
 - Az első tervezett játék eredményjelző prototípusa
 ![A prototype of the first game's highscores screen.](./images/game1_highscores.png "Game1's highscores screen")
 
+- A második tervezett játék kezdőképernyő prototípusa
+![A prototype of the first game's welcome screen.](./images/game2_welcome.png "Game1's welcome screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
