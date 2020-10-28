@@ -80,6 +80,9 @@ Képernyőtervek
 - A harmadik tervezett játék menet közbeni prototípusa
 ![A prototype of the third game's ingame screen.](./images/game3_ingame.png "Game3's ingame screen")
 
+- A harmadik tervezett játék eredményjelző prototípusa
+![A prototype of the third game's highscores screen.](./images/game3_highscores.png "Game3's highscores screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
