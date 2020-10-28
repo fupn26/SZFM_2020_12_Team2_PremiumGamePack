@@ -56,6 +56,9 @@ Használati esetek
 Képernyőtervek
 --------------
 
+- Az első tervezett játék kezdőképernyője
+![A prototype of the first game's welcome screen.](./images/game1_welcome.png "Game1's welcome screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
