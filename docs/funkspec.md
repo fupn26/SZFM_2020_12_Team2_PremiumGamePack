@@ -56,11 +56,14 @@ Használati esetek
 Képernyőtervek
 --------------
 
-- Az első tervezett játék kezdőképernyője
+- Az első tervezett játék kezdőképernyő prototípusa
 ![A prototype of the first game's welcome screen.](./images/game1_welcome.png "Game1's welcome screen")
 
-- Az első tervezett játék játék közbeni képe
+- Az első tervezett játék menet közbeni prototípusa
 ![A prototype of the first game's ingame screen.](./images/game1_ingame.png "Game1's ingame screen")
+
+- Az első tervezett játék eredményjelző prototípusa
+![A prototype of the first game's highscores screen.](./images/game1_highscores.png "Game1's highscores screen")
 
 Forgatókönyvek
 --------------
