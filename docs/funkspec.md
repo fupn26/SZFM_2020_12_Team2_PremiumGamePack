@@ -135,7 +135,10 @@ Addig-addig játszanak míg nem Anett úgy lép, hogy Szilvi bábuját sarokba s
 <!--Botond-->
 A szakkör vége felé közeledve a szakkört vezető tanár elrendeli a közös játékot. Két diák, Denerisz és Aragorn úgy döntenek, hogy a PUCKG nevű korongos logikai játékkal szeretnének egymás ellen játszani. Elindítják az iskolai számítógépen a szoftvert, majd kiválasztják a játékot.
 Még mielőtt beírnák a nevüket, elolvassák a szabályzatot, mert nem biztosak abban, hogy mikor is van vége a játéknak. Persze ez érthető is, még csak most játszanak másodjára a játékkal, és az előző alkalom is 2 hete volt, a tavaszi szünet miatt. Miután tisztázták a szabályokat, beírják a nevüket, és el is kezdik a játékot.
-A piros játékos kezdi a játékot, és felváltva lépegetnek. Egy lépésben vagy letesznek egy új korongot egy már meglévő koronggal nyolcszomszédos helyre, vagy áthelyeznek egy meglévő korongot két pozícióval odébb átlósan függőlegesen vagy vízszintesen. Minden egyes újonnan elhelyezett korong nyolcszomszédos mezőiben lévő ellenfélhez tartozó korong átszíneződik az adott játékos színére. Ezek szerinte haladnak, taktikáznak.
+A piros játékos kezdi a játékot, és felváltva lépegetnek. Egy lépésben vagy letesznek egy új korongot egy már meglévő koronggal nyolcszomszédos helyre, vagy áthelyeznek egy meglévő korongot két pozícióval odébb átlósan függőlegesen vagy vízszintesen. Minden egyes újonnan elhelyezett korong nyolcszomszédos mezőiben lévő ellenfélhez tartozó korong átszíneződik az adott játékos színére. Ezek szerint haladnak, taktikáznak.
+Már egy ideje tart a játék, amikor Aragorn rossz helyzetbe kerül, és csupán három korongja marad a pályán, azok is egymás mellett. Denerisz pedig ki is használja ezt, és egy korongját áthelyezve megnyeri a játékot, lenullázva Aragorn korongjainak számát.
+Aragorn persze nem hagyja magát, visszavágót kér, és meg is nyeri a második játszmát.
+Sajnos ekkor véget a szakkör, így megegyeznek egy igazságos döntetlenben, és kilépnek a játékból.
 
 <!--Balázs-->
 
