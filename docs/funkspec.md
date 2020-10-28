@@ -86,6 +86,9 @@ Képernyőtervek
 - A negyedik tervezett játék kezdőképernyő prototípusa
 ![A prototype of the fourth game's welcome screen.](./images/game4_welcome.png "Game4's welcome screen")
 
+- A negyedik tervezett játék menet közbeni prototípusa
+![A prototype of the fourth game's ingame screen.](./images/game4_ingame.png "Game4's ingame screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
