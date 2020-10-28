@@ -74,6 +74,9 @@ Képernyőtervek
 - A második tervezett játék eredményjelző prototípusa
 ![A prototype of the second game's highscores screen.](./images/game2_highscores.png "Game2's highscores screen")
 
+- A harmadik tervezett játék kezdőképernyő prototípusa
+![A prototype of the third game's welcome screen.](./images/game3_welcome.png "Game3's welcome screen")
+
 Forgatókönyvek
 --------------
 <!--Benedek-->
