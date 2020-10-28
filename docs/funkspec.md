@@ -57,40 +57,64 @@ Képernyőtervek
 --------------
 
 - Az első tervezett játék kezdőképernyő prototípusa
-![A prototype of the first game's welcome screen.](./images/game1_welcome.png "Game1's welcome screen")
+<p align="center">
+    <img src="./images/game1_welcome.png" title="Game1's welcome screen">
+</p>
 
 - Az első tervezett játék menet közbeni prototípusa
-![A prototype of the first game's ingame screen.](./images/game1_ingame.png "Game1's ingame screen")
+<p align="center">
+    <img src="./images/game1_ingame.png" title="Game1's ingame screen">
+</p>
 
 - Az első tervezett játék eredményjelző prototípusa
-![A prototype of the first game's highscores screen.](./images/game1_highscores.png "Game1's highscores screen")
+<p align="center">
+    <img src="./images/game1_highscores.png" title="Game1's highscores screen">
+</p>
 
 - A második tervezett játék kezdőképernyő prototípusa
-![A prototype of the second game's welcome screen.](./images/game2_welcome.png "Game2's welcome screen")
+<p align="center">
+    <img src="./images/game2_welcome.png" title="Game2's welcome screen">
+</p>
 
 - A második tervezett játék menet közbeni prototípusa
-![A prototype of the second game's ingame screen.](./images/game2_ingame.png "Game2's ingame screen")
+<p align="center">
+    <img src="./images/game2_ingame.png" title="Game2's ingame screen">
+</p>
 
 - A második tervezett játék eredményjelző prototípusa
-![A prototype of the second game's highscores screen.](./images/game2_highscores.png "Game2's highscores screen")
+<p align="center">
+    <img src="./images/game2_highscores.png" title="Game2's highscores screen">
+</p>
 
 - A harmadik tervezett játék kezdőképernyő prototípusa
-![A prototype of the third game's welcome screen.](./images/game3_welcome.png "Game3's welcome screen")
+<p align="center">
+    <img src="./images/game3_welcome.png" title="Game3's welcome screen">
+</p>
 
 - A harmadik tervezett játék menet közbeni prototípusa
-![A prototype of the third game's ingame screen.](./images/game3_ingame.png "Game3's ingame screen")
+<p align="center">
+    <img src="./images/game3_ingame.png" title="Game3's ingame screen">
+</p>
 
 - A harmadik tervezett játék eredményjelző prototípusa
-![A prototype of the third game's highscores screen.](./images/game3_highscores.png "Game3's highscores screen")
+<p align="center">
+    <img src="./images/game3_highscores.png" title="Game3's highscores screen">
+</p>
 
 - A negyedik tervezett játék kezdőképernyő prototípusa
-![A prototype of the fourth game's welcome screen.](./images/game4_welcome.png "Game4's welcome screen")
+<p align="center">
+    <img src="./images/game4_welcome.png" title="Game4's welcome screen">
+</p>
 
 - A negyedik tervezett játék menet közbeni prototípusa
-![A prototype of the fourth game's ingame screen.](./images/game4_ingame.png "Game4's ingame screen")
+<p align="center">
+    <img src="./images/game4_ingame.png" title="Game4's ingame screen">
+</p>
 
 - A negyedik tervezett játék eredményjelző prototípusa
-![A prototype of the fourth game's highscores screen.](./images/game4_highscores.png "Game4's highscores screen")
+<p align="center">
+    <img src="./images/game4_highscores.png" title="Game4's highscores screen">
+</p>
 
 Forgatókönyvek
 --------------
