@@ -34,6 +34,8 @@ Jelenlegi üzleti folyamatok
 ----------------------------
 ![A diagram showing how the process of playing a game works in the current situation.](./images/jelenlegi_jatek_menete_reszletes.png "Flow chart of current way of game starting")
 
+![A diagram showing how the process of recording results works in the current situation.](./images/jelenlegi_eredmenyek_rogzitese_reszletes.png "Flow chart of current way of result recording")
+
 Igényelt üzleti folyamatok
 --------------------------
 ![A diagram showing the steps of gaming.](./images/jatek_lefolytatasa_funkspec.png "Flow chart for gaming")
