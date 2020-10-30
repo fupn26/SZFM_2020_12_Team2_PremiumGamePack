@@ -17,3 +17,6 @@ Ezen felül a rendszernek célja, hogy a szakkörön meglévő játékokat inká
 Telepítési terv
 ---------------
 A megrendelő kívánsága szerint elkészített, megfelelően letesztelt alkalmazás az iskola saját rendszerének adminisztrátorainak, rendszergazdáinak kerül majd átadásra, akik elvégzik annak telepítését a kívánt iskolai számítógépekre.
+
+Karbantartási terv
+------------------
