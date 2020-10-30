@@ -27,3 +27,10 @@ A karbantartás 2 részből áll az elkészítendő szoftver esetében. Egyrész
 1. A hiba felfedezését követő legrövidebb időn belül a fejlesztők megkezdik annak feltárását, javítása.
 2. A javítás elkészültével egy rövid tesztelési folyamaton megy át a javított szoftver.
 3. Majd a kész szoftver díjmentesen újratelepítésre kerül az iskola számítógépein.
+
+**Szoftverfrissítési terv**: Amennyiben az átadást követően a vásárló részéről új játékkal való bővítés igénye merülne fel, úgy az a következő lépések szerint történne:
+
+1. Egy közös egyeztetés folyamán felmérjük az igényeket.
+2. Az igényfelmérés alapján elkészítjük az árajánlatot és a pontos rendszertervet.
+3. Ennek elfogadását követően megkezdődik az új játék fejlesztése, tesztelése
+4. A tesztelés lezárultával pedig telepítjük a frissített szoftvereket az iskola számítógépeire.
