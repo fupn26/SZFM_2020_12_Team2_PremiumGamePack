@@ -20,3 +20,10 @@ A megrendelő kívánsága szerint elkészített, megfelelően letesztelt alkalm
 
 Karbantartási terv
 ------------------
+A karbantartás 2 részből áll az elkészítendő szoftver esetében. Egyrészről az esetlegesen felmerülő hibák javításának tervéről, másrészről pedig a szoftver bővítésének tervéről.
+
+**Hibajavítási terv**: Amennyiben a szoftver átadását követően, a használat során bármilyen nemű hiba lép fel, a javítás a következő lépések szerint történik:
+
+1. A hiba felfedezését követő legrövidebb időn belül a fejlesztők megkezdik annak feltárását, javítása.
+2. A javítás elkészültével egy rövid tesztelési folyamaton megy át a javított szoftver.
+3. Majd a kész szoftver díjmentesen újratelepítésre kerül az iskola számítógépein.
