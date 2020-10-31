@@ -48,6 +48,84 @@ A játékok eredményeit külön-külön adatbázis táblában fogja tárolni a 
 ### Tárolt eljárások
 A jelenlegi igények mellett nincs szükség tárolt eljárások létrehozására. Egy esetleges továbbfejlesztés esetén újra mérlegelve lesz használatuk.
 
+### Fizikai adatmodellt legeneráló SQL script
+Az adatmodellek létrehozásához szükséges szkripteket a Hibernate programkönyvtár fogja legenerálni a DAO osztályoknak megfelelően. A jelenlegi logikai adatmodell alapján a következő SQL utasításokra lenne szükség:
+```sql
+CREATE TABLE DAO_RESULTS (
+    RED VARCHAR(40),
+    BLUE VARCHAR(40),
+    WINNER VARCHAR(40),
+    STEPS INT,
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+
+CREATE TABLE DAO_ALL_TIME_TOP_50 (
+    RED VARCHAR(40),
+    BLUE VARCHAR(40),
+    WINNER VARCHAR(40),
+    STEPS INT,
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+```
+
+```sql
+CREATE TABLE MINESWEEPER_RESULTS (
+    PLAYER VARCHAR(40),
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+
+CREATE TABLE MINESWEEPER_ALL_TIME_TOP_50 (
+    PLAYER VARCHAR(40),
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+```
+
+```sql
+CREATE TABLE TRIPLE_SHOT_RESULTS (
+    RED VARCHAR(40),
+    BLUE VARCHAR(40),
+    WINNER VARCHAR(40),
+    STEPS INT,
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+
+CREATE TABLE TRIPLE_SHOT_ALL_TIME_TOP_50 (
+    RED VARCHAR(40),
+    BLUE VARCHAR(40),
+    WINNER VARCHAR(40),
+    STEPS INT,
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+``` 
+
+```sql
+CREATE TABLE PUCKG_RESULTS (
+    RED VARCHAR(40),
+    RED_POINTS INT,
+    BLUE VARCHAR(40),
+    BLUE_POINTS INT,
+    WINNER VARCHAR(40),
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+
+CREATE TABLE PUCKG_ALL_TIME_TOP_50 (
+    RED VARCHAR(40),
+    RED_POINTS INT,
+    BLUE VARCHAR(40),
+    BLUE_POINTS INT,
+    WINNER VARCHAR(40),
+    DURATION TIME,
+    DATE TIMESTAMP
+);
+``` 
+
 Implementációs terv
 -------------------
 
