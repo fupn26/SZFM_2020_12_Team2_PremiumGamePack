@@ -35,6 +35,7 @@ Követelmények
 - K04: Grafikus megjelenítés
     - programnak kötelezően rendelkeznie kell grafikus felhasználói felülettel
 - K05: Egyszemélyes és többszemélyes játékok biztosítása
+    - fontos, hogy mind a két kategóriából tartalmazzon legalább egy játékot a csomag
 
 ### Nemfunkcionális követelmények
 - K01: Intuitív, felhasználóbarát UI
@@ -48,6 +49,12 @@ Követelmények
 - K04: Program megbízható működése rejtélyes hibák, fagyások nélkül
     - az átadáskor a programnak stabilan kell működnie, csak optimalizációs problémák
     - nem fordulhat elő olyan, hogy játék közben hibával terminál a program
+- K05: Az eredmények lokális tárolása
+    - a játékok során gyűjtött adatokat nem szabad távoli szerveren tárolni, kizárólag azon a számítógépen, melyen telepítve van a programcsomag
+
+### Törvényi előírások
+- K01: GDPR szabályok betartása
+    - a játékok során gyűjtött adatok minden esetben a GDPR-nak megfelelően kell kezelni
 
 Funkcionális terv
 -----------------
