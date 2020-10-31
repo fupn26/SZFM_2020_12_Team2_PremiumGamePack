@@ -45,6 +45,9 @@ A játékok eredményeit külön-külön adatbázis táblában fogja tárolni a 
     <img src="./images/logikai_modell.png" title="Logical model of the database">
 </p>
 
+### Tárolt eljárások
+A jelenlegi igények mellett nincs szükség tárolt eljárások létrehozására. Egy esetleges továbbfejlesztés esetén újra mérlegelve lesz használatuk.
+
 Implementációs terv
 -------------------
 
