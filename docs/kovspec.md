@@ -16,7 +16,7 @@ A játékok legyenek egy- és többszemélyesek. E szempont célja, hogy több k
 
 Szeretnénk, ha a játékok közel hasonló stílussal rendelkeznének, mely elősegítheti azt a folyamatot, mely során a gyerekek elsajátítják egy-egy új játék alapjait. Ez azért fontos, hogy egy új játék kipróbálása során ne az új stílusok befogadása és megértése kösse le a figyelmüket, hanem egy már jól ismert *világban* nézhessenek szembe az újabb kihívásokkal. A megjelenítéssel kapcsolatos további igény az egységen kívül az az, hogy egy gyerekek számára alkalmas kellemes környezetben jelenjenek meg a játékok.
 
-Amit szívesen látnánk még a szoftver által nyújtott lehetőségek palettáján, az az eredménykövetés. Időről időre egy kisebb szakkörön belüli bajnokságot is szeretnénk szervezni a gyerekek versenyszellemének fejlesztése céljából. Ezért fontos lenne minden játékhoz egy eredményjelző tábla, hogy a játékban elért eredményket ne papíron kelljen nyomon követni.
+Amit szívesen látnánk még a szoftver által nyújtott lehetőségek palettáján, az az eredménykövetés. Időről időre egy kisebb szakkörön belüli bajnokságot is szeretnénk szervezni a gyerekek versenyszellemének fejlesztése céljából. Ezért fontos lenne minden játékhoz egy eredményjelző tábla, hogy a játékban elért eredményeket ne papíron kelljen nyomon követni.
 
 A szoftver eredmény tárolása két részből kellene álljon. Egy részről szükséges lenne egy olyan funkció, amely törli az aktuális tárolt eredményeket. Erre azért lenne szükség, hogy ha például egy kis házi bajnokságot szervezünk, akkor ott csak a bajnokság eredményei legyenek láthatóak.
 
