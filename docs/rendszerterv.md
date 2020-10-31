@@ -38,8 +38,12 @@ Architektúrális terv
 Adatbázis terv
 --------------
 Az eredmények tárolásához egy H2 adatbázis lesz használva annak gyorsasága és open source jellege miatt. A felemerülő igények kielégítéséhez bőven elegendő a tudása és nem elhanyagolható szempont az alacsony rendszerigénye.
-A játékok eredményeit külön-külön adatbázis táblában fogja tárolni a program,melyek esetén lehetőség lesz a teljes törlésre. Ezen felül minden játékhoz tartozni fog egy a legjobb 5 eredményt tároló tábla is, melyet nem lehet majd törölni. Előbbi táblák a bajnokságok nyomon követéséhez lesznek ideálisak, utóbbiak pedig a diákok versenyszellemét hivatott fenntartani.
+A játékok eredményeit külön-külön adatbázis táblában fogja tárolni a program,melyek esetén lehetőség lesz a teljes törlésre. Ezen felül minden játékhoz tartozni fog egy a legjobb 5 eredményt tároló tábla is, melyet nem lehet majd törölni. Előbbi táblák a bajnokságok nyomon követéséhez lesznek ideálisak, utóbbiak pedig a diákok versenyszellemét hivatottak fenntartani.
 
+### Logikai modell
+<p align="center">
+    <img src="./images/logikai_modell.png" title="Logical model of the database">
+</p>
 
 Implementációs terv
 -------------------
