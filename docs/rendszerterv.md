@@ -22,6 +22,16 @@ Projekt terv
 
 Követelmények
 -------------
+### Funkcionális követelmények
+- K01: Eredménytárolás adatbázisban
+    - Játékosnév, Pontszám/Győztes és Dátum tárolása
+    - mindenkori TOP 5 eredmény tárolása külön táblában a bajnokságok segítése érdekében
+    - az összes korábbi eredmény törlésének biztosítása, leszámítva a Top 5 eredményt tartalmazó táblát
+- K02: Játékok közötti váltás lehetősége egy központi felületen
+    - a program indításakor ez a központi felület kell, hogy köszöntse a felhasználót
+    - a programnak futási időben kezelnie kell a játékok közötti váltást
+- K03: Aktuális játék újraindításának lehetősége
+    - az újraindítás során a korábbi játékos nevet/neveket kell használni az új játszmához
 
 Funkcionális terv
 -----------------
