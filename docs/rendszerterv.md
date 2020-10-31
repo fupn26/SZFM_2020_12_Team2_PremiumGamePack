@@ -14,6 +14,36 @@ A rendszer célja továbbá az egyszerű, zökkenőmentes működés biztosítá
 
 Ezen felül a rendszernek célja, hogy a szakkörön meglévő játékokat inkább kiegészítse, mintsem helyettesítse.
 
+Projekt terv
+------------
+
+Üzleti folyamatok modellje
+--------------------------
+
+Követelmények
+-------------
+
+Funkcionális terv
+-----------------
+
+Fizikai környezet
+-----------------
+
+Absztrakt domain modell
+-----------------------
+
+Architektúrális terv
+--------------------
+
+Adatbázis terv
+--------------
+
+Implementációs terv
+-------------------
+
+Tesztterv
+---------
+
 Telepítési terv
 ---------------
 A megrendelő kívánsága szerint elkészített, megfelelően letesztelt alkalmazás az iskola saját rendszerének adminisztrátorainak, rendszergazdáinak kerül majd átadásra, akik elvégzik annak telepítését a kívánt iskolai számítógépekre.
