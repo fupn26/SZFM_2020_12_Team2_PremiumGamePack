@@ -27,11 +27,27 @@ Követelmények
     - Játékosnév, Pontszám/Győztes és Dátum tárolása
     - mindenkori TOP 5 eredmény tárolása külön táblában a bajnokságok segítése érdekében
     - az összes korábbi eredmény törlésének biztosítása, leszámítva a Top 5 eredményt tartalmazó táblát
-- K02: Játékok közötti váltás lehetősége egy központi felületen
+- K02: Játékok közötti váltás lehetőségének biztosítása egy központi felületen keresztül
     - a program indításakor ez a központi felület kell, hogy köszöntse a felhasználót
     - a programnak futási időben kezelnie kell a játékok közötti váltást
 - K03: Aktuális játék újraindításának lehetősége
     - az újraindítás során a korábbi játékos nevet/neveket kell használni az új játszmához
+- K04: Grafikus megjelenítés
+    - programnak kötelezően rendelkeznie kell grafikus felhasználói felülettel
+- K05: Egyszemélyes és többszemélyes játékok biztosítása
+
+### Nemfunkcionális követelmények
+- K01: Intuitív, felhasználóbarát UI
+    - a grafikus felhasználói felületnek könnyen kezelhetőnek kell lennie
+    - a használatához szükséges tudás elsajátítása nem lehet hosszabb 1-2 percnél
+- K02: Kellemes színvilág
+    - a program színvilágának olyannak kell lennie, hogy a diákok figyelmét felkeltse
+    - fontos szempont, hogy ne legyen megterhelő a felhasználó szemének hosszabb játszmák során sem
+- K03: Windows operációs rendszer támogatása
+    - programnak Windows 7 és Windows 10 operációs rendszereket kell támogatnia
+- K04: Program megbízható működése rejtélyes hibák, fagyások nélkül
+    - az átadáskor a programnak stabilan kell működnie, csak optimalizációs problémák
+    - nem fordulhat elő olyan, hogy játék közben hibával terminál a program
 
 Funkcionális terv
 -----------------
