@@ -93,6 +93,17 @@ Funkcionális terv
 
 Fizikai környezet
 -----------------
+A szoftver Java nyelven, a JavaFX platform igénybe vételével kerül fejlesztésre.
+
+Hálózati kapcsolatot nem alkalmaz a program, mindent lokális adatbázisban tárol.
+
+Vásárolt komponenseket nem tartalmaz a szoftver, teljesen ingyenes, nyílt forrásokból dolgozunk.
+
+Fejlesztéshez az IntelliJ IDEA integrált fejlesztői környezetet használjuk.
+
+Az alkalmazás, mivel a Java platformfüggetlen, bármilyen platformon, melyre Java van telepítve, működik, de a célplatform a Windows, így a fejlesztés, tesztelés is ezen az operációs rendszeren történik.
+
+A projekt összeállításához a Maven projektkezelő eszközt használjuk.
 
 Absztrakt domain modell
 -----------------------
