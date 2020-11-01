@@ -238,6 +238,16 @@ Funkcionális terv
     <img src="./images/menu_hierarchy.png" title="Menu hierarchy">
 </p>
 
+### Használati esetek levezetése:
+
+#### Eredmények megtekintése:
+Program elindítása &rarr; Eredménylista megnyitása &rarr; Játék kiválasztása &rarr; Eredmény megtekintése
+
+#### 2 fős játék indítása:
+Program elindítása &rarr; 2 fős játék kiválasztása &rarr; Nevek megadása &rarr; Játék kezdése &rarr; Játék befejezése
+
+#### 1 fős játék indítása:
+Program elindítása &rarr; 1 fős játék kiválasztása &rarr; Név megadása &rarr; Játék kezdése &rarr; Játék befejezése
 
 Fizikai környezet
 -----------------
