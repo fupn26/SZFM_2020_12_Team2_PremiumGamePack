@@ -142,10 +142,21 @@ Funkcionális terv
     <img src="./images/game2_welcome.png" title="Game2's welcome screen">
 </p>
 
+- Elemek:
+    - Cím
+    - Névmegadó szövegdobozok
+    - Indító gomb
+
 #### A második tervezett játék menet közbeni prototípusa
 <p align="center">
     <img src="./images/game2_ingame.png" title="Game2's ingame screen">
 </p>
+
+- Elemek:
+    - Időmérő
+    - Játéktér
+    - Lépésszám
+    - Feladás gomb
 
 #### A második tervezett játék eredményjelző prototípusa
 <p align="center">
