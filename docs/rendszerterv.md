@@ -236,7 +236,7 @@ Mindegyik játék csomagja tartalmazni fog egy az adott játék szabályait impl
 Az egyes ``fxml`` nézetek rendelkezni fognak vezérlő osztályokkal, melyek a felhasználói interakciókat hivatottak kezelni. Mindegyik játék esetén 3 nézet lesz, ennek megfelelően 3 kontroller osztály. Az első nézet az üdvözlő képernyő, majd a játéktér nézete, végül pedig az eredményeket ábrázoló nézet. A szoftver ezen felül rendelkezni fog egy fő nézettel, melyen keresztül lehet majd választani a játékok között.
 
 <p align="center">
-    <img src="./images/osztaly_diagram.png" title="Logical model of the database">
+    <img src="./images/osztaly_diagram.png" title="Class diagram of the program">
 </p>
 
 Tesztterv
