@@ -255,6 +255,11 @@ A projekt összeállításához a Maven projektkezelő eszközt használjuk.
 
 Absztrakt domain modell
 -----------------------
+
+<p align="center">
+    <img src="./images/architecture_plan.png" title="Architectural plan">
+</p>
+
 A szoftver magját 4 játék képezi. Ezek között van egy- és többjátékos is. A játékokhoz külön-külön adatbázisok tartoznak. Szám szerint játékonként kettő.
 
 A két adatbázis felépítésében, modelljében azonos, azonban funkcionalitásában, felhasználásában eltér. A különbség, hogy míg az egyik adatbázis törölhető, a másik egy mindenkori toplistát tartalmaz, ami már nem lesz törölhető. A törölhető adatbázis lényege, hogy lehetőséget biztosítson kis szakköri bajnokságok lebonyolítására, az eredmények tárolására.
