@@ -23,6 +23,10 @@ Projekt terv
 
 ![A diagram showing how the process of playing a game works in the current situation.](./images/kivaltando_uzleti_folyamatok.png "Flow chart of current way of game starting")
 
+<p align="center">A tervezett üzleti folyamatok modellje</p>
+
+![A diagram modelling the system.](./images/tervezett_folyamatok.png "Flow chart modelling the system")
+
 Követelmények
 -------------
 ### Funkcionális követelmények
