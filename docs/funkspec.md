@@ -175,6 +175,9 @@ Funkció-követelmény megfeleltetés
 - K03: A színvilág beállítása CSS segítségével történik, melyet az fxml-hez rendelve tetszőleges színűvé tehetjük az elemeket.
 - K04: Az adatbáziskezelést SQL-el tesszük, ami a Java-n belül a H2 adatbáziskezelő rendszerrel történik.
 - K05: A többszemélyes játékokat un. "hot seat" módon tesszük, mely során a körökre osztott játék játékosai felváltva lépnek, ugyanazon a gépen. 
+- K06: Mivel a Java platformfüggetlen, a Windows operációs rendszer támogatása extra lépések nélkül is lehetséges.
+- K07: Minden játékba helyezünk navigációs elemet, mely a játékválasztó kijelzőhöz visszavezet, így kilépés nélkül lehet váltani.
+- K08: Az adatbáziskezeléskor nem töltjük fel az eredményeket külső szerverre, így azok csak lokálisan lesznek tárolva.
 
 Fogalomszótár
 -------------
