@@ -158,6 +158,11 @@ Sajnos ekkor véget a szakkör, így megegyeznek egy igazságos döntetlenben, �
 
 Funkció-követelmény megfeleltetés
 ---------------------------------
+- K01: Az intuitív user interface megvalósítását az fxml fájlok megfelelő layoutjával, és a kép assetek letisztult designjával tesszük meg.
+- K02: A grafikus megjelenítést a JavaFX platform segítségével tesszük meg, melyet interaktív GUI tervezésére alkalmazunk.
+- K03: A színvilág beállítása CSS segítségével történik, melyet az fxml-hez rendelve tetszőleges színűvé tehetjük az elemeket.
+- K04: Az adatbáziskezelést SQL-el tesszük, ami a Java-n belül a H2 adatbáziskezelő rendszerrel történik.
+- K05: A többszemélyes játékokat un. "hot seat" módon tesszük, mely során a körökre osztott játék játékosai felváltva lépnek, ugyanazon a gépen. 
 
 Fogalomszótár
 -------------
