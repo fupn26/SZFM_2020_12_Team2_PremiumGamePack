@@ -16,6 +16,28 @@ Ezen felül a rendszernek célja, hogy a szakkörön meglévő játékokat inká
 
 Projekt terv
 ------------
+A projektben 4 fő dolgozik:
+- Bartha Balázs
+- Fürjes-Benke Péter
+- Szabó Benedek
+- Mezei Botond
+
+A munkások szerepkörei hasonlóak. Ezek a következőek:
+- Specifikációk leírása
+- Játékok állapottér-reprezentációjának létrehozása
+- Játékok grafikus user interface tervezése
+- Játékok JavaFX kontrollereinek megírása
+- Adatbáziskezelés
+- Tesztelés
+
+Ütemterv:
+- 2020 November 2.: Specifikáció, rendszerterv tervezett befejezése
+- 2020 November 9.: Demo verzió bemutatásra való előkészítése
+- 2020 November 30.: Végleges verzió bemutatásra való előkészítése
+
+Mérföldkövek:
+- Demo bemutatása
+- Projekt befejezése
 
 Üzleti folyamatok modellje
 --------------------------
