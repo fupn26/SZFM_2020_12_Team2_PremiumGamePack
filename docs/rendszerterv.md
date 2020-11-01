@@ -19,6 +19,9 @@ Projekt terv
 
 Üzleti folyamatok modellje
 --------------------------
+<p align="center">A kiváltandó üzleti folyamatok modellje</p>
+
+![A diagram showing how the process of playing a game works in the current situation.](./images/kivaltando_uzleti_folyamatok.png "Flow chart of current way of game starting")
 
 Követelmények
 -------------
