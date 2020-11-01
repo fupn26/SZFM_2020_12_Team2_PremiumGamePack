@@ -203,16 +203,35 @@ Funkcionális terv
     <img src="./images/game4_welcome.png" title="Game4's welcome screen">
 </p>
 
+- Elemek:
+    - Cím
+    - Névmegadó szövegdobozok
+    - Indító gomb
+    - Szabálymegtekintés gomb
+
 #### A negyedik tervezett játék menet közbeni prototípusa
 <p align="center">
     <img src="./images/game4_ingame.png" title="Game4's ingame screen">
 </p>
+
+- Elemek:
+    - Játékosnevek
+    - Időmérő
+    - Játéktér
+    - Pontszámok
+    - Feladás gomb
+    - Újrakezdés gomb
 
 #### A negyedik tervezett játék eredményjelző prototípusa
 <p align="center">
     <img src="./images/game4_highscores.png" title="Game4's highscores screen">
 </p>
 
+- Elemek:
+    - Eredménytáblázat
+    - Újrakezdés gomb
+    - Kilépés gomb
+    - Rendező gombok
 
 
 Fizikai környezet
