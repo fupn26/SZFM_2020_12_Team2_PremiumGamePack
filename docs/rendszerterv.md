@@ -125,6 +125,14 @@ Az tervezés az MVC architektúrális minta szerint történik. A játékok mode
  - közös irányítófelület
  - kontrollerek, az állapottér és a felhasználói felület összeköttetése érdekében
 
+**Változások kezelése és bővíthetőség**
+
+A változások kezelése e szoftver esetén új játékok hozzáadásával történhet vagy a jelenlegiek módosításával. Mivel ezek a játékok egymástól teljes mértékben függetlenek, így az ilyen változtatások könnyen, gördülékenyen kivitelezhetők.
+
+**Biztonsági funkciók**
+
+Mivel egy belsős felhasználású, csupán játékokat tartalmazó szoftverről beszélünk, melyek internetes adatforgalmat semmilyen szinten sem generálnak, illetve a tárolt adatok sem érzékenyek, így nem szükséges magas szintű biztonsági funkciók beépítése.
+
 Adatbázis terv
 --------------
 Az eredmények tárolásához egy H2 adatbázis lesz használva annak gyorsasága és open source jellege miatt. A felemerülő igények kielégítéséhez bőven elegendő a tudása és nem elhanyagolható szempont az alacsony rendszerigénye.
@@ -230,7 +238,7 @@ Mindegyik játék csomagja tartalmazni fog egy az adott játék szabályait impl
 Az egyes ``fxml`` nézetek rendelkezni fognak vezérlő osztályokkal, melyek a felhasználói interakciókat hivatottak kezelni. Mindegyik játék esetén 3 nézet lesz, ennek megfelelően 3 kontroller osztály. Az első nézet az üdvözlő képernyő, majd a játéktér nézete, végül pedig az eredményeket ábrázoló nézet. A szoftver ezen felül rendelkezni fog egy fő nézettel, melyen keresztül lehet majd választani a játékok között.
 
 <p align="center">
-    <img src="./images/osztaly_diagram.png" title="Logical model of the database">
+    <img src="./images/osztaly_diagram.png" title="Class diagram of the program">
 </p>
 
 Tesztterv
