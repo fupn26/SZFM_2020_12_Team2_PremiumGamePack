@@ -55,6 +55,9 @@ Követelménylista
     - Pontszám/győztes játékos tárolása
     - Eredmény dátumának tárolása
 - K05: Egy- és többszemélyes játékok
+- K06: Windows támogatása
+- K07: Újraindítás nélkül lehessen váltogatni a játékok között
+- K08: Eredmények tárolása a számítógépen legyen
 
 Fogalomszótár
 -------------
