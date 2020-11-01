@@ -126,9 +126,11 @@ Az tervezés az MVC architektúrális minta szerint történik. A játékok mode
  - kontrollerek, az állapottér és a felhasználói felület összeköttetése érdekében
 
 **Változások kezelése és bővíthetőség**
+
 A változások kezelése e szoftver esetén új játékok hozzáadásával történhet vagy a jelenlegiek módosításával. Mivel ezek a játékok egymástól teljes mértékben függetlenek, így az ilyen változtatások könnyen, gördülékenyen kivitelezhetők.
 
 **Biztonsági funkciók**
+
 Mivel egy belsős felhasználású, csupán játékokat tartalmazó szoftverről beszélünk, melyek internetes adatforgalmat semmilyen szinten sem generálnak, illetve a tárolt adatok sem érzékenyek, így nem szükséges magas szintű biztonsági funkciók beépítése.
 
 Adatbázis terv
