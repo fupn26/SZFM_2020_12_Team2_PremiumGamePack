@@ -116,10 +116,26 @@ Funkcionális terv
     <img src="./images/game1_ingame.png" title="Game1's ingame screen">
 </p>
 
+- Elemek:
+    - Játékosnevek
+    - Időmérő
+    - Játéktér
+    - Újrakezdés gomb
+    - Pause gomb
+    - Mentés gomb
+    - Feladás gomb
+
 #### Az első tervezett játék eredményjelző prototípusa
 <p align="center">
     <img src="./images/game1_highscores.png" title="Game1's highscores screen">
 </p>
+
+- Elemek:
+    - Győztes játékos
+    - Eredménytáblázat
+    - Visszavágó gomb
+    - Főmenü gomb
+    - Kilépés gomb
 
 #### A második tervezett játék kezdőképernyő prototípusa
 <p align="center">
