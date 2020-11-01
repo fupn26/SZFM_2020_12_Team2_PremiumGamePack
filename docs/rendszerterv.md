@@ -178,6 +178,29 @@ Az egyes ``fxml`` nézetek rendelkezni fognak vezérlő osztályokkal, melyek a 
 
 Tesztterv
 ---------
+A tesztelésnek 2 fázisa szükséges. Első körben a forráskódszintű tesztelés folyamata megy végbe JUnit tesztek segítségével. Majd a gyakorlati tesztelés esetében pedig azt fogjuk vizsgálni, hogy az elkészült játék a lefektetett szabályok szerint minden esetben megfelelően működik, a játék kipróbálás, többszöri végigjátszása segítségével.
+
+**Forráskódszintű tesztelés**: A tesztelés során a játékok alapját képező állapottér reprezentáció helyességét teszteljük. Azt, hogy az adott osztályokbeli függvények visszatérési értéke, működése megegyezik az elvárttal. A PUCKG esetében a következő esetekre kell odafigyelni:
+ - a tábla konstruktorának megfelelő működése,
+ - adott tábla konfiguráció helyessége,
+ - a tábla állapotának alapján vége van-e a játéknak,
+ - adott koronghoz elérhető-e olyan pozíció, amibe lehetséges a mozgatás,
+ - adott korong mozgatható-e a megadott új pozícióba,
+ - az üres cellák száma (fontos a játék végének eldöntése céljából),
+ - adott cella üres-e (korong mozgathatóságának eldöntése miatt),
+ - a mozgatás sikeressége,
+ - új korong elhelyezésének lehetősége,
+ - új korong elhelyezésének sikeressége,
+ - adott lépés utáni műveletek sikeressége,
+ - adott játékos pontjainak helyes kiszámolása.
+
+**Gyakorlati tesztelés**: A gyakorlati tesztelés folyamata a játékok többszöri végigjátszásából áll. Ez szintén a PUCKG esetén a következőképpen alakul:
+ - teszteljük, hogy mindig a lépni következő játékos van kiemelve,
+ - teszteljük, hogy minden lépés után látható a pontszámok frissülése,
+ - teszteljük, hogy ha egy korongot áthelyezés céljából kijelölünk, akkor a kijelölés vizuálisan is láthatóvá válik (a cella hátterének elsötédedésével),
+ - amennyiben véget ér a játék, a képernyőn megjelenik az eredményjelző tábla,
+ - az eredményjelző táblánál az adott rendezések meg is valósulnak-e,
+ - adott képernyőváltások megfelelően mennek-e végbe.
 
 Telepítési terv
 ---------------
