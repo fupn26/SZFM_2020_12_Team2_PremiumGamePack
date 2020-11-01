@@ -169,13 +169,17 @@ Implementációs terv
 A szoftver az MVC architektúrális minta szerint lesz elkészítve. Ennek megfelelően 3 rétegre bontható a szerkezete: modell, nézet, vezérlő. A grafikus felhasználói felülethez a JavaFX lesz használva, mellyel tökéletesen megvalósítható a 3-as tagolás. Az egyes játékok külön csomagokban lesznek, a jobb elkülönítés érdekében.
 
 ### Perzisztencia osztályok
-A csomagban található minden egyes játék külön DAO osztállyal fog rendelkezni. Ezen osztályok segítségével tárolva lesznek az egyes játszmák eredményei. Mindegyik DAO osztály rendelkezik a játékosok és a győztes neveinek, valamint a játék idejének tárolásához szükséges változókkal. Emellett a ``Dao`` és a ``Triple Puck`` játékok esetén összlépésszám is tárolva lesz, a ``PuckG``-hoz tartozó DAO osztálya pedig az egyes játékosok bábúinak számát tároló tagváltozókkal is rendelkezik.
+A csomagban található minden egyes játék külön DAO osztállyal fog rendelkezni. Ezen osztályok segítségével tárolva lesznek az egyes játszmák eredményei. Ezen felül mindegyikhez tartozni fog egy osztály, melyet a DAO osztályon keresztül fog a program az adatbázisban eltárolni. Mindegyik ilyen osztály rendelkezik a játékosok és a győztes neveinek, valamint a játék idejének tárolásához szükséges változókkal. Emellett a ``Dao`` és a ``Triple Puck`` játékok esetén összlépésszám is tárolva lesz, a ``PuckG``-hoz tartozó DAO osztálya pedig az egyes játékosok bábúinak számát tároló tagváltozókkal is rendelkezik.
 
 ### Üzleti logikai osztályai
-Mindegyik játék csomagja tartalmazni fog egy az adott játék szabályait implementáló állapottér reprezentációt. Ezek tartalmazni fogják a játékok kezdő állását és azok végállásait, valamint azokat az operátorokat, melyek a szabályoknak megfelelően egyik állásból a másikba visznek át.
+Mindegyik játék csomagja tartalmazni fog egy az adott játék szabályait implementáló állapottér reprezentációt. Ezek leírják a játékok kezdő állását és azok végállásait, valamint azokat az operátorokat, melyek a szabályoknak megfelelően egyik állásból a másikba visznek át.
 
 ### Kliens oldal osztályai (Vezérlők)
 Az egyes ``fxml`` nézetek rendelkezni fognak vezérlő osztályokkal, melyek a felhasználói interakciókat hivatottak kezelni. Mindegyik játék esetén 3 nézet lesz, ennek megfelelően 3 kontroller osztály. Az első nézet az üdvözlő képernyő, majd a játéktér nézete, végül pedig az eredményeket ábrázoló nézet. A szoftver ezen felül rendelkezni fog egy fő nézettel, melyen keresztül lehet majd választani a játékok között.
+
+<p align="center">
+    <img src="./images/osztaly_diagram.png" title="Logical model of the database">
+</p>
 
 Tesztterv
 ---------
