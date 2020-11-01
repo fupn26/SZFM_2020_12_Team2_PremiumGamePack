@@ -116,7 +116,7 @@ A játékok működése és eredménytárolása teljesen független egymástól.
 Architektúrális terv
 --------------------
 
-Az tervezés az MVC architektúrális minta szerint történik. A játékok modellje az állapottérreprezentáció, a JavaFX-ben készített felhasználói felületettel pedig a kontrollerek fogják végezni.
+Az tervezés az MVC architektúrális minta szerint történik. A játékok modellje az állapottérreprezentáció, a JavaFX-ben készített felhasználói felülettel pedig a kontrollerek fogják végezni.
 
 **Komponensek**
  - játékok állapottérreprezentációi
