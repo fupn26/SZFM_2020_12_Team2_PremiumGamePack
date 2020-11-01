@@ -60,6 +60,9 @@ Követelménylista
     - Pontszám/győztes játékos
     - Dátum
 - K05: Singleplayer és multiplayer játékok
+- K06: Windows operációs rendszer támogatása
+- K07: Kilépés nélküli váltás játékok között
+- K08: Lokális eredménytárolás
 
 Használati esetek
 -----------------
