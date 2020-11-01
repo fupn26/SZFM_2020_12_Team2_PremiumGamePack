@@ -163,10 +163,20 @@ Funkcionális terv
     <img src="./images/game2_highscores.png" title="Game2's highscores screen">
 </p>
 
+- Elemek:
+    - Eredménytáblázat
+    - Visszavágó gomb
+    - Újrakezdés gomb
+
 #### A harmadik tervezett játék kezdőképernyő prototípusa
 <p align="center">
     <img src="./images/game3_welcome.png" title="Game3's welcome screen">
 </p>
+
+- Elemek:
+    - Cím
+    - Névmegadó szövegdoboz
+    - Indító gomb
 
 #### A harmadik tervezett játék menet közbeni prototípusa
 <p align="center">
