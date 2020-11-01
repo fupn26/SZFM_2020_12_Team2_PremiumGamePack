@@ -183,10 +183,20 @@ Funkcionális terv
     <img src="./images/game3_ingame.png" title="Game3's ingame screen">
 </p>
 
+- Elemek:
+    - Időmérő
+    - Játéktér
+    - Újrakezdés gomb
+    - Feladás gomb
+
 #### A harmadik tervezett játék eredményjelző prototípusa
 <p align="center">
     <img src="./images/game3_highscores.png" title="Game3's highscores screen">
 </p>
+
+- Elemek:
+    - Eredménytáblázat
+    - Újrakezdés gomb
 
 #### A negyedik tervezett játék kezdőképernyő prototípusa
 <p align="center">
