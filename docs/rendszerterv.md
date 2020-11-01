@@ -73,6 +73,15 @@ A játékok működése és eredménytárolása teljesen független egymástól.
 Architektúrális terv
 --------------------
 
+Az tervezés az MVC architektúrális minta szerint történik. A játékok modellje az állapottérreprezentáció, a JavaFX-ben készített felhasználói felületettel pedig a kontrollerek fogják végezni.
+
+**Komponensek**
+ - játékok állapottérreprezentációi
+ - szükséges adatbázisok (játékonként 2)
+ - felhasználói felületek a játékokhoz
+ - közös irányítófelület
+ - kontrollerek, az állapottér és a felhasználói felület összeköttetése érdekében
+
 Adatbázis terv
 --------------
 Az eredmények tárolásához egy H2 adatbázis lesz használva annak gyorsasága és open source jellege miatt. A felemerülő igények kielégítéséhez bőven elegendő a tudása és nem elhanyagolható szempont az alacsony rendszerigénye.
