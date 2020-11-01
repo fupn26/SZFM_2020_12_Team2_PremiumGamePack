@@ -67,6 +67,11 @@ Fizikai környezet
 
 Absztrakt domain modell
 -----------------------
+A szoftver magját 4 játék képezi. Ezek között van egy- és többjátékos is. A játékokhoz külön-külön adatbázisok tartoznak. Szám szerint játékonként kettő.
+
+A két adatbázis felépítésében, modelljében azonos, azonban funkcionalitásában, felhasználásában eltér. A különbség, hogy míg az egyik adatbázis törölhető, a másik egy mindenkori toplistát tartalmaz, ami már nem lesz törölhető. A törölhető adatbázis lényege, hogy lehetőséget biztosítson kis szakköri bajnokságok lebonyolítására, az eredmények tárolására.
+
+A játékok működése és eredménytárolása teljesen független egymástól. Az összekapcsoló elem lényegében a szoftver kezdőképernyője. Innen lehet majd a játékokat elindítani.
 
 Architektúrális terv
 --------------------
