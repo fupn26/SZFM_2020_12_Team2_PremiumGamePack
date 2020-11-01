@@ -233,6 +233,11 @@ Funkcionális terv
     - Kilépés gomb
     - Rendező gombok
 
+### Menü hierarchiák
+<p align="center">
+    <img src="./images/menu_hierarchy.png" title="Menu hierarchy">
+</p>
+
 
 Fizikai környezet
 -----------------
