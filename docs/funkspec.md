@@ -63,6 +63,9 @@ Követelménylista
 
 Használati esetek
 -----------------
+ <p align="center">
+    <img src="./images/use_cases.png" title="Use case diagram">
+</p>
 
 Képernyőtervek
 --------------
