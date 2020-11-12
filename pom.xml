@@ -29,6 +29,12 @@
 			<version>1.18.12</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>14.0.1</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>
