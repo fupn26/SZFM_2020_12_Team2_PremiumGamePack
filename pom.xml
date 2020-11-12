@@ -7,4 +7,13 @@
 	<groupId>hu.unideb.inf</groupId>
 	<artifactId>PremiumGames</artifactId>
 	<version>1.0</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+		<exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
+		<exec.mainClass>central.Main</exec.mainClass>
+	</properties>
+	
+
 </project>
