@@ -161,7 +161,8 @@
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>${exec.mainClass}</mainClass>
 								</transformer>
-							</transformers>                          <createDependencyReducedPom>false</createDependencyReducedPom>
+							</transformers>
+							<createDependencyReducedPom>false</createDependencyReducedPom>
 						</configuration>
 					</execution>
 				</executions>
@@ -252,4 +253,5 @@
 			</reporting>
 		</profile>
 	</profiles>
+
 </project>
