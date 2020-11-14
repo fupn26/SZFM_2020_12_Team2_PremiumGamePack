@@ -110,4 +110,26 @@ public class TableState {
         }
         return false;
     }
+
+    public boolean isMovableTo(int player, int rowfrom, int colFrom, int rowTo, int colTo) {
+        if(player == previousPlayer) {
+            return false;
+        }
+        if(Math.abs(rowfrom-rowTo) > 2 || Math.abs(colFrom-colTo) > 2) {
+            return false;
+        }
+        if(!isEmptyCell(rowTo,colTo)) {
+            return false;
+        }
+        if(Math.abs(rowfrom-rowTo) == 2 && Math.abs(colFrom-colTo) == 0) {
+            return true;
+        }
+        if(Math.abs(rowfrom-rowTo) == 0 && Math.abs(colFrom-colTo) == 2) {
+            return true;
+        }
+        if(Math.abs(rowfrom-rowTo) == 2 && Math.abs(colFrom-colTo) == 2) {
+            return true;
+        }
+        return false;
+    }
 }
