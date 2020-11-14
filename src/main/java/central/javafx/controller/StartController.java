@@ -79,4 +79,28 @@ public class StartController {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
     }
+
+    public void loadNextGameTitle(ActionEvent actionEvent) throws IOException {
+        titleIndex.setValue(titleIndex.get() + 1);
+
+        Parent root = gameTitles[titleIndex.get()];
+        Scene scene = centreContainer.getScene();
+
+        root.translateXProperty().set(scene.getWidth());
+        centreContainer.getChildren().add(1, root);
+
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+        KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.setOnFinished(event -> {
+            previousButton.setDisable(false);
+            nextButton.setDisable(false);
+            centreContainer.getChildren().remove(0);
+        });
+
+        previousButton.setDisable(true);
+        nextButton.setDisable(true);
+        timeline.play();
+    }
 }
