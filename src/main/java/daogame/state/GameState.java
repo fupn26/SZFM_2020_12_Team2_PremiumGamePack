@@ -276,4 +276,36 @@ public class GameState {
         return -1;
     }
 
+    /**
+     * Returns whether a player blocks the other player's piece.
+     * @return the ID of the player who is the victim, {@code -1} otherwise
+     */
+    private int ruleViolation() {
+        int[][] a = {{actualState[0][0], actualState[0][1], actualState[1][0], actualState[1][1]},
+                {actualState[0][3], actualState[0][2], actualState[1][2], actualState[1][3]},
+                {actualState[3][0], actualState[2][0], actualState[2][1], actualState[3][1]},
+                {actualState[3][3], actualState[3][2], actualState[2][2], actualState[2][3]}};
+        for (int i = 0; i < 4; ++i) {
+            if (a[i][0] == a[i][1]){
+                continue;
+            }
+            else if (a[i][0] != 0 && a[i][1] != 0) {
+                boolean isSame = true;
+                for (int j = 2; j < 4; ++j)
+                    if (a[i][j] != a[i][1]) {
+                        isSame = false;
+                        break;
+                    }
+
+                if (isSame) {
+                    return a[i][0];
+                }
+            }
+            else {
+                continue;
+            }
+        }
+
+        return -1;
+    }
 }
