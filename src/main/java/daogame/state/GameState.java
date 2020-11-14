@@ -197,4 +197,29 @@ public class GameState {
         return true;
     }
 
+    /**
+     * Returns whether there are any rows filled with the same kind of pieces.
+     * @return the ID of the player who managed to fill a row, {@code -1} otherwise
+     */
+    private int fullRow() {
+        for (int i = 0; i < 4; ++i){
+            if (actualState[i][0] == 0){
+                continue;
+            }
+            int a = actualState[i][0];
+            boolean isSame = true;
+            for (int j = 1; j < 4; ++j){
+                if (actualState[i][j] != a) {
+                    isSame = false;
+                    break;
+                }
+            }
+
+            if (isSame) {
+                return a;
+            }
+        }
+        return -1;
+    }
+
 }
