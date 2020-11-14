@@ -194,7 +194,37 @@ public class GameState {
      * @return {@code true} if the game is ended, {@code false} otherwise
      */
     public boolean isGameEnded() {
-        return true;
+        int winner = fullRow();
+        if (winner != -1){
+            winnerID = winner;
+            return true;
+        }
+
+        winner = fullColumn();
+        if (winner != -1){
+            winnerID = winner;
+            return true;
+        }
+
+        winner = fullCorners();
+        if (winner != -1) {
+            winnerID = winner;
+            return true;
+        }
+
+        winner = full2x2();
+        if (winner != -1) {
+            winnerID = winner;
+            return true;
+        }
+
+        winner = ruleViolation();
+        if (winner != -1) {
+            winnerID = winner;
+            return true;
+        }
+
+        return false;
     }
 
     /**
