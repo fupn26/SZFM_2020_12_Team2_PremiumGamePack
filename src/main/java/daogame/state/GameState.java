@@ -94,5 +94,16 @@ public class GameState {
         return y/x == 1.0;
     }
 
+    /**
+     * Returns whether there is any piece between the {@code from} position and the {@code to} position.
+     * @param from the piece actual position
+     * @param to the piece new position
+     * @return {@code true} if there is not any pieces between the given positions,
+     * {@code false} otherwise
+     */
+    private boolean isWayClear(daogame.state.Position from, daogame.state.Position to) {
+        return true;
+    }
+
 
 }
