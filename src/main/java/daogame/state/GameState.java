@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Random;
+import java.util.stream.IntStream;
 
 import static java.lang.Math.abs;
 
@@ -103,6 +104,18 @@ public class GameState {
      */
     private boolean isWayClear(daogame.state.Position from, daogame.state.Position to) {
         return true;
+    }
+
+    /**
+     * Returns whether there are any pieces between the {@code start} and the {@code end} columns at the given {@code row}.
+     * @param row the row number of {@code start} and {@code end}
+     * @param start the column number where the checking starts
+     * @param end the column number where the checking ends
+     * @return {@code true} if there are not any pieces at the given range,
+     * {@code false} otherwise
+     */
+    private boolean isWayClearHor(int row, int start, int end){
+        return IntStream.range(start, end).noneMatch(i -> actualState[row][i] != 0);
     }
 
 
