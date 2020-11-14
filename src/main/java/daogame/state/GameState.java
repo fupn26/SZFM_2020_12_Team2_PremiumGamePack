@@ -118,5 +118,16 @@ public class GameState {
         return IntStream.range(start, end).noneMatch(i -> actualState[row][i] != 0);
     }
 
+    /**
+     * Returns whether there are any pieces between the {@code start} and the {@code end} rows at the given {@code column}.
+     * @param column the column number of {@code start} and {@code stop}
+     * @param start the row number where the checking starts
+     * @param end the row number where the cheking ends
+     * @return {@code true} if there are not any pieces at the given range,
+     * {@code false} otherwise
+     */
+    private boolean isWayClearVer(int column, int start, int end){
+        return IntStream.range(start, end).noneMatch(i -> actualState[i][column] != 0);
+    }
 
 }
