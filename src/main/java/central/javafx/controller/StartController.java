@@ -129,6 +129,23 @@ public class StartController {
         timeline.play();
     }
     public void handleGameStart(ActionEvent actionEvent) throws IOException{
-
+        Parent root = null;
+        switch (titleIndex.get()) {
+            case 0:
+                root = FXMLLoader.load(GameApplication.class.getResource("/fxml/daogame/welcome.fxml"));
+                break;
+            case 1:
+                root = FXMLLoader.load(GameApplication.class.getResource("/fxml/minesweeper/launch.fxml"));
+                break;
+            case 2:
+                root = FXMLLoader.load(getClass().getResource("/fxml/puckg/start.fxml"));
+                break;
+            case 3:
+                root = FXMLLoader.load(GameApplication.class.getResource("/fxml/swegame/launch.fxml"));
+                break;
+        }
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
