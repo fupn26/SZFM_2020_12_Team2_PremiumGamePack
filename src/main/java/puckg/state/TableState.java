@@ -176,4 +176,20 @@ public class TableState {
         }
         return true;
     }
+
+    public void afterStep (int player, int row, int col) {
+        for(int i = row-1; i<= row+1; i++) {
+            if(i < 0 || i >= table.length) {
+                continue;
+            }
+            for(int j = col-1; j<= col+1; j++) {
+                if(j < 0 || j >= table.length) {
+                    continue;
+                }
+                if(table[i][j] == Cell.of(player).opposite()) {
+                    table[i][j] = Cell.of(player);
+                }
+            }
+        }
+    }
 }
