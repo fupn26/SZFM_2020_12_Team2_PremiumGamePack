@@ -49,7 +49,7 @@ public class WelcomeController {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.centerOnScreen();
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 }

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daogame.controller.GameController">
+    <center>
+        <GridPane fx:id="gameGrid" hgap="10.0" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 10;" vgap="10.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <effect>
+                <DropShadow blurType="GAUSSIAN">
+                    <color>
+                        <Color blue="0.7847709655761719" green="0.7847709655761719" red="0.7921052575111389" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <children>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+                <ToggleButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleClickOnPiece" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </ToggleButton>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="40.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="restartButton" mnemonicParsing="false" onMouseClicked="#onRestartButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: greenyellow;" text="Restart" />
+                <Button fx:id="pauseButton" mnemonicParsing="false" onMouseClicked="#onPauseButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: lightblue;" text="Pause" />
+                <Button fx:id="pauseButton1" layoutX="275.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#onSaveButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: lightblue;" text="Save" />
+                <Button fx:id="giveupButton" mnemonicParsing="false" onMouseClicked="#onGiveUpButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: tomato;" text="Give Up" />
+            </children>
+        </HBox>
+    </bottom>
+    <top>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="player1Label" style="-fx-background-color: white; -fx-background-radius: 10;" text="Player1" textFill="BLUE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#a2a2a2" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <padding>
+                        <Insets left="5.0" right="5.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="timeLabel" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;" text="00:00:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                    <padding>
+                        <Insets left="5.0" right="5.0" />
+                    </padding>
+                    <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0">
+                            <color>
+                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+                <Label fx:id="player2Label" alignment="CENTER_RIGHT" style="-fx-background-color: white; -fx-background-radius: 10;" text="Player2" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#a2a2a2" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <padding>
+                        <Insets left="5.0" right="5.0" />
+                    </padding>
+                </Label>
+            </children>
+        </GridPane>
+    </top>
+    <left>
+        <Label fx:id="blueTurnIndicator" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="10.0" BorderPane.alignment="CENTER">
+            <effect>
+                <InnerShadow>
+                    <color>
+                        <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                    </color>
+                </InnerShadow>
+            </effect>
+            <BorderPane.margin>
+                <Insets right="20.0" />
+            </BorderPane.margin>
+        </Label>
+    </left>
+    <right>
+        <Label fx:id="redTurnIndicator" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="10.0" BorderPane.alignment="CENTER">
+            <effect>
+                <InnerShadow>
+                    <color>
+                        <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                    </color>
+                </InnerShadow>
+            </effect>
+            <BorderPane.margin>
+                <Insets left="20.0" />
+            </BorderPane.margin>
+        </Label>
+    </right>
+</BorderPane>
