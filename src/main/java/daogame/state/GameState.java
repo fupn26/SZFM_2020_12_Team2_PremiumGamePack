@@ -258,5 +258,22 @@ public class GameState {
                 actualState[3][3] == actualState[3][0] ? actualState[0][0] : -1;
     }
 
+    /**
+     * Returns whether a 2x2 square is filled with the same kind of pieces.
+     * @return the ID of the player who managed to fill a 2x2 square, {@code -1} otherwise
+     */
+    private int full2x2() {
+        for (int i = 0; i < 3; ++i)
+            for (int j = 0; j < 3; ++j) {
+                int a = actualState[i][j];
+                int b = actualState[i][j + 1];
+                int c = actualState[i + 1][j];
+                int d = actualState[i + 1][j + 1];
+                if (a == b && b == c && c == d && a > 0) {
+                    return a;
+                }
+            }
+        return -1;
+    }
 
 }
