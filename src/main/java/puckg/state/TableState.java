@@ -1,6 +1,6 @@
 package puckg.state;
 
-public class TableState {
+public class TableState implements Cloneable{
 
     public static final int[][] INITIAL = {
             {1, 0, 0, 0, 0, 2},
@@ -235,5 +235,18 @@ public class TableState {
             }
         }
         return result;
+    }
+
+    public TableState clone() {
+        TableState copy = null;
+        try {
+            copy = (TableState) super.clone();
+        } catch (CloneNotSupportedException e) {
+        }
+        copy.table = new Cell[table.length][];
+        for (int i = 0; i < table.length; ++i) {
+            copy.table[i] = table[i].clone();
+        }
+        return copy;
     }
 }
