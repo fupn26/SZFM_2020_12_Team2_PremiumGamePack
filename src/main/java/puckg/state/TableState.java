@@ -136,4 +136,30 @@ public class TableState {
     public boolean isPuckOfPlayer (int player, int row, int col) {
         return table[row][col] == Cell.of(player);
     }
+
+    public boolean isNewPuckAvailable (int player, int row, int col) {
+        if(player == previousPlayer) {
+            return false;
+        }
+        if(isBlackCell(row,col)) {
+            return false;
+        }
+        if(!isEmptyCell(row,col)) {
+            return false;
+        }
+        for(int i = row-1; i <= row+1; ++i) {
+            if(i < 0 || i >= table.length) {
+                continue;
+            }
+            for(int j = col-1; j <= col+1; ++j) {
+                if(j < 0 || j >= table.length) {
+                    continue;
+                }
+                if(table[i][j] == Cell.of(player)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
