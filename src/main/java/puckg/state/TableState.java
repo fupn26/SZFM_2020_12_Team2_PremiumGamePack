@@ -211,4 +211,17 @@ public class TableState {
         afterStep(player, row, col);
         previousPlayer = player;
     }
+
+    public int pointsOfPlayer (int player) {
+        int result = 0;
+        for (int i = 0; i < 6; ++i) {
+            for (int j = 0; j < 6; ++j) {
+                if(table[i][j] == Cell.of(player))
+                {
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
 }
