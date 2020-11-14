@@ -130,4 +130,33 @@ public class GameState {
         return IntStream.range(start, end).noneMatch(i -> actualState[i][column] != 0);
     }
 
+    /**
+     * Returns whether there are any pieces on the diagonal specified by the {@code start} and {@code stop}
+     * positions.
+     * @param start the position where the checking starts
+     * @param end the position where the checking ends
+     * @return {@code true} if there are not any pieces on the specified diagonal,
+     * {@code false} otherwise
+     */
+    private boolean isWayClearDiag(Position start, Position end) {
+        int i = start.getColumn();
+        int j = start.getRow();
+        int limitX = end.getColumn();
+        int limitY = end.getRow();
+
+        int stepX = (end.getColumn() - i > 0) ? 1 : -1;
+        int stepY = (end.getRow() - j > 0) ? 1 : -1;
+
+        do {
+            i += stepX;
+            j += stepY;
+
+            if (actualState[j][i] != 0) {
+                return false;
+            }
+        } while(i != limitX && j != limitY);
+
+        return true;
+    }
+
 }
