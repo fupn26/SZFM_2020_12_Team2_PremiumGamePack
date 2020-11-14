@@ -73,6 +73,22 @@ public class GameState {
      * {@code false} otherwise
      */
     public boolean isApplicable(Position from, Position to) {
+        if (actualState[from.getRow()][from.getColumn()] != turnID) {
+            log.info("It's not the player's piece.");
+            return false;
+        }
+        else if (actualState[to.getRow()][to.getColumn()] != 0) {
+            log.info("The new place is filled with another piece.");
+            return false;
+        }
+        else if (!isValidDirection(from, to)) {
+            log.info("The movement is not valid.");
+            return false;
+        }
+        else if (!isWayClear(from, to)){
+            log.info("The way is not clear.");
+            return false;
+        }
         return true;
     }
 
