@@ -13,4 +13,12 @@ public enum Cell {
         }
         return values()[value];
     }
+
+    public int getValue() {
+        return ordinal();
+    }
+
+    public String toString() {
+        return Integer.toString(ordinal());
+    }
 }
