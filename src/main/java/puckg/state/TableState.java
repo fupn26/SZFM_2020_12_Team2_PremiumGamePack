@@ -132,4 +132,8 @@ public class TableState {
         }
         return false;
     }
+
+    public boolean isPuckOfPlayer (int player, int row, int col) {
+        return table[row][col] == Cell.of(player);
+    }
 }
