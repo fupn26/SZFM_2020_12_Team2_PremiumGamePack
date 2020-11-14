@@ -58,4 +58,8 @@ public class TableState {
             }
         }
     }
+
+    public boolean isEmptyCell (int row, int col) {
+        return table[row][col] == Cell.EMPTY;
+    }
 }
