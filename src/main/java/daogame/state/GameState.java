@@ -222,4 +222,30 @@ public class GameState {
         return -1;
     }
 
+    /**
+     * Returns whether there are any columns filled with the same kind of pieces.
+     * @return the ID of the player who managed to fill a column, {@code -1} otherwise
+     */
+    private int fullColumn() {
+        for (int i = 0; i < 4; ++i){
+            if (actualState[0][i] == 0){
+                continue;
+            }
+            int a = actualState[0][i];
+            boolean isSame = true;
+            for (int j = 1; j < 4; ++j){
+                if (actualState[j][i] != a) {
+                    isSame = false;
+                    break;
+                }
+            }
+
+            if (isSame) {
+                return a;
+            }
+        }
+        return -1;
+    }
+
+
 }
