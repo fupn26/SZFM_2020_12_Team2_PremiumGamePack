@@ -66,4 +66,48 @@ public class TableState {
     public boolean isBlackCell (int row, int col) {
         return table[row][col] == Cell.BLACK;
     }
+
+    public boolean isMoveAvailable(int row, int col) {
+        if(row-2 >= 0) {
+            if(table[row-2][col] == Cell.EMPTY) {
+                return true;
+            }
+            if(col-2 >= 0) {
+                if(table[row-2][col-2] == Cell.EMPTY) {
+                    return true;
+                }
+            }
+            if(col+2 < 6) {
+                if(table[row-2][col+2] == Cell.EMPTY) {
+                    return true;
+                }
+            }
+        }
+        if(row+2 < 6) {
+            if(table[row+2][col] == Cell.EMPTY) {
+                return true;
+            }
+            if(col-2 >= 0) {
+                if(table[row+2][col-2] == Cell.EMPTY) {
+                    return true;
+                }
+            }
+            if(col+2 < 6) {
+                if(table[row+2][col+2] == Cell.EMPTY) {
+                    return true;
+                }
+            }
+        }
+        if(col-2 >= 0) {
+            if(table[row][col-2] == Cell.EMPTY) {
+                return true;
+            }
+        }
+        if(col+2 < 6) {
+            if(table[row][col+2] == Cell.EMPTY) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
