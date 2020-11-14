@@ -15,7 +15,7 @@
                   <Font size="50.0" />
               </font>
           </Label>
-      <Label text="Enter your names!" textFill="RED" visible="false">
+      <Label fx:id="warningLabel" text="Enter your names!" textFill="RED" visible="false">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
@@ -23,7 +23,7 @@
       <HBox alignment="CENTER" spacing="20.0">
          <children>
             <Label text="Player 1" />
-            <TextField />
+            <TextField fx:id="player1Input" />
          </children>
          <VBox.margin>
             <Insets bottom="10.0" />
@@ -34,7 +34,7 @@
          </VBox.margin>
          <children>
             <Label text="Player 2" />
-            <TextField />
+            <TextField fx:id="player2Input" />
          </children>
       </HBox>
           <Button mnemonicParsing="false" onMouseClicked="#onStartGameButtonClicked" prefHeight="55.0" prefWidth="75.0" text="Start Game">

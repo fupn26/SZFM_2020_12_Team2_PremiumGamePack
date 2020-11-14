@@ -11,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
@@ -25,14 +27,23 @@ public class WelcomeController {
     @Inject
     private FXMLLoader fxmlLoader;
 
-    private Parent dialog;
-    private Scene dialogScene;
-    private final StringProperty player1Name = new SimpleStringProperty();
-    private final StringProperty player2Name = new SimpleStringProperty();
-    private boolean isPlayer1NameSet;
-    private boolean isPlayer2NameSet;
+    @FXML
+    private Label warningLabel;
+
+    @FXML
+    private TextField player1Input;
+
+    @FXML
+    private TextField player2Input;
+
 
     public void onStartGameButtonClicked(MouseEvent mouseEvent) throws IOException {
+        String player1Name = player1Input.getText();
+        String player2Name = player2Input.getText();
+        if (player1Name.isEmpty() || player2Name.isEmpty()) {
+            warningLabel.setVisible(true);
+            return;
+        }
         fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
