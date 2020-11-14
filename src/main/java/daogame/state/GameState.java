@@ -338,4 +338,11 @@ public class GameState {
 
         return -1;
     }
+
+    /**
+     * Sets the {@code winnerID} to the other player's ID, if the actual player gave up the game.
+     */
+    public void playerGaveUp() {
+        winnerID = (turnID == 1) ? 2 : 1;
+    }
 }
