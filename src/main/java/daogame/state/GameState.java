@@ -42,4 +42,16 @@ public class GameState {
         log.info("TurnID = {}", turnID);
         winnerID = -1;
     }
+
+    /**
+     * Move the piece from the {@code from} position to the {@code to} position.
+     * @param from the actual position of the piece
+     * @param to the new position of the piece
+     */
+    public void op(Position from, Position to) {
+        int temp = actualState[to.getRow()][to.getColumn()];
+        actualState[to.getRow()][to.getColumn()] = actualState[from.getRow()][from.getColumn()];
+        actualState[from.getRow()][from.getColumn()] = temp;
+//        changeTurn();
+    }
 }
