@@ -51,4 +51,27 @@ public class StartController {
 
     private final IntegerProperty titleIndex = new SimpleIntegerProperty();
     private Parent[] gameTitles;
+
+    @FXML
+    public void initialize() throws IOException {
+        gameTitles = new Parent[4];
+        gameTitles[0] = FXMLLoader.load(getClass().getResource("/fxml/central/dao.fxml"));
+        gameTitles[1] = FXMLLoader.load(getClass().getResource("/fxml/central/minesweeper.fxml"));
+        gameTitles[2] = FXMLLoader.load(getClass().getResource("/fxml/central/puckg.fxml"));
+        gameTitles[3] = FXMLLoader.load(getClass().getResource("/fxml/central/triplepuck.fxml"));
+
+        titleIndex.addListener((observable, oldValue, newValue) -> {
+            if (newValue.intValue() == 0) {
+                previousButton.setVisible(false);
+            } else if (newValue.intValue() == gameTitles.length - 1) {
+                nextButton.setVisible(false);
+            } else {
+                previousButton.setVisible(true);
+                nextButton.setVisible(true);
+            }
+        });
+        titleIndex.setValue(0);
+
+        centreContainer.getChildren().add(0, gameTitles[titleIndex.get()]);
+    }
 }
