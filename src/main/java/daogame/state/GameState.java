@@ -103,7 +103,21 @@ public class GameState {
      * {@code false} otherwise
      */
     private boolean isWayClear(daogame.state.Position from, daogame.state.Position to) {
-        return true;
+        if (from.getRow() == to.getRow()) {
+            int row = from.getRow();
+            return (from.getColumn() > to.getColumn()) ?
+                    isWayClearHor(row, to.getColumn()+1, from.getColumn()) :
+                    isWayClearHor(row, from.getColumn()+1, to.getColumn());
+        }
+        else if (from.getColumn() == to.getColumn()) {
+            int column = from.getColumn();
+            return (from.getRow() > to.getRow()) ?
+                    isWayClearVer(column, to.getRow()+1, from.getRow()) :
+                    isWayClearVer(column, from.getRow()+1, to.getRow());
+        }
+        else {
+            return isWayClearDiag(from, to);
+        }
     }
 
     /**
