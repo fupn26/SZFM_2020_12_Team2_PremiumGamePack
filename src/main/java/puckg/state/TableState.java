@@ -162,4 +162,18 @@ public class TableState {
         }
         return false;
     }
+
+    public boolean isFinished(int player) {
+        for(int i = 0; i < 6; i++) {
+            for(int j = 0; j < 6; j++) {
+                if(isNewPuckAvailable(player, i, j)) {
+                    return false;
+                }
+                if(isPuckOfPlayer(player, i, j) && isMoveAvailable(i, j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
