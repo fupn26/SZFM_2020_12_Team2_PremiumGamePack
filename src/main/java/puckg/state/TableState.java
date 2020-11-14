@@ -192,4 +192,14 @@ public class TableState {
             }
         }
     }
+
+    public void movePuck (int player, int rowFrom, int colFrom, int rowTo, int colTo) {
+        if(!isMovableTo(player,rowFrom,colFrom,rowTo,colTo)) {
+            throw new IllegalArgumentException();
+        }
+        table[rowFrom][colFrom] = Cell.EMPTY;
+        table[rowTo][colTo] = Cell.of(player);
+        afterStep(player, rowTo, colTo);
+        previousPlayer = player;
+    }
 }
