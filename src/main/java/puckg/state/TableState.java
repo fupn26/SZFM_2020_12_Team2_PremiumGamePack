@@ -54,6 +54,11 @@ public class TableState implements Cloneable{
         initTable(a);
     }
 
+    /**
+     * Checks whether the specified table is valid.
+     * @param a the table to be checked
+     * @return {@code true} if the specified table is valid, {@code false} otherwise
+     */
     public boolean isValidTable(int[][] a) {
         if(a == null || a.length != 6) {
             return false;
@@ -87,14 +92,38 @@ public class TableState implements Cloneable{
         }
     }
 
+    /**
+     * Checks whether the specified cell is an empty cell.
+     *
+     * @param row the row of the cell to be checked
+     * @param col the column of the cell to be checked
+     * @return {@code true} if the specified cell is empty, {@code false} otherwise
+     */
     public boolean isEmptyCell (int row, int col) {
         return table[row][col] == Cell.EMPTY;
     }
 
+
+    /**
+     * Checks whether the specified cell is black cell.
+     *
+     * @param row the row of the cell to be checked
+     * @param col the column of the cell to be checked
+     * @return {@code true} if the specified cell is black, {@code false} otherwise
+     */
     public boolean isBlackCell (int row, int col) {
         return table[row][col] == Cell.BLACK;
     }
 
+
+    /**
+     * Checks whether is it possible to move the puck from the specified position.
+     *
+     * @param row the row of the puck to be moved
+     * @param col the column of the puck to be moved
+     * @return {@code true} if there is at least one possible position, where the puck
+     * can be moved to, {@code false} otherwise
+     */
     public boolean isMoveAvailable(int row, int col) {
         if(row-2 >= 0) {
             if(table[row-2][col] == Cell.EMPTY) {
@@ -139,6 +168,18 @@ public class TableState implements Cloneable{
         return false;
     }
 
+    /**
+     * Checks whether the specified puck is able to be moved to the specified position with
+     * the respect to the specified player.
+     *
+     * @param player the player who is willing to move the puck
+     * @param rowfrom the row of the puck to be moved
+     * @param colFrom the column of the puck to be moved
+     * @param rowTo the row of the desired position
+     * @param colTo the column of the desired position
+     * @return {@code true} if the specified puck is able to be moved to the specified
+     * position by the specified player, {@code false} otherwise
+     */
     public boolean isMovableTo(int player, int rowfrom, int colFrom, int rowTo, int colTo) {
         if(player == previousPlayer) {
             return false;
