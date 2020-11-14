@@ -20,5 +20,35 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
+
 public class StartController {
+//    @FXML
+//    private Button gameOneButton;
+//
+//    @FXML
+//    private Button gameTwoButton;
+//
+//    @FXML
+//    private Button gameThreeButton;
+//
+//    @FXML
+//    private Button gameFourButton;
+    @FXML
+    private JFXButton startButton;
+
+    @FXML
+    private JFXButton previousButton;
+
+    @FXML
+    private JFXButton nextButton;
+
+    @FXML
+    private StackPane centreContainer;
+
+    @FXML
+    private JFXButton exitButton;
+
+    private final IntegerProperty titleIndex = new SimpleIntegerProperty();
+    private Parent[] gameTitles;
 }
