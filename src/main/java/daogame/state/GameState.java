@@ -189,4 +189,12 @@ public class GameState {
         return true;
     }
 
+    /**
+     * Returns whether the game is ended.
+     * @return {@code true} if the game is ended, {@code false} otherwise
+     */
+    public boolean isGameEnded() {
+        return true;
+    }
+
 }
