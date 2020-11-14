@@ -128,4 +128,7 @@ public class StartController {
         nextButton.setDisable(true);
         timeline.play();
     }
+    public void handleGameStart(ActionEvent actionEvent) throws IOException{
+
+    }
 }
