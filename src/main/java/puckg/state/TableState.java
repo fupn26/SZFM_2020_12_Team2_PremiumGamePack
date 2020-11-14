@@ -202,4 +202,13 @@ public class TableState {
         afterStep(player, rowTo, colTo);
         previousPlayer = player;
     }
+
+    public void newPuck (int player, int row, int col) {
+        if(!isNewPuckAvailable(player, row, col)) {
+            throw new IllegalArgumentException();
+        }
+        table[row][col] = Cell.of(player);
+        afterStep(player, row, col);
+        previousPlayer = player;
+    }
 }
