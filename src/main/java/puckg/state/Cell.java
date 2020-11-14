@@ -18,6 +18,14 @@ public enum Cell {
         return ordinal();
     }
 
+    public Cell opposite() {
+        switch (this) {
+            case RED: return BLUE;
+            case BLUE: return RED;
+        }
+        throw new AssertionError();
+    }
+
     public String toString() {
         return Integer.toString(ordinal());
     }
