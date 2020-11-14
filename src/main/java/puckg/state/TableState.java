@@ -15,6 +15,17 @@ public class TableState {
 
     private int previousPlayer = 2;
 
+    public TableState() {
+        this(INITIAL);
+    }
+
+    public TableState(int[][] a) {
+        if(!isValidTable(a)) {
+            throw new IllegalArgumentException();
+        }
+        initTable(a);
+    }
+
     public boolean isValidTable(int[][] a) {
         if(a == null || a.length != 6) {
             return false;
