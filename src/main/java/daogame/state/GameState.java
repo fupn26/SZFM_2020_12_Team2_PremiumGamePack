@@ -62,4 +62,15 @@ public class GameState {
         turnID = (turnID == 1) ? 2 : 1;
     }
 
+    /**
+     * Returns whether the piece can be moved from the {@code from} position to the {@code to} position.
+     * @param from the actual position of the piece
+     * @param to the new position of the piece
+     * @return {@code true} if the piece can be moved to the {@code to} position,
+     * {@code false} otherwise
+     */
+    public boolean isApplicable(daogame.state.Position from, daogame.state.Position to) {
+        return true;
+    }
+
 }
