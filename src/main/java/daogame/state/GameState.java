@@ -1,4 +1,45 @@
 package daogame.state;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.Random;
+
+/**
+ * Class representing the state of the game.
+ */
+@Data
+@Slf4j
 public class GameState {
+    /**
+     * Array representing the game's actual state.
+     */
+    @Setter(AccessLevel.NONE)
+    private int[][] actualState = {{2, 0, 0, 1},
+            {0, 2, 1, 0},
+            {0, 1, 2, 0},
+            {1, 0, 0, 2}};
+
+    /**
+     * Variable representing the actual player.
+     */
+    @Setter(AccessLevel.NONE)
+    private int turnID;
+
+    /**
+     * Variable representing the winner.
+     */
+    @Setter(AccessLevel.NONE)
+    private int winnerID;
+
+    /**
+     * Constructs a {@link GameState} object with random {@code turnID} between 1 and 2.
+     */
+    public GameState() {
+        turnID = new Random().nextInt(2) + 1;
+        log.info("TurnID = {}", turnID);
+        winnerID = -1;
+    }
 }
