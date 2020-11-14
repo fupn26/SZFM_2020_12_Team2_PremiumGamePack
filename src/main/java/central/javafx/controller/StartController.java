@@ -74,4 +74,9 @@ public class StartController {
 
         centreContainer.getChildren().add(0, gameTitles[titleIndex.get()]);
     }
+
+    public void handleExit (ActionEvent actionEvent) {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
 }
