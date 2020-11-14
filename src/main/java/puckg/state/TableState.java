@@ -38,4 +38,13 @@ public class TableState {
         }
         return foundBlack;
     }
+
+    private void initTable(int[][] a) {
+        this.table = new Cell[6][6];
+        for (int i = 0; i < 6; ++i) {
+            for (int j = 0; j < 6; ++j) {
+                this.table[i][j] = Cell.of(a[i][j]);
+            }
+        }
+    }
 }
