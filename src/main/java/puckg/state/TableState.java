@@ -4,9 +4,15 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
 
+/**
+ * Class representing the state of the game.
+ */
 @Data
 public class TableState implements Cloneable{
 
+    /**
+     * The array representing the initial configuration of the table.
+     */
     public static final int[][] INITIAL = {
             {1, 0, 0, 0, 0, 2},
             {0, 0, 0, 0, 0, 0},
@@ -16,16 +22,31 @@ public class TableState implements Cloneable{
             {2, 0, 0, 0, 0, 1}
     };
 
+    /**
+     * The array storing the current configuration of the table.
+     */
     @Setter(AccessLevel.NONE)
     private Cell[][] table;
 
+    /**
+     * A variable to store the previous player.
+     */
     @Setter(AccessLevel.NONE)
     private int previousPlayer = 2;
 
+    /**
+     * Creates a {@code TableState} object representing the (original)
+     * initial state of the puzzle.
+     */
     public TableState() {
         this(INITIAL);
     }
 
+    /**
+     * Creates a {@code TableState} object that is initialized it with a specific array.
+     * @param a and array of size 6&#xd7;6 representing the initial configuration of the table
+     * @throws IllegalArgumentException if the array does not represent a valid configuration of the table
+     */
     public TableState(int[][] a) {
         if(!isValidTable(a)) {
             throw new IllegalArgumentException();
