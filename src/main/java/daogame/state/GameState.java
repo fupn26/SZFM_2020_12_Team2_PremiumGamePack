@@ -52,6 +52,14 @@ public class GameState {
         int temp = actualState[to.getRow()][to.getColumn()];
         actualState[to.getRow()][to.getColumn()] = actualState[from.getRow()][from.getColumn()];
         actualState[from.getRow()][from.getColumn()] = temp;
-//        changeTurn();
+        changeTurn();
     }
+
+    /**
+     * Changes the {@code turnID} to the ID of the next player.
+     */
+    private void changeTurn() {
+        turnID = (turnID == 1) ? 2 : 1;
+    }
+
 }
