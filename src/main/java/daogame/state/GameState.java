@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Random;
 
+import static java.lang.Math.abs;
+
 /**
  * Class representing the state of the game.
  */
@@ -69,8 +71,28 @@ public class GameState {
      * @return {@code true} if the piece can be moved to the {@code to} position,
      * {@code false} otherwise
      */
-    public boolean isApplicable(daogame.state.Position from, daogame.state.Position to) {
+    public boolean isApplicable(Position from, Position to) {
         return true;
     }
+
+    /**
+     * Returns whether the move from {@code from} position to {@code to} position is permitted in the
+     * perspective of available directions.
+     * @param from the actual position of the piece
+     * @param to the new position of the piece
+     * @return {@code true} if the {@code from} to {@code to} movement is a permitted direction,
+     * {@code false} otherwise
+     */
+    private boolean isValidDirection(Position from, Position to) {
+        double x = abs(to.getColumn() - from.getColumn());
+        double y = abs(to.getRow() - from.getRow());
+
+        if(x == 0 || y == 0) {
+            return true;
+        }
+
+        return y/x == 1.0;
+    }
+
 
 }
