@@ -31,4 +31,24 @@
          </children>
       </VBox>
    </bottom>
+   <center>
+      <StackPane fx:id="centreContainer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <JFXButton fx:id="previousButton" onAction="#loadPreviousGameTitle" text="&lt;" visible="false" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton fx:id="nextButton" onAction="#loadNextGameTitle" text="&gt;" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </JFXButton>
+               </right></BorderPane>
+         </children></StackPane>
+   </center>
 </BorderPane>
