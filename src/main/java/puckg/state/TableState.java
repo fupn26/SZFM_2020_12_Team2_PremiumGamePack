@@ -202,10 +202,27 @@ public class TableState implements Cloneable{
         return false;
     }
 
+    /**
+     * Checks whether the puck at the specified position belongs to the player specified.
+     * @param player the player who may own the specified puck
+     * @param row the row of the puck to be checked
+     * @param col the column of the puck to be checked
+     * @return {@code true} if the specified puck belongs to the specified player,
+     * {@code false} otherwise
+     */
     public boolean isPuckOfPlayer (int player, int row, int col) {
         return table[row][col] == Cell.of(player);
     }
 
+    /**
+     * Returns whether the puck to be placed has another puck from the same player
+     * in the eight adjacent cells.
+     * @param player the player who wants to place the new puck
+     * @param row the row of the puck to be placed
+     * @param col the column of the puck to be placed
+     * @return {@code true} if the desired place of the new puck has at least one puck
+     * in the eight adjacent cells, {@code false} otherwise
+     */
     public boolean isNewPuckAvailable (int player, int row, int col) {
         if(player == previousPlayer) {
             return false;
@@ -232,6 +249,12 @@ public class TableState implements Cloneable{
         return false;
     }
 
+    /**
+     * Checks whether the game is finished with respect to the player who is next.
+     *
+     * @param player is the player who is next
+     * @return {@code true} if the player can not take actions, {@code false} otherwise
+     */
     public boolean isFinished(int player) {
         for(int i = 0; i < 6; i++) {
             for(int j = 0; j < 6; j++) {
@@ -246,6 +269,13 @@ public class TableState implements Cloneable{
         return true;
     }
 
+    /**
+     * After a step, changes all puck belonging to the other player in the eight adjacent cells.
+     *
+     * @param player the player who took the previous step
+     * @param row the row of the new or replaced puck
+     * @param col the column of the new or replaced puck
+     */
     public void afterStep (int player, int row, int col) {
         for(int i = row-1; i<= row+1; i++) {
             if(i < 0 || i >= table.length) {
@@ -262,6 +292,16 @@ public class TableState implements Cloneable{
         }
     }
 
+    /**
+     * Moves a puck from a given position to another position by the specific player.
+     *
+     * @param player the player taking action
+     * @param rowFrom the row of the original puck
+     * @param colFrom the column of the original puck
+     * @param rowTo the row of the new puck
+     * @param colTo the column of the new puck
+     * @throws IllegalArgumentException if the specified player is not the next player in the order
+     */
     public void movePuck (int player, int rowFrom, int colFrom, int rowTo, int colTo) {
         if(!isMovableTo(player,rowFrom,colFrom,rowTo,colTo)) {
             throw new IllegalArgumentException();
