@@ -1,5 +1,10 @@
 package puckg.state;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Setter;
+
+@Data
 public class TableState implements Cloneable{
 
     public static final int[][] INITIAL = {
@@ -11,8 +16,10 @@ public class TableState implements Cloneable{
             {2, 0, 0, 0, 0, 1}
     };
 
+    @Setter(AccessLevel.NONE)
     private Cell[][] table;
 
+    @Setter(AccessLevel.NONE)
     private int previousPlayer = 2;
 
     public TableState() {
