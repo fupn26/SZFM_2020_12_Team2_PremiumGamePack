@@ -312,6 +312,15 @@ public class TableState implements Cloneable{
         previousPlayer = player;
     }
 
+    /**
+     * Places a new puck by the specified player to the specified position.
+     *
+     * @param player the player who takes action
+     * @param row the row of the puck to be placed
+     * @param col the column of the puck to be placed
+     * @throws IllegalArgumentException if a new puck is available for the specified player,
+     * in the specified position
+     */
     public void newPuck (int player, int row, int col) {
         if(!isNewPuckAvailable(player, row, col)) {
             throw new IllegalArgumentException();
@@ -321,6 +330,13 @@ public class TableState implements Cloneable{
         previousPlayer = player;
     }
 
+    /**
+     * Returns the score of the specified player with respect to the actual state
+     * of {@code table}.
+     *
+     * @param player the player who's points are going to be calculated
+     * @return the actual points of the player specified
+     */
     public int pointsOfPlayer (int player) {
         int result = 0;
         for (int i = 0; i < 6; ++i) {
@@ -334,6 +350,12 @@ public class TableState implements Cloneable{
         return result;
     }
 
+    /**
+     * Returns the number of empty cells in the table. Used in
+     * calculating points.
+     *
+     * @return the number of empty cells in the table
+     */
     public int numberOfEmptyCells () {
         int result = 0;
         for(int i = 0; i < 6; i++) {
@@ -346,6 +368,11 @@ public class TableState implements Cloneable{
         return result;
     }
 
+    /**
+     * Returns the clone of {@code this} object.
+     *
+     * @return the clone of {@code this} object
+     */
     public TableState clone() {
         TableState copy = null;
         try {
@@ -359,6 +386,11 @@ public class TableState implements Cloneable{
         return copy;
     }
 
+    /**
+     * Returns the string format of {@code this.table}.
+     *
+     * @return the string foramt of {@code this.table}
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Cell[] row : table) {
