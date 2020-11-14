@@ -247,5 +247,16 @@ public class GameState {
         return -1;
     }
 
+    /**
+     * Returns whether all of the corners are filled with the same kind of pieces.
+     * @return the ID of the player who managed to fill the edges
+     */
+    private int fullCorners() {
+        return actualState[0][0] != 0 &&
+                actualState[0][0] == actualState[0][3] &&
+                actualState[0][3] == actualState[3][3] &&
+                actualState[3][3] == actualState[3][0] ? actualState[0][0] : -1;
+    }
+
 
 }
