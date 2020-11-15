@@ -38,4 +38,10 @@ public class StartController {
 
     @FXML
     private Button rulesButton;
+
+    @FXML
+    public void initialize() {
+        ruleArea.setVisible(false);
+        context.init();
+    }
 }
