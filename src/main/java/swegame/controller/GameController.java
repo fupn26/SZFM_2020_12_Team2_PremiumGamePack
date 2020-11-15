@@ -22,11 +22,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import puckg.data.GameData;
-import puckg.data.GameDataJson;
-import swegame.data.GResult;
-import swegame.data.GResultDao;
-import swegame.data.GResultJson;
+
 import swegame.state.SweGameState;
 
 import javax.inject.Inject;
@@ -101,12 +97,6 @@ public class GameController {
         blueLabel.setText("");
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
-                gameResultDao.persist(createGameResult());
-                try {
-                    updateTopFive();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
                 stopWatchTimeline.stop();
                 messageLabel.setText(winner + " is the WINNER!");
                 redLabel.setText("");
@@ -183,9 +173,9 @@ public class GameController {
         }
         else {
 
-            fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/highscores.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
             Parent root = fxmlLoader.load();
-            fxmlLoader.<HighScoreController>getController().setPlayerNames(redPlayerName,bluePlayerName);
+            
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

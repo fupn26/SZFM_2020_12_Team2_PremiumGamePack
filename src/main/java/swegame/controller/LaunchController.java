@@ -13,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
-import puckg.data.GameDataDao;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -24,11 +23,7 @@ public class LaunchController {
 
     private GuiceContext context = new GuiceContext(this, () -> List.of(
             new AbstractModule() {
-                @Override
-                protected void configure() {
-                    install(new PersistenceModule("swegame"));
-                    bind(GameDataDao.class);
-                }
+
             }
     ));
 
