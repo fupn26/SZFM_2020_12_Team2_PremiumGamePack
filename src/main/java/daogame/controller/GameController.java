@@ -79,6 +79,14 @@ public class GameController {
 
         player1Label.textProperty().bind(player1Name);
         player2Label.textProperty().bind(player2Name);
+
+        Platform.runLater(() -> {
+            startGame();
+        });
+    }
+
+    private void startGame() {
+        return;
     }
 
 }
