@@ -17,5 +17,19 @@ public enum Cell {
      */
     BLUE;
 
+    /**
+     * Returns the instance represented by the value specified.
+     *
+     * @param value the value representing an instance
+     * @return the instance represented by the value specified
+     * @throws IllegalArgumentException if the value specified does not
+     * represent an instance
+     */
+    public static Cell of(int value) {
+        if (value < 0 || value >= values().length) {
+            throw new IllegalArgumentException();
+        }
+        return values()[value];
+    }
 
 }
