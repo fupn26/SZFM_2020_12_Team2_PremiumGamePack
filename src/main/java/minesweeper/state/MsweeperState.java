@@ -241,4 +241,22 @@ public class MsweeperState implements Cloneable {
         }
         return true;
     }
+
+    /**
+     * Converts the current state to a string.
+     *
+     * @return the result of the conversion
+     */
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                sb.append(minegrid[i][j]).append(',').append(aroundgrid[i][j]).append(',').append(flaggrid[i][j])
+                        .append(',').append(revealgrid[i][j]).append(' ');
+            }
+            sb.append('\n');
+        }
+        sb.append(this.isLost()).append(' ').append(this.isWon());
+        return sb.toString();
+    }
 }
