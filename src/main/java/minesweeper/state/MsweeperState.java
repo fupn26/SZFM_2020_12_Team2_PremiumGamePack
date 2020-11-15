@@ -259,4 +259,27 @@ public class MsweeperState implements Cloneable {
         sb.append(this.isLost()).append(' ').append(this.isWon());
         return sb.toString();
     }
+
+    /**
+     * A function which determines what the player should see on each square of the grid.
+     *
+     * @return an array representing the content of each grid, as to be seen by the player
+     */
+    public int[][] displayGrid() {
+        int[][] tempgrid = new int[rownumber][colnumber];
+        for (int i = 0; i < rownumber; i++) {
+            for (int j = 0; j < colnumber; j++) {
+                if (flaggrid[i][j] == 1) {
+                    tempgrid[i][j] = 1;
+                } else if (revealgrid[i][j] == 0) {
+                    tempgrid[i][j] = 0;
+                } else if (minegrid[i][j] == 1) {
+                    tempgrid[i][j] = 2;
+                } else {
+                    tempgrid[i][j] = aroundgrid[i][j] + 3;
+                }
+            }
+        }
+        return tempgrid;
+    }
 }
