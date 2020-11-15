@@ -91,4 +91,31 @@ public class GameController {
     }
 
 
+    @FXML
+    public void initialize() {
+        cellImages = List.of(
+                new Image(getClass().getResource("/images/swegame/cell0.png").toExternalForm()),
+                new Image(getClass().getResource("/images/swegame/cell1.png").toExternalForm()),
+                new Image(getClass().getResource("/images/swegame/cell2.png").toExternalForm())
+        );
+        stepsLabel.textProperty().bind(steps.asString());
+        redLabel.setText("Red player starts");
+        blueLabel.setText("");
+        gameOver.addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                gameResultDao.persist(createGameResult());
+                try {
+                    updateTopFive();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                stopWatchTimeline.stop();
+                messageLabel.setText(winner + " is the WINNER!");
+                redLabel.setText("");
+                blueLabel.setText("");
+                }
+        });
+        resetGame();
+    }
+
 }
