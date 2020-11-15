@@ -146,4 +146,19 @@ public class GameController {
             }
     }
 
+    private void movePiece(Node source) throws IOException {
+        if (gameState.isApplicable(from, to)) {
+            gameState.op(from, to);
+            if (gameState.isGameEnded()) {
+                gameOver.setValue(true);
+            }
+        } else {
+            log.info("Not permitted movement!");
+        }
+        from = null;
+        to = null;
+        displayGameState();
+        setTurnIndicator();
+    }
+
 }
