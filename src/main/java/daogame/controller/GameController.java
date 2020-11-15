@@ -127,6 +127,7 @@ public class GameController {
             for (int j = 0; j < 4; j++) {
                 ToggleButton toggleButton = (ToggleButton) gameGrid.getChildren().get(i * 4 + j);
                 toggleButton.setSelected(false);
+                toggleButton.setDisable(false);
                 toggleButton.getStylesheets().clear();
                 toggleButton.getStylesheets().add(buttonSytles.get(gameState.getActualState()[i][j]));
                 if (gameState.getActualState()[i][j] == 0) {
@@ -213,7 +214,7 @@ public class GameController {
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.centerOnScreen();
+//        stage.centerOnScreen();
         stage.show();
 
     }
