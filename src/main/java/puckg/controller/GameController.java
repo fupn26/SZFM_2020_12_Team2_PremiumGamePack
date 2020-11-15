@@ -1,5 +1,7 @@
 package puckg.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -9,10 +11,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
+import org.apache.commons.lang3.time.DurationFormatUtils;
 import puckg.state.TableState;
 
 import javax.inject.Inject;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class GameController {
@@ -66,5 +71,14 @@ public class GameController {
 
     public void setPlayer2Name(String player2Name) {
         this.players[1] = player2Name;
+    }
+
+    private void createStopWatch () {
+        stopWatchTimeLine = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            long millisElapsed = startTime.until(Instant.now(), ChronoUnit.MILLIS);
+            stopWatchLabel.setText(DurationFormatUtils.formatDuration(millisElapsed, "HH:mm:ss"));
+        }), new KeyFrame(Duration.seconds(1)));
+        stopWatchTimeLine.setCycleCount(Animation.INDEFINITE);
+        stopWatchTimeLine.play();
     }
 }
