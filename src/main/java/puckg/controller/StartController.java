@@ -66,4 +66,14 @@ public class StartController {
             stage.show();
         }
     }
+
+    public void handleRules(ActionEvent actionEvent) {
+        if(!ruleArea.visibleProperty().getValue()) {
+            ruleArea.setVisible(true);
+            rulesButton.setText("Hide rules");
+        } else {
+            ruleArea.setVisible(false);
+            rulesButton.setText("Show rules");
+        }
+    }
 }
