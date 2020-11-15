@@ -32,4 +32,12 @@ public enum Cell {
         return values()[value];
     }
 
+    /**
+     * Returns the integer value that represents this instance.
+     *
+     * @return the integer value that represents this instance
+     */
+    public int getValue() {
+        return ordinal();
+    }
 }
