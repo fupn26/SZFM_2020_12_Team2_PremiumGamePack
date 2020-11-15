@@ -134,7 +134,18 @@ public class GameController {
     }
 
     public void handleClickOnPiece(MouseEvent mouseEvent) throws IOException {
-        //TODO
+        ToggleButton source = (ToggleButton) mouseEvent.getSource();
+        Position position = Position.builder()
+                .column(GridPane.getColumnIndex(source))
+                .row(GridPane.getRowIndex(source))
+                .build();
+        if (from == null) {
+            from = position;
+            enableEmptySpaces();
+        } else {
+            to = position;
+            movePiece((Node) mouseEvent.getSource());
+        }
     }
 
     private void enableEmptySpaces() {
