@@ -198,4 +198,18 @@ public class MsweeperState implements Cloneable {
             }
         } else throw new IllegalArgumentException();
     }
+
+    /**
+     * Checks whether the puzzle is lost.
+     *
+     * @return {@code true} if the puzzle is lost, {@code false} otherwise
+     */
+    public boolean isLost() {
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                if (minegrid[i][j] == 1 && revealgrid[i][j] == 1) return true;
+            }
+        }
+        return false;
+    }
 }
