@@ -86,4 +86,10 @@ public class GameController {
         this.points[0] = tableState.pointsOfPlayer(1);
         this.points[1] = tableState.pointsOfPlayer(2);
     }
+
+    private int oppositePlayer (int player) {
+        if(player == 1) {
+            return 2;
+        } else return 1;
+    }
 }
