@@ -164,7 +164,7 @@ Egy négyzetrácson bal- vagy jobbkattintással léphet interakcióba Tomi a mez
 Minden felfedett mezőn látszik, hogy mennyi akna van az azzal szomszédos, vagy közvetlenül átlós mezőkön, és Tomi ez alapján kitalálja, melyik mezők tartalmaznak aknát.
 Ha az adott mező felfedésekor nincs körülötte egyetlen akna sem, a mellette lévő mezők automatikusan felfedésre kerülnek, 8 triviális kattintást megelőzve.
 Tomi bal klikkel kattint egy zászlóra a mellette lévő rejtett mező helyett, viszont véletlen félrekattintást megelőzve a zászlós mezőket nem lehet felfedni, hiszen azért jelölte be őket, mert azt sejti, akna van rajtuk, melyekre kattintva azonnal veszítene.
-Mikor a pálya minden olyan zónája, melyen nincs bomba, felfedésre kerül, Tomi megnyerte a játékot, és idője az adatbázisba kerül, ami mindössze 30 másodperc volt.
+Mikor a pálya minden olyan zónája, melyen nincs bomba, felfedésre kerül, Tomi megnyerte a játékot, és ideje az adatbázisba kerül, ami mindössze 30 másodperc volt.
 Ezután Tomi kilép a játékból, és átadja a rákövetkező játékosnak.
 A bajnokság végén, mikor mindenki játszott, Tomi lett az első helyezett, mert 1 próbálkozással, 30 másodperc alatt fejtette meg a játékot.
 
