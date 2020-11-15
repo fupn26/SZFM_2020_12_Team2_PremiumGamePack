@@ -2,6 +2,8 @@ package daogame.controller;
 
 import daogame.state.GameState;
 import daogame.state.Position;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
@@ -13,9 +15,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import javax.inject.Inject;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,6 +102,14 @@ public class GameController {
             redTurnIndicator.setDisable(false);
             blueTurnIndicator.setDisable(true);
         }
+    }
+
+    private void createStopWatch() {
+        stopWatch = new Timeline(new KeyFrame(javafx.util.Duration.ZERO, e -> {
+            timeLabel.setText(DurationFormatUtils.formatDuration(Duration.ofSeconds(elapsedTime++).toMillis(), "HH:mm:ss"));
+        }), new KeyFrame(javafx.util.Duration.seconds(1)));
+        stopWatch.setCycleCount(Animation.INDEFINITE);
+        stopWatch.play();
     }
 
 }
