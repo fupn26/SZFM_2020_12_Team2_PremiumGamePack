@@ -83,7 +83,12 @@ public class GameController {
     @FXML
     private Button giveUpButton;
 
-   
+    private BooleanProperty gameOver = new SimpleBooleanProperty();
+
+    public void setPlayerNames(String redPlayerName, String bluePlayerName) {
+        this.redPlayerName = redPlayerName;
+        this.bluePlayerName = bluePlayerName;
+    }
 
 
 }
