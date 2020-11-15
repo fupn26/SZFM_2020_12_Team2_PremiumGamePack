@@ -31,5 +31,11 @@
                 <Font size="20.0" />
             </font>
         </Button>
+        <Button fx:id="rulesButton" layoutX="249.0" layoutY="357.0" mnemonicParsing="false" onAction="#handleRules" text="Show rules">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="ruleArea" layoutX="11.0" layoutY="6.0" prefHeight="346.0" prefWidth="580.0" text="Given a 6x6 central table. Each of the two players have 2 pucks at the beginning&#10;of the central. There are 2 types of cell in the central:&#10;&#10; - Empty cell: where players can put their pucks.&#10; - Black cell: no player is able to place pucks there like the table had a &quot;hole&quot; onthat cell. The table&#10;has exactly one black cell.&#10;&#10;Players make actions alternately. Each player can make one action of these per round:&#10;&#10; - Place a new puck next to an existing one, choosing one of its 8 adjacent cells.&#10; - Move and existing puck with 2 cells if the desired cell to be put in is empty. Moving is available vertically, horizontally and diagonally, and by moving it is allowed to &quot;jump over&quot; existing pucks.&#10;&#10;After each action made, all pucks of the other player in the 8 adjacent cells to the newly placed or replaced turns into the color of the player who made actions.&#10;&#10;The central ends if the next player cannot make actions. The winner is the player with more pucks on the table. In the end the number of empty cells are added to the points of the player who made the last action." wrapText="true" />
     </children>
 </Pane>
