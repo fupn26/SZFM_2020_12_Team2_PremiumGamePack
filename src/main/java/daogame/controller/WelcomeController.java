@@ -48,8 +48,7 @@ public class WelcomeController {
                 player2Name);
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.centerOnScreen();
-        stage.setResizable(false);
+//        stage.centerOnScreen();
         stage.show();
     }
 }
