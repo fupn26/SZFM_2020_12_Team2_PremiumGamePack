@@ -173,4 +173,24 @@ public class GameController {
 
 
     }
+
+
+
+    public void handleGiveUpButton(ActionEvent actionEvent) throws IOException {
+        String buttonText = ((Button) actionEvent.getSource()).getText();
+        if (buttonText.equals("Give Up")) {
+            winner = gameState.getPlayer() == 2 ? redPlayerName : bluePlayerName;
+            giveUpButton.setText("Finish");
+            gameOver.setValue(true);
+        }
+        else {
+
+            fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/highscores.fxml"));
+            Parent root = fxmlLoader.load();
+            fxmlLoader.<HighScoreController>getController().setPlayerNames(redPlayerName,bluePlayerName);
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }
+    }
 }
