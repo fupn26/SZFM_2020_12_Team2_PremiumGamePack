@@ -48,6 +48,21 @@ public class MsweeperState implements Cloneable {
      */
     private int colnumber;
 
+    private void initGrid() {
+        minegrid = new int[rownumber][colnumber];
+        flaggrid = new int[rownumber][colnumber];
+        revealgrid = new int[rownumber][colnumber];
+        aroundgrid = new int[rownumber][colnumber];
+
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                minegrid[i][j] = 0;
+                flaggrid[i][j] = 0;
+                revealgrid[i][j] = 0;
+                aroundgrid[i][j] = 0;
+            }
+        }
+    }
 
     /**
      * Places a number of mines in the grid, randomly.
