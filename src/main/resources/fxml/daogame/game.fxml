@@ -219,7 +219,7 @@
                 </Label>
                 <Label fx:id="timeLabel" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;" text="00:00:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                     <font>
-                        <Font size="50.0" />
+                        <Font size="40.0" />
                     </font>
                     <padding>
                         <Insets left="5.0" right="5.0" />
