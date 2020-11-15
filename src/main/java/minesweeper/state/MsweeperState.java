@@ -212,4 +212,19 @@ public class MsweeperState implements Cloneable {
         }
         return false;
     }
+
+
+    /**
+     * Checks whether the puzzle is won.
+     *
+     * @return {@code true} if the puzzle is won, {@code false} otherwise
+     */
+    public boolean isWon() {
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                if (minegrid[i][j] == 0 && revealgrid[i][j] == 0) return false;
+            }
+        }
+        return true;
+    }
 }
