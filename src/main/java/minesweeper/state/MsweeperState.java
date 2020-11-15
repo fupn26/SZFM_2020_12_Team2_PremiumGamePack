@@ -125,4 +125,16 @@ public class MsweeperState implements Cloneable {
         }
         return false;
     }
+
+    private boolean isValidMinefield(int[][] minefield) {
+        int firstrowlength = minefield[0].length;
+        if (firstrowlength == 0) return false;
+        for (int[] row : minefield) {
+            if (row.length != firstrowlength) return false;
+            for (int field : row) {
+                if (field != 1 && field != 0) return false;
+            }
+        }
+        return true;
+    }
 }
