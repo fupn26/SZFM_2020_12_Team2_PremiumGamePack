@@ -48,6 +48,24 @@ public class MsweeperState implements Cloneable {
      */
     private int colnumber;
 
+    /**
+     * Creates a {@code MsweeperState} object with mines randomly placed in it.
+     *
+     * @param rows    the number of rows in the grid
+     * @param columns the number of columns in the grid
+     * @param mines   the number of mines to be randomly placed in the grid
+     * @throws IllegalArgumentException if there are more mines than squares, or if the number of rows or columns are not positive
+     */
+    public MsweeperState(int rows, int columns, int mines) {
+        if (rows * columns >= mines && rows > 0 && columns > 0) {
+            rownumber = rows;
+            colnumber = columns;
+            initGrid();
+            placeMines(mines);
+            calculateMinesAround();
+        } else throw new IllegalArgumentException();
+    }
+
     private void initGrid() {
         minegrid = new int[rownumber][colnumber];
         flaggrid = new int[rownumber][colnumber];
