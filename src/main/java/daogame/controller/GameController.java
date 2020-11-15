@@ -13,11 +13,14 @@ import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
@@ -29,8 +32,6 @@ import java.util.List;
 
 @Slf4j
 public class GameController {
-    @Inject
-    private FXMLLoader fxmlLoader;
 
     @FXML
     private Label player1Label;
@@ -201,5 +202,19 @@ public class GameController {
     private void pauseGame() {
         stopWatch.pause();
         gameGrid.setDisable(true);
+    }
+
+    public void onGiveUpButtonClicked(MouseEvent mouseEvent) throws IOException {
+        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
+        gameState.playerGaveUp();
+        gameOver.setValue(true);
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.centerOnScreen();
+        stage.show();
+
     }
 }
