@@ -143,4 +143,9 @@ public class GameController {
         }
         displayGameState();
     }
+
+    public void handleResetButton(ActionEvent actionEvent)  {
+        stopwatchTimeline.stop();
+        resetGame();
+    }
 }
