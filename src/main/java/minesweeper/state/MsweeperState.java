@@ -65,4 +65,31 @@ public class MsweeperState implements Cloneable {
             minegrid[x][y] = 1;
         }
     }
+
+    /**
+     * Calculates the number of mines around each square in the grid, and sets the values of {@code aroundgrid} to it.
+     */
+    private void calculateMinesAround() {
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                if (minegrid[i][j] == 1) {
+                    if (isExistingSquare(i - 1, j - 1)) aroundgrid[i - 1][j - 1]++;
+                    if (isExistingSquare(i - 1, j)) aroundgrid[i - 1][j]++;
+                    if (isExistingSquare(i - 1, j + 1)) aroundgrid[i - 1][j + 1]++;
+                    if (isExistingSquare(i + 1, j - 1)) aroundgrid[i + 1][j - 1]++;
+                    if (isExistingSquare(i + 1, j)) aroundgrid[i + 1][j]++;
+                    if (isExistingSquare(i + 1, j + 1)) aroundgrid[i + 1][j + 1]++;
+                    if (isExistingSquare(i, j - 1)) aroundgrid[i][j - 1]++;
+                    if (isExistingSquare(i, j + 1)) aroundgrid[i][j + 1]++;
+                }
+            }
+        }
+    }
+
+    private boolean isExistingSquare(int x, int y) {
+        if (x >= 0 && y >= 0 && x < rownumber && y < colnumber) {
+            return true;
+        }
+        return false;
+    }
 }
