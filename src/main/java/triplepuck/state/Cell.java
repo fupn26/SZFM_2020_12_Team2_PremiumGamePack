@@ -40,4 +40,12 @@ public enum Cell {
     public int getValue() {
         return ordinal();
     }
+
+    /**
+     * Returns the string representation of the cell.
+     */
+    public String toString() {
+        return Integer.toString(ordinal());
+    }
+
 }
