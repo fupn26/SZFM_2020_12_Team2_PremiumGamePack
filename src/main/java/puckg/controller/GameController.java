@@ -81,4 +81,9 @@ public class GameController {
         stopWatchTimeLine.setCycleCount(Animation.INDEFINITE);
         stopWatchTimeLine.play();
     }
+
+    private void calculatePoints () {
+        this.points[0] = tableState.pointsOfPlayer(1);
+        this.points[1] = tableState.pointsOfPlayer(2);
+    }
 }
