@@ -148,4 +148,27 @@ public class SweGameState implements Cloneable {
     }
 
 
+    /**
+     * Moves the disk at the specified position to an other specified position.
+     *
+     * @param fromRow the row of the disk to be moved
+     * @param fromCol the column of the disk to be moved
+     * @param toRow the row we move the disk to
+     * @param toCol the column we move the disk to
+     * @throws IllegalArgumentException if the disk at the specified position
+     * can not be moved to the other specified position
+     */
+    public void move(int fromRow, int fromCol, int toRow, int toCol){
+        if (canMoveTo(fromRow,fromCol,toRow,toCol)){
+            log.info("disk at ({},{}) is moved to ({},{})", fromRow, fromCol, toRow, toCol);
+            board[toRow][toCol] = Cell.of(board[fromRow][fromCol].getValue());
+            board[fromRow][fromCol] = Cell.of(0);
+            player = 3 - player;
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
+
+    }
+
 }
