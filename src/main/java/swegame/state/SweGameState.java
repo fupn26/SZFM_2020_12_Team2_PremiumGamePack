@@ -126,4 +126,26 @@ public class SweGameState implements Cloneable {
     }
 
 
+    /**
+     * Returns whether a disk at the specified position can be moved to an other specified position.
+     *
+     * @param fromRow the row of the disk to be moved
+     * @param fromCol the column of the disk to be moved
+     * @param toRow the row we move the disk to
+     * @param toCol the column we move the disk to
+     * @return {@code true} if the disk at the specified position can be moved
+     * to an other specified position, {@code false} otherwise
+     */
+
+    public boolean canMoveTo(int fromRow, int fromCol, int toRow, int toCol){
+        if (fromRow<0 || fromRow>4 || toRow<0 || toRow>4 || fromCol<0 || fromCol>3 || toCol<0 || toCol>3){
+            return false;
+        }
+        if (board[fromRow][fromCol].getValue()==player && board[toRow][toCol].getValue()==0){
+            return (Math.abs(fromRow - toRow) == 1 && Math.abs(fromCol - toCol) == 0) || (Math.abs(fromRow - toRow) == 0 && Math.abs(fromCol - toCol) == 1);
+        }
+        return false;
+    }
+
+
 }
