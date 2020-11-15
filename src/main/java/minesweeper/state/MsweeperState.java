@@ -66,6 +66,25 @@ public class MsweeperState implements Cloneable {
         } else throw new IllegalArgumentException();
     }
 
+    /**
+     * Creates a {@code MsweeperState} object from a predefined grid.
+     *
+     * @param incomingminegrid the predefined grid to create the object from
+     * @throws IllegalArgumentException if the predefined grid isn't a valid minefield
+     */
+    public MsweeperState(int[][] incomingminegrid) {
+        if (!isValidMinefield(incomingminegrid)) throw new IllegalArgumentException();
+        rownumber = incomingminegrid.length;
+        colnumber = incomingminegrid[0].length;
+        initGrid();
+        for (int i = 0; i < rownumber; ++i) {
+            for (int j = 0; j < colnumber; ++j) {
+                minegrid[i][j] = incomingminegrid[i][j];
+            }
+        }
+        calculateMinesAround();
+    }
+
     private void initGrid() {
         minegrid = new int[rownumber][colnumber];
         flaggrid = new int[rownumber][colnumber];
