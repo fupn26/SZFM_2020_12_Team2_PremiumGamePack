@@ -47,4 +47,22 @@ public class MsweeperState implements Cloneable {
      * The number of columns in the grid.
      */
     private int colnumber;
+
+
+    /**
+     * Places a number of mines in the grid, randomly.
+     *
+     * @param numberofminestoplace the number of mines to place in the grid
+     */
+    private void placeMines(int numberofminestoplace) {
+        for (int i = 0; i < numberofminestoplace; ++i) {
+            int x = random.nextInt(rownumber);
+            int y = random.nextInt(colnumber);
+            while (minegrid[x][y] == 1) {
+                x = random.nextInt(rownumber);
+                y = random.nextInt(colnumber);
+            }
+            minegrid[x][y] = 1;
+        }
+    }
 }
