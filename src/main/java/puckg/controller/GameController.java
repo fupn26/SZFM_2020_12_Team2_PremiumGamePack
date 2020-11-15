@@ -94,6 +94,22 @@ public class GameController {
                 new Image(getClass().getResource("/images/puckg/cell4.png").toExternalForm()),
                 new Image(getClass().getResource("/images/puckg/cell5.png").toExternalForm())
         );
+        gameOver.addListener((observable, oldValue, newValue) -> {
+            if(newValue) {
+                calculatePoints();
+                points[oppositePlayer(player) - 1] += tableState.numberOfEmptyCells();
+                stopWatchTimeLine.stop();
+                player1Label.setVisible(false);
+                player2Label.setVisible(false);
+                player1PointsLabel.setVisible(false);
+                player2PointsLabel.setVisible(false);
+                infoLabel.setText("The winner is\n" + players[winner(playerGaveUp)] + "!");
+                if(winner(playerGaveUp) == 0) {
+                    infoLabel.setStyle("-fx-text-fill: red");
+                } else infoLabel.setStyle("-fx-text-fill: blue");
+                infoLabel.setPrefWidth(500);
+            }
+        });
         resetGame();
     }
 
