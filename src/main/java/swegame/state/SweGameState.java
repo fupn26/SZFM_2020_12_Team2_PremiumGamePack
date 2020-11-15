@@ -91,6 +91,39 @@ public class SweGameState implements Cloneable {
     }
 
 
+    /**
+     * Checks whether the game is over.
+     *
+     * @return {@code true} if a goal state is reached, {@code false} otherwise
+     */
+    public boolean isGoal() {
+        for (int i = 0; i < 5; ++i) {
+            for (int j = 0; j < 4; ++j) {
+                if (board[i][j].getValue()>0){
+
+                if ((i==0 && j==0) || (i==0 && j==3) || (i==4 && j==0) || (i==4 && j==3)) {
+                    continue;
+                }
+                if (i == 0 || i == 4){
+                    if ((board[i][j] == board[i][j+1]) && (board[i][j] == board[i][j-1])){
+                        return true;
+                    }
+                }
+                else if (j == 0 || j == 3){
+                    if ((board[i][j] == board[i+1][j]) && (board[i][j] == board[i-1][j])){
+                        return true;
+                    }
+                }
+                else if (((board[i][j] == board[i+1][j]) && (board[i][j] == board[i-1][j])) ||
+                        ((board[i][j] == board[i][j+1]) && (board[i][j] == board[i][j-1])) ||
+                        ((board[i][j] == board[i-1][j+1]) && (board[i][j] == board[i+1][j-1])) ||
+                        ((board[i][j] == board[i-1][j-1]) && (board[i][j] == board[i+1][j+1])))
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
 
 }
