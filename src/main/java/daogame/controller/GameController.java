@@ -188,4 +188,9 @@ public class GameController {
         gameGrid.setDisable(false);
     }
 
+    private void pauseGame() {
+        stopWatch.pause();
+        gameGrid.setDisable(true);
+    }
+
 }
