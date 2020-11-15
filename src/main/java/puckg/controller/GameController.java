@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -149,6 +150,43 @@ public class GameController {
             player1Label.setStyle("-fx-background-color: darksalmon;");
         } else {
             player2Label.setStyle("-fx-background-color: dodgerblue;");
+        }
+    }
+
+    public void handleClickOnCell (MouseEvent mouseEvent) {
+        int row = GridPane.getRowIndex((Node) mouseEvent.getSource());
+        int col = GridPane.getColumnIndex((Node) mouseEvent.getSource());
+        if(prevRow < 0 && prevCol < 0) {
+            if(!tableState.isFinished(player) && tableState.isEmptyCell(row, col)) {
+                tableState.newPuck(player, row, col);
+                player = oppositePlayer(player);
+                if (tableState.isFinished(player)) {
+                    gameOver.setValue(true);
+                    giveUpButton.setText("Finish");
+                }
+            }
+            if(!tableState.isFinished(player) && tableState.isPuckOfPlayer(player, row, col)) {
+                ImageView view = (ImageView) gameGrid.getChildren().get(row * 6 + col);
+                view.setImage(cellImagesOnMove.get(player - 1));
+                prevRow = row;
+                prevCol = col;
+            }
+        } else {
+            if(!tableState.isFinished(player) && tableState.isMovableTo(player, prevRow, prevCol, row, col)) {
+                tableState.movePuck(player, prevRow, prevCol, row, col);
+                prevRow = -1;
+                prevCol = -1;
+                player = oppositePlayer(player);
+                if (tableState.isFinished(player)) {
+                    gameOver.setValue(true);
+                    giveUpButton.setText("Finish");
+                }
+            }
+            prevRow = -1;
+            prevCol = -1;
+        }
+        if(prevCol < 0 && prevRow < 0) {
+            displayGameState();
         }
     }
 
