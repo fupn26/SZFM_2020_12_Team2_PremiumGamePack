@@ -183,4 +183,9 @@ public class GameController {
         //TODO
     }
 
+    private void continueGame() {
+        stopWatch.play();
+        gameGrid.setDisable(false);
+    }
+
 }
