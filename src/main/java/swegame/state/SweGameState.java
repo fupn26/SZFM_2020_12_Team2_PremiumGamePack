@@ -186,4 +186,17 @@ public class SweGameState implements Cloneable {
         return sb.toString();
     }
 
+    public static void main(String[] args) {
+        SweGameState state = new SweGameState();
+        System.out.println(state);
+        if (state.isGoal()){
+            System.out.println("Player won!");
+        }
+        if (state.canMoveTo(0,0,3,1)){
+            System.out.println("true");
+        }
+        state.move(0,0,1,0);
+        System.out.println(state);
+    }
+
 }
