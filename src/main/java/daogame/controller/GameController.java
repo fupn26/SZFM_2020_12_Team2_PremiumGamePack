@@ -178,4 +178,9 @@ public class GameController {
         stopWatch.stop();
         startGame();
     }
+
+    public void onPauseButtonClicked(MouseEvent mouseEvent) {
+        //TODO
+    }
+
 }
