@@ -87,6 +87,19 @@ public class GameController {
         this.points[1] = tableState.pointsOfPlayer(2);
     }
 
+    private int winner (int playerGaveUp) {
+        if(playerGaveUp > 0) {
+            return oppositePlayer(playerGaveUp) - 1;
+        }
+        if(points[0] > points[1]) {
+            return 0;
+        }
+        if (points[1] > points[0]) {
+            return 1;
+        }
+        return oppositePlayer(player) - 1;
+    }
+
     private int oppositePlayer (int player) {
         if(player == 1) {
             return 2;
