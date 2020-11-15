@@ -88,4 +88,15 @@ public class GameController {
         });
         resetGame();
     }
+
+    private void resetGame(){
+        gameState = new MsweeperState(5,10,10);
+        startTime = Instant.now();
+        gameOver.setValue(false);
+        displayGameState();
+        createStopWatch();
+        Platform.runLater(() -> messageLabel.setText("Good luck, " + playerName + "!"));
+        giveUpButton.setDisable(false);
+        resetButton.setText("Reset");
+    }
 }
