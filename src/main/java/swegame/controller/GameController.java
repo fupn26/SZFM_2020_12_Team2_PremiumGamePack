@@ -128,4 +128,14 @@ public class GameController {
         displayGameState();
         messageLabel.setText("");
     }
+
+    private void displayGameState() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                ImageView view = (ImageView) gameGrid.getChildren().get(i * 4 + j);
+                view.setImage(cellImages.get(gameState.getBoard()[i][j].getValue()));
+            }
+        }
+    }
+
 }
