@@ -89,4 +89,15 @@ public class GameController {
         return;
     }
 
+    private void setTurnIndicator() {
+        int turn = gameState.getTurnID();
+        if (turn == 1){
+            redTurnIndicator.setDisable(true);
+            blueTurnIndicator.setDisable(false);
+        } else {
+            redTurnIndicator.setDisable(false);
+            blueTurnIndicator.setDisable(true);
+        }
+    }
+
 }
