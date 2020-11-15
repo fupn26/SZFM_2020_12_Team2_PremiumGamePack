@@ -58,4 +58,32 @@ public class GameController {
     private String winner;
 
 
+
+    @FXML
+    private Label messageLabel;
+
+    @FXML
+    private Label redLabel;
+
+    @FXML
+    private Label blueLabel;
+
+    @FXML
+    private GridPane gameGrid;
+
+    @FXML
+    private Label stepsLabel;
+
+    @FXML
+    private Label stopWatchLabel;
+
+    private Timeline stopWatchTimeline;
+
+
+    @FXML
+    private Button giveUpButton;
+
+   
+
+
 }
