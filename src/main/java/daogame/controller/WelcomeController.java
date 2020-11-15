@@ -24,9 +24,6 @@ import java.util.List;
 @Slf4j
 public class WelcomeController {
 
-    @Inject
-    private FXMLLoader fxmlLoader;
-
     @FXML
     private Label warningLabel;
 
@@ -44,8 +41,11 @@ public class WelcomeController {
             warningLabel.setVisible(true);
             return;
         }
+        FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
+        fxmlLoader.<daogame.controller.GameController>getController().setPlayerNames(player1Name,
+                player2Name);
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.centerOnScreen();
