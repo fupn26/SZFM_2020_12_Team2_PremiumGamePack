@@ -13,6 +13,7 @@ import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
@@ -172,4 +173,9 @@ public class GameController {
         setTurnIndicator();
     }
 
+    public void onRestartButtonClicked(MouseEvent mouseEvent) {
+        log.debug("{} is pressed", ((Button) mouseEvent.getSource()).getText());
+        stopWatch.stop();
+        startGame();
+    }
 }
