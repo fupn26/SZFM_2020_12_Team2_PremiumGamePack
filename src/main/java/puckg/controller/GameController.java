@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
@@ -71,6 +72,27 @@ public class GameController {
 
     public void setPlayer2Name(String player2Name) {
         this.players[1] = player2Name;
+    }
+
+    private void displayGameState() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                ImageView view = (ImageView) gameGrid.getChildren().get(i * 6 + j);
+                view.setImage(cellImages.get(tableState.getTable()[i][j].getValue()));
+            }
+        }
+        calculatePoints();
+        player1PointsLabel.setText(Integer.toString(points[0]));
+        player2PointsLabel.setText(Integer.toString(points[1]));
+        player1Label.setStyle("-fx-background-color: transparent;");
+        player2Label.setStyle("-fx-background-color: transparent;");
+        player1Label.setText(players[0]);
+        player2Label.setText(players[1]);
+        if(player == 1) {
+            player1Label.setStyle("-fx-background-color: darksalmon;");
+        } else {
+            player2Label.setStyle("-fx-background-color: dodgerblue;");
+        }
     }
 
     private void createStopWatch () {
