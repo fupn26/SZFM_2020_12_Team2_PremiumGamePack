@@ -34,4 +34,32 @@ import java.util.List;
 
 @Slf4j
 public class GameController {
+
+
+    @Inject
+    private FXMLLoader fxmlLoader;
+
+    private String playerName;
+    private MsweeperState gameState;
+    private Instant startTime;
+    private List<Image> imageList;
+
+    @FXML
+    private Label messageLabel;
+
+    @FXML
+    private GridPane gameGrid;
+
+    @FXML
+    private Label stopwatchLabel;
+
+    private Timeline stopwatchTimeline;
+
+    @FXML
+    private Button resetButton;
+
+    @FXML
+    private Button giveUpButton;
+
+    private BooleanProperty gameOver = new SimpleBooleanProperty();
 }
