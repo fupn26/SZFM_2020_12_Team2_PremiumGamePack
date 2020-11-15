@@ -148,4 +148,13 @@ public class GameController {
         stopwatchTimeline.stop();
         resetGame();
     }
+
+    private void createStopWatch() {
+        stopwatchTimeline = new Timeline(new KeyFrame(javafx.util.Duration.ZERO, e -> {
+            long millisElapsed = startTime.until(Instant.now(), ChronoUnit.MILLIS);
+            stopwatchLabel.setText(DurationFormatUtils.formatDuration(millisElapsed, "HH:mm:ss"));
+        }), new KeyFrame(javafx.util.Duration.seconds(1)));
+        stopwatchTimeline.setCycleCount(Animation.INDEFINITE);
+        stopwatchTimeline.play();
+    }
 }
