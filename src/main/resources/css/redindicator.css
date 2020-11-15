@@ -1,0 +1,8 @@
+.label {
+    -fx-background-radius: 20 0 0 20;
+    -fx-background-color: red;
+}
+
+.label:disabled {
+    -fx-background-color: white;
+}
