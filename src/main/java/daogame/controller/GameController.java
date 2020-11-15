@@ -137,5 +137,13 @@ public class GameController {
         //TODO
     }
 
+    private void enableEmptySpaces() {
+        for (int i = 0; i < 4; ++i)
+            for (int j = 0; j < 4; ++j) {
+                if (gameState.getActualState()[i][j] == 0) {
+                    gameGrid.getChildren().get(i * 4 + j).setDisable(false);
+                }
+            }
+    }
 
 }
