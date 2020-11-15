@@ -156,4 +156,20 @@ public class MsweeperState implements Cloneable {
         }
         return true;
     }
+
+    /**
+     * Places or removes a flag from the targeted square, depending on if there was one there to begin with.
+     *
+     * @param x the x coordinate of the square
+     * @param y the y coordinate of the square
+     * @throws IllegalArgumentException if the targeted square does not exist
+     */
+    public void putFlag(int x, int y) {
+        if (isExistingSquare(x, y)) {
+            if (revealgrid[x][y] == 0) {
+                flaggrid[x][y] = (flaggrid[x][y] + 1) % 2;
+                log.info("Flag placed/removed at square ({}, {})", x, y);;
+            }
+        } else throw new IllegalArgumentException();
+    }
 }
