@@ -21,4 +21,17 @@ import java.util.List;
 
 @Slf4j
 public class LaunchController {
+
+    @Inject
+    private FXMLLoader fxmlLoader;
+
+    @FXML
+    private TextField playerNameTextField;
+
+    @FXML
+    private Label errorLabel;
+
+    @FXML
+    public void initialize() {
+    }
 }
