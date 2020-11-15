@@ -64,4 +64,28 @@ public class GameController {
     private BooleanProperty gameOver = new SimpleBooleanProperty();
 
     public void setPlayerName(String playerName) {this.playerName = playerName;}
+
+    @FXML
+    public void initialize() {
+        imageList = List.of(
+                new Image(getClass().getResource("/images/minesweeper/hidden.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/flagged.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/bomb.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed0.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed1.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed2.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed3.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed4.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed5.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed6.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed7.png").toExternalForm()),
+                new Image(getClass().getResource("/images/minesweeper/revealed8.png").toExternalForm())
+        );
+        gameOver.addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                stopwatchTimeline.stop();
+            }
+        });
+        resetGame();
+    }
 }
