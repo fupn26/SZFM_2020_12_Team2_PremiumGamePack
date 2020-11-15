@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -92,6 +93,11 @@ public class GameController {
         giveUpButton.setText("Give Up");
         player = 1;
         displayGameState();
+    }
+
+    public void handleReset (ActionEvent actionEvent) {
+        stopWatchTimeLine.stop();
+        resetGame();
     }
 
     private void displayGameState() {
