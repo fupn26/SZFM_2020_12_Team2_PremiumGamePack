@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="daogame.controller.GameController">
     <center>
@@ -36,7 +28,7 @@
             <effect>
                 <DropShadow blurType="GAUSSIAN">
                     <color>
-                        <Color blue="0.7847709655761719" green="0.7847709655761719" red="0.7921052575111389" />
+                        <Color red="0.7921052575111389" green="0.7847709655761719" blue="0.7847709655761719" />
                     </color>
                 </DropShadow>
             </effect>
@@ -48,7 +40,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -57,7 +49,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -66,7 +58,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -75,7 +67,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -84,7 +76,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -93,7 +85,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -102,7 +94,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -111,7 +103,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -120,7 +112,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -129,7 +121,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -138,7 +130,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -147,7 +139,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -156,7 +148,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -165,7 +157,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -174,7 +166,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -183,7 +175,7 @@
                     <effect>
                         <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -196,7 +188,6 @@
             <children>
                 <Button fx:id="restartButton" mnemonicParsing="false" onMouseClicked="#onRestartButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: greenyellow;" text="Restart" />
                 <Button fx:id="pauseButton" mnemonicParsing="false" onMouseClicked="#onPauseButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: lightblue;" text="Pause" />
-                <Button fx:id="pauseButton1" layoutX="275.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#onSaveButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: lightblue;" text="Save" />
                 <Button fx:id="giveupButton" mnemonicParsing="false" onMouseClicked="#onGiveUpButtonClicked" scaleX="1.5" scaleY="1.5" style="-fx-base: tomato;" text="Give Up" />
             </children>
         </HBox>
@@ -236,7 +227,7 @@
                     <effect>
                         <DropShadow height="10.0" radius="4.5" width="10.0">
                             <color>
-                                <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                                <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -260,7 +251,7 @@
             <effect>
                 <InnerShadow>
                     <color>
-                        <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                        <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                     </color>
                 </InnerShadow>
             </effect>
@@ -274,7 +265,7 @@
             <effect>
                 <InnerShadow>
                     <color>
-                        <Color blue="0.6352941393852234" green="0.6352941393852234" red="0.6352941393852234" />
+                        <Color red="0.6352941393852234" green="0.6352941393852234" blue="0.6352941393852234" />
                     </color>
                 </InnerShadow>
             </effect>
