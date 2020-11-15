@@ -13,6 +13,7 @@ import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
@@ -110,6 +111,19 @@ public class GameController {
         }), new KeyFrame(javafx.util.Duration.seconds(1)));
         stopWatch.setCycleCount(Animation.INDEFINITE);
         stopWatch.play();
+    }
+
+    private void displayGameState() {
+        for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 4; j++) {
+                ToggleButton toggleButton = (ToggleButton) gameGrid.getChildren().get(i * 4 + j);
+                toggleButton.setSelected(false);
+                toggleButton.getStylesheets().clear();
+                toggleButton.getStylesheets().add(buttonSytles.get(gameState.getActualState()[i][j]));
+                if (gameState.getActualState()[i][j] == 0) {
+                    toggleButton.setDisable(true);
+                }
+            }
     }
 
 }
