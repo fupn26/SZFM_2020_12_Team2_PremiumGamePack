@@ -91,7 +91,12 @@ public class GameController {
     }
 
     private void startGame() {
-        return;
+        gameState = new GameState();
+        elapsedTime = 0;
+        gameOver.setValue(false);
+        displayGameState();
+        setTurnIndicator();
+        createStopWatch();
     }
 
     private void setTurnIndicator() {
