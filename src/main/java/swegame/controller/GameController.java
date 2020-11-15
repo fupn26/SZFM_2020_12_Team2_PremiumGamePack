@@ -118,4 +118,14 @@ public class GameController {
         resetGame();
     }
 
+
+    private void resetGame() {
+        gameState = new SweGameState(SweGameState.INITIAL);
+        steps.set(0);
+        startTime = Instant.now();
+        gameOver.setValue(false);
+        createStopWatch();
+        displayGameState();
+        messageLabel.setText("");
+    }
 }
