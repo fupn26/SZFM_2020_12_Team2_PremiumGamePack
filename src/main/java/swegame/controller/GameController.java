@@ -138,4 +138,39 @@ public class GameController {
         }
     }
 
+    public  void handleClickOnDisk(MouseEvent mouseEvent){
+        if (isFirst){
+            fromRow = GridPane.getRowIndex((Node) mouseEvent.getSource());
+            fromCol = GridPane.getColumnIndex((Node) mouseEvent.getSource());
+            if(gameState.getBoard()[fromRow][fromCol].getValue() != 0)
+            isFirst=false;
+        }
+        else{
+            int toRow = GridPane.getRowIndex((Node) mouseEvent.getSource());
+            int toCol = GridPane.getColumnIndex((Node) mouseEvent.getSource());
+
+            if (! gameState.isGoal() && gameState.canMoveTo(fromRow,fromCol,toRow,toCol) && ! gameOver.getValue()) {
+                gameState.move(fromRow,fromCol,toRow,toCol);
+                steps.set(steps.get() + 1);
+                if (gameState.getPlayer()==1){
+                    redLabel.setText(redPlayerName + " is moving");
+                    blueLabel.setText("");
+                }
+                else{
+                    blueLabel.setText((bluePlayerName + " is moving"));
+                    redLabel.setText("");
+                }
+
+                if (gameState.isGoal()) {
+                    winner = gameState.getPlayer() == 2 ? redPlayerName : bluePlayerName;
+                    giveUpButton.setText("Finish");
+                    gameOver.setValue(true);
+                }
+            }
+            displayGameState();
+            isFirst=true;
+        }
+
+
+    }
 }
