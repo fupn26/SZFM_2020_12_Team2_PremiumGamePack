@@ -99,4 +99,13 @@ public class GameController {
         giveUpButton.setDisable(false);
         resetButton.setText("Reset");
     }
+
+    private void displayGameState(){
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 10; j++){
+                ImageView view = (ImageView) gameGrid.getChildren().get(i * 10+ j);
+                view.setImage(imageList.get(gameState.displayGrid()[i][j]));
+            }
+        }
+    }
 }
