@@ -9,16 +9,21 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import puckg.state.TableState;
 
 import javax.inject.Inject;
+import java.io.IOException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -98,6 +103,17 @@ public class GameController {
     public void handleReset (ActionEvent actionEvent) {
         stopWatchTimeLine.stop();
         resetGame();
+    }
+
+    public void handleGiveUp (ActionEvent actionEvent) throws IOException {
+        String buttonText = ((Button) actionEvent.getSource()).getText();
+        playerGaveUp = player;
+        gameOver.setValue(true);
+        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     private void displayGameState() {
