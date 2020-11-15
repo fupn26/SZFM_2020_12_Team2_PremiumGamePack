@@ -81,6 +81,21 @@ public class GameController {
         this.players[1] = player2Name;
     }
 
+    @FXML
+    public void initialize() {
+        cellImages = List.of(
+                new Image(getClass().getResource("/images/puckg/cell0.png").toExternalForm()),
+                new Image(getClass().getResource("/images/puckg/cell1.png").toExternalForm()),
+                new Image(getClass().getResource("/images/puckg/cell2.png").toExternalForm()),
+                new Image(getClass().getResource("/images/puckg/cell3.png").toExternalForm())
+        );
+        cellImagesOnMove = List.of(
+                new Image(getClass().getResource("/images/puckg/cell4.png").toExternalForm()),
+                new Image(getClass().getResource("/images/puckg/cell5.png").toExternalForm())
+        );
+        resetGame();
+    }
+
     private void resetGame () {
         tableState = new TableState();
         startTime = Instant.now();
