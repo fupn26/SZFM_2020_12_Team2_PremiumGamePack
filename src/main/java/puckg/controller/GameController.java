@@ -59,4 +59,12 @@ public class GameController {
     private Button giveUpButton;
 
     private BooleanProperty gameOver = new SimpleBooleanProperty();
+
+    public void setPlayer1Name(String player1Name) {
+        this.players[0] = player1Name;
+    }
+
+    public void setPlayer2Name(String player2Name) {
+        this.players[1] = player2Name;
+    }
 }
