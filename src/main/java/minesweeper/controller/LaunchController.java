@@ -34,4 +34,17 @@ public class LaunchController {
     @FXML
     public void initialize() {
     }
+
+    public void startAction(ActionEvent actionEvent) throws IOException {
+        if (playerNameTextField.getText().isEmpty()) {
+            errorLabel.setText("Enter your name!");
+        } else {
+            fxmlLoader.setLocation(getClass().getResource("/fxml/minesweeper/game.fxml"));
+            Parent root = fxmlLoader.load();
+            fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }
+    }
 }
