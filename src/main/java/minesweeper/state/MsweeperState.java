@@ -168,7 +168,7 @@ public class MsweeperState implements Cloneable {
         if (isExistingSquare(x, y)) {
             if (revealgrid[x][y] == 0) {
                 flaggrid[x][y] = (flaggrid[x][y] + 1) % 2;
-                log.info("Flag placed/removed at square ({}, {})", x, y);;
+                log.info("Flag placed/removed at square ({}, {})", x, y);
             }
         } else throw new IllegalArgumentException();
     }
