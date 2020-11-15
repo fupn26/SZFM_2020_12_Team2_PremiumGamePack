@@ -71,4 +71,18 @@
             </children>
         </GridPane>
     </center>
+    <right>
+        <VBox alignment="CENTER" prefHeight="372.0" prefWidth="140.0" spacing="40.0" style="-fx-font-size: 150%;" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Time">
+                    <font>
+                        <Font size="29.0" />
+                    </font></Label>
+                <Label fx:id="stopWatchLabel" text="00:00:00" />
+            </children>
+            <BorderPane.margin>
+                <Insets right="40.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
 </BorderPane>
