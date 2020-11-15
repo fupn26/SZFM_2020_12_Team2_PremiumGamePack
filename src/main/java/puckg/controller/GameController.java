@@ -3,6 +3,7 @@ package puckg.controller;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
@@ -72,6 +73,25 @@ public class GameController {
 
     public void setPlayer2Name(String player2Name) {
         this.players[1] = player2Name;
+    }
+
+    private void resetGame () {
+        tableState = new TableState();
+        startTime = Instant.now();
+        gameOver.setValue(false);
+        createStopWatch();
+        Platform.runLater(() -> infoLabel.setText("VS"));
+        infoLabel.setPrefWidth(100);
+        Platform.runLater(() -> player1Label.setText(players[0]));
+        Platform.runLater(() -> player1Label.setStyle("-fx-background-color: darksalmon;"));
+        Platform.runLater(() -> player2Label.setText(players[1]));
+        player1Label.setVisible(true);
+        player2Label.setVisible(true);
+        player1PointsLabel.setVisible(true);
+        player2PointsLabel.setVisible(true);
+        giveUpButton.setText("Give Up");
+        player = 1;
+        displayGameState();
     }
 
     private void displayGameState() {
