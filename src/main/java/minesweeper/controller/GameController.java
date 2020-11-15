@@ -36,8 +36,7 @@ import java.util.List;
 public class GameController {
 
 
-    @Inject
-    private FXMLLoader fxmlLoader;
+    private FXMLLoader fxmlLoader = new FXMLLoader();
 
     private String playerName;
     private MsweeperState gameState;
@@ -147,6 +146,16 @@ public class GameController {
     public void handleResetButton(ActionEvent actionEvent)  {
         stopwatchTimeline.stop();
         resetGame();
+    }
+
+    public void handleGiveUpButton(ActionEvent actionEvent) throws IOException {
+        String buttonText = ((Button) actionEvent.getSource()).getText();
+        gameOver.setValue(true);
+        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     private void createStopWatch() {

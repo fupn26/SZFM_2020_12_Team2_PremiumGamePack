@@ -22,8 +22,7 @@ import java.util.List;
 @Slf4j
 public class LaunchController {
 
-    @Inject
-    private FXMLLoader fxmlLoader;
+    private FXMLLoader fxmlLoader = new FXMLLoader();
 
     @FXML
     private TextField playerNameTextField;
