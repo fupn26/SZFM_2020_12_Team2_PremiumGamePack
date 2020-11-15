@@ -43,8 +43,6 @@ public class GameController {
     @Inject
     private FXMLLoader fxmlLoader;
 
-    @Inject
-    private GResultDao gameResultDao;
 
     private String redPlayerName;
     private String bluePlayerName;
