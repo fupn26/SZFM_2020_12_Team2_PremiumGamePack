@@ -180,7 +180,17 @@ public class GameController {
     }
 
     public void onPauseButtonClicked(MouseEvent mouseEvent) {
-        //TODO
+        Button button = (Button)mouseEvent.getSource();
+        log.debug("{} is pressed", button.getText());
+        if (button.getText().equals("Pause")) {
+            log.info("Game pausing...");
+            button.setText("Play");
+            pauseGame();
+        } else {
+            log.info("Game continuing...");
+            button.setText("Pause");
+            continueGame();
+        }
     }
 
     private void continueGame() {
@@ -192,5 +202,4 @@ public class GameController {
         stopWatch.pause();
         gameGrid.setDisable(true);
     }
-
 }
