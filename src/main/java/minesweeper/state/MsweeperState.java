@@ -172,4 +172,30 @@ public class MsweeperState implements Cloneable {
             }
         } else throw new IllegalArgumentException();
     }
+
+    /**
+     * Reveals the targeted square, and recursively reveals squares around it until one is found which has a mine around it.
+     *
+     * @param x the x coordinate of the square
+     * @param y the y coordinate of the square
+     * @throws IllegalArgumentException if the targeted square does not exist
+     */
+    public void reveal(int x, int y) {
+        if (isExistingSquare(x, y)) {
+            if (revealgrid[x][y] == 0 && flaggrid[x][y] == 0) {
+                log.info("Square at ({}, {}) is revealed", x, y);
+                revealgrid[x][y] = 1;
+                if (aroundgrid[x][y] == 0) {
+                    if (isExistingSquare(x - 1, y - 1)) reveal(x - 1, y - 1);
+                    if (isExistingSquare(x - 1, y)) reveal(x - 1, y);
+                    if (isExistingSquare(x - 1, y + 1)) reveal(x - 1, y + 1);
+                    if (isExistingSquare(x, y - 1)) reveal(x, y - 1);
+                    if (isExistingSquare(x, y + 1)) reveal(x, y + 1);
+                    if (isExistingSquare(x + 1, y - 1)) reveal(x + 1, y - 1);
+                    if (isExistingSquare(x + 1, y)) reveal(x + 1, y);
+                    if (isExistingSquare(x + 1, y + 1)) reveal(x + 1, y + 1);
+                }
+            }
+        } else throw new IllegalArgumentException();
+    }
 }
