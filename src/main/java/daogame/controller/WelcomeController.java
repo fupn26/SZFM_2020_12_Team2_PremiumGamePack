@@ -3,6 +3,9 @@ package daogame.controller;
 import central.util.guice.PersistenceModule;
 import com.gluonhq.ignite.guice.GuiceContext;
 import com.google.inject.AbstractModule;
+import com.jfoenix.controls.JFXAlert;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
@@ -25,22 +28,38 @@ import java.util.List;
 public class WelcomeController {
 
     @FXML
-    private Label warningLabel;
+    private JFXTextField player1Input;
 
     @FXML
-    private TextField player1Input;
+    private JFXTextField player2Input;
 
     @FXML
-    private TextField player2Input;
+    public void initialize() {
+        RequiredFieldValidator player1Validator = new RequiredFieldValidator();
+        player1Validator.setMessage("Input Required");
+        RequiredFieldValidator player2Validator = new RequiredFieldValidator();
+        player2Validator.setMessage("Input Required");
 
+
+        player1Input.getValidators().add(player1Validator);
+        player2Input.getValidators().add(player2Validator);
+
+        player1Input.focusedProperty().addListener((o,oldVal,newVal)->{
+            if(!newVal) player1Input.validate();
+        });
+
+        player2Input.focusedProperty().addListener((o,oldVal,newVal)->{
+            if(!newVal) player2Input.validate();
+        });
+
+    }
 
     public void onStartGameButtonClicked(MouseEvent mouseEvent) throws IOException {
-        String player1Name = player1Input.getText();
-        String player2Name = player2Input.getText();
-        if (player1Name.isEmpty() || player2Name.isEmpty()) {
-            warningLabel.setVisible(true);
+        if (!player1Input.validate() || !player2Input.validate()) {
             return;
         }
+        String player1Name = player1Input.getText();
+        String player2Name = player2Input.getText();
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
@@ -48,7 +67,6 @@ public class WelcomeController {
                 player2Name);
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-//        stage.centerOnScreen();
         stage.show();
     }
 }
