@@ -6,7 +6,7 @@ import com.google.inject.persist.Transactional;
 import java.util.List;
 
 /**
- * DAO class for the {@link daogame.data.GameResult} entity.
+ * DAO class for the {@link GameResult} entity.
  */
 public class GameResultDao extends GenericJpaDao<GameResult> {
 
