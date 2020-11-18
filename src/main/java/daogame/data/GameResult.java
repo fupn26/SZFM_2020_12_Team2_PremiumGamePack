@@ -10,6 +10,9 @@ import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+/**
+ * Class representing the result of a game played by two players.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -43,27 +46,19 @@ public class GameResult {
     private String winner;
 
     /**
-     * Indicates whether the game is ended.
-     */
-    @Column(nullable = false)
-    private boolean ended;
-
-    /**
      * The duration of the game.
      */
     @Column(nullable = false)
     private Duration duration;
 
     /**
-     * Gives the row-wise representation of the board matrix.
-     */
-    @ElementCollection
-    @Column(name="board", nullable=false)
-    private List<Integer> board;
-
-    /**
      * The timestamp when the result was saved.
      */
     @Column(nullable = false)
     private ZonedDateTime created;
+
+    @PrePersist
+    protected void onPersist() {
+        created = ZonedDateTime.now();
+    }
 }
