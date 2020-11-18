@@ -30,4 +30,15 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
                 .getResultList();
     }
 
+    /**
+     * Returns the list of all previous results.
+     *
+     * @return the list of all previous result
+     */
+    @Transactional
+    public List<daogame.data.GameResult> findAllDateOrdered() {
+        return entityManager.createQuery("SELECT r FROM GameResult r ORDER BY r.created DESC", daogame.data.GameResult.class)
+                .getResultList();
+    }
+
 }
