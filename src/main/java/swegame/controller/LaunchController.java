@@ -26,7 +26,7 @@ public class LaunchController {
                 @Override
                 protected void configure() {
                     install(new PersistenceModule("swegame"));
-                    bind(GameDataDao.class);
+                    //TODO: bind(GameDataDao.class);
                 }
             }
     ));
