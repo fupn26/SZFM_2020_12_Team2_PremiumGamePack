@@ -29,4 +29,11 @@ public class GResultDao extends GenericJpaDao<GResult> {
                 .setMaxResults(n)
                 .getResultList();
     }
+
+    @Transactional
+    public void deleteData() {
+        Query query = entityManager.createQuery("DELETE FROM GResult");
+        query.executeUpdate();
+    }
+
 }
