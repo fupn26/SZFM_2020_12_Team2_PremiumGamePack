@@ -101,6 +101,7 @@ public class GameController {
         blueLabel.setText("");
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
+                gameResultDao.persist(createGameResult());
                 stopWatchTimeline.stop();
                 messageLabel.setText(winner + " is the WINNER!");
                 redLabel.setText("");
