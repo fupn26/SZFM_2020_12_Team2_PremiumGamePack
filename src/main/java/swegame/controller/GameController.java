@@ -186,6 +186,16 @@ public class GameController {
         }
     }
 
+    private GResult createGameResult() {
+        GResult result = GResult.builder()
+                .redplayer(redPlayerName)
+                .blueplayer(bluePlayerName)
+                .winner(winner)
+                .steps(steps.get())
+                .duration(Duration.between(startTime, Instant.now()))
+                .build();
+        return result;
+    }
 
     private void createStopWatch() {
         stopWatchTimeline = new Timeline(new KeyFrame(javafx.util.Duration.ZERO, e -> {
