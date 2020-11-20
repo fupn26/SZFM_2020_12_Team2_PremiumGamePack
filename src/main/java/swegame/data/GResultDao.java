@@ -16,4 +16,17 @@ public class GResultDao extends GenericJpaDao<GResult> {
     public GResultDao() {
         super(GResult.class);
     }
+
+    /**
+     * Returns the list of the last {@code n} games.
+     *
+     * @param n the maximum number of results to be returned
+     * @return the list of the last {@code n} games.
+     */
+    @Transactional
+    public List<GResult> findLast(int n) {
+        return entityManager.createQuery("SELECT r FROM GResult r ORDER BY  r.created DESC", GResult.class)
+                .setMaxResults(n)
+                .getResultList();
+    }
 }
