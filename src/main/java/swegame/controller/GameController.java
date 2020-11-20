@@ -24,6 +24,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import swegame.state.SweGameState;
+import swegame.data.GResult;
+import swegame.data.GResultDao;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -39,6 +41,8 @@ public class GameController {
     @Inject
     private FXMLLoader fxmlLoader;
 
+    @Inject
+    private GResultDao gameResultDao;
 
     private String redPlayerName;
     private String bluePlayerName;
