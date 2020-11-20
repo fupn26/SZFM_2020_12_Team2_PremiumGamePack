@@ -1,12 +1,19 @@
 package puckg.data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class GameData {
 
     @Id
