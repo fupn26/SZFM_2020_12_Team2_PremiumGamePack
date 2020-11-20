@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class GResultDao extends GenericJpaDao<GResult> {
     /**
-     * Constructor for thew class.
+     * Constructor for the class.
      */
     public GResultDao() {
         super(GResult.class);
