@@ -93,7 +93,10 @@ public class GameController {
         redTurnIndicator.getStylesheets().add(getClass().getResource("/css/redindicator.css").toExternalForm());
 
         gameOver.addListener((observable, oldValue, newValue) -> {
-            stopWatch.stop();
+            if (newValue) {
+                gameResultDao.persist(createGameResult());
+                stopWatch.stop();
+            }
         });
 
         player1Label.textProperty().bind(player1Name);
