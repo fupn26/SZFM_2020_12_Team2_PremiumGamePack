@@ -144,6 +144,29 @@ public class HighScoreController {
             return cell;
         });
 
+        redplayer2.setCellValueFactory(new PropertyValueFactory<>("redplayer"));
+        blueplayer2.setCellValueFactory(new PropertyValueFactory<>("blueplayer"));
+        winner2.setCellValueFactory(new PropertyValueFactory<>("winner"));
+        steps2.setCellValueFactory(new PropertyValueFactory<>("steps"));
+        duration2.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        created2.setCellValueFactory(new PropertyValueFactory<>("created"));
+
+
+
+        duration2.setCellFactory(column -> {
+            TableCell<GResult, Duration> cell = new TableCell<GResult, Duration>() {
+                @Override
+                protected void updateItem(Duration item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if(empty) {
+                        setText(null);
+                    } else {
+                        setText(DurationFormatUtils.formatDuration(item.toMillis(),"H:mm:ss"));
+                    }
+                }
+            };
+            return cell;
+        });
 
 
     }
