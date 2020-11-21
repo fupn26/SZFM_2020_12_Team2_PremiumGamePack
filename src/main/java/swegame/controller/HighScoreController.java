@@ -168,6 +168,25 @@ public class HighScoreController {
             return cell;
         });
 
+        created2.setCellFactory(column -> {
+            TableCell<GResult, ZonedDateTime> cell = new TableCell<GResult, ZonedDateTime>() {
+                private DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
+                @Override
+                protected void updateItem(ZonedDateTime item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if(empty) {
+                        setText(null);
+                    } else {
+                        setText(item.format(formatter));
+                    }
+                }
+            };
+            return cell;
+        });
 
+        ObservableList<GResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(highScoreList);
+
+        highScoreTable.setItems(observableResult);
     }
 }
