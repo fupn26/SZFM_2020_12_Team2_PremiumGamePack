@@ -42,5 +42,6 @@
                 <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
             </children>
         </HBox>
+        <Button fx:id="deleteButton" layoutX="645.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" />
     </children>
 </Pane>
