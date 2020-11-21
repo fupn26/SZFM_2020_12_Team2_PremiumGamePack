@@ -2,6 +2,7 @@ package daogame.controller;
 
 import daogame.data.GameResult;
 import daogame.data.GameResultDao;
+import daogame.data.GameResultJson;
 import daogame.state.GameState;
 import daogame.state.Position;
 import javafx.animation.Animation;
@@ -29,6 +30,7 @@ import org.apache.commons.lang3.time.DurationFormatUtils;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -207,6 +209,12 @@ public class GameController {
                 build();
     }
 
+    public void updateTopFive() throws IOException {
+        GameResult newResult = createGameResult();
+        newResult.setCreated(ZonedDateTime.now());
+        GameResultJson.execute(newResult);
+    }
+
     public void onRestartButtonClicked(MouseEvent mouseEvent) {
         log.debug("{} is pressed", ((Button) mouseEvent.getSource()).getText());
         stopWatch.stop();
@@ -238,7 +246,7 @@ public class GameController {
     }
 
     public void onGiveUpButtonClicked(MouseEvent mouseEvent) throws IOException {
-        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
+        log.debug("{} is pressed", ((Button) mouseEvent.getSource()).getText());
         gameState.playerGaveUp();
         gameOver.setValue(true);
         fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
