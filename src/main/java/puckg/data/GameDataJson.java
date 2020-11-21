@@ -72,4 +72,17 @@ public class GameDataJson {
         }
 
     }
+
+    public static void execute(GameData newData) throws IOException {
+        File file = new File("puckg.json");
+        if (file.exists() && !file.isDirectory()) {
+            ArrayList<GameData> dataList = readJson(file);
+            addAndSortData(dataList, newData);
+            writeJson(file, dataList);
+        } else {
+            ArrayList<GameData> dataList = new ArrayList<>();
+            addAndSortData(dataList, newData);
+            writeJson(file, dataList);
+        }
+    }
 }
