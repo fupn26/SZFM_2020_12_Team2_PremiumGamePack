@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puckg.controller.HighScoreController">
     <children>
         <TableView fx:id="highScoreTable" editable="true" layoutX="25.0" layoutY="333.0" prefHeight="268.0" prefWidth="700.0">
@@ -24,5 +25,22 @@
                 <Font size="22.0" />
             </font>
         </Label>
+        <HBox alignment="CENTER" layoutX="7.0" layoutY="610.0" prefHeight="100.0" prefWidth="736.0" spacing="100.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="50.0" prefWidth="120.0" text="Restart">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: firebrick;" text="Exit" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
+            </children>
+        </HBox>
     </children>
 </Pane>
