@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puckg.controller.HighScoreController">
+    <children>
+        <TableView fx:id="highScoreTable" editable="true" layoutX="25.0" layoutY="333.0" prefHeight="268.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="winner" prefWidth="160.0" text="Winner" />
+                <TableColumn fx:id="winnerPoints" prefWidth="55.0" text="Points" />
+                <TableColumn fx:id="second" prefWidth="160.0" text="Second" />
+                <TableColumn fx:id="secondPoints" prefWidth="55.0" text="Points" />
+                <TableColumn fx:id="duration" prefWidth="70.0" text="Time" />
+                <TableColumn fx:id="created" prefWidth="200.0" text="Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="284.0" layoutY="285.0" text="Previous Results">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
