@@ -2,6 +2,7 @@ package daogame.controller;
 
 import daogame.data.GameResult;
 import daogame.data.GameResultDao;
+import daogame.data.GameResultJson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,11 +16,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import javax.inject.Inject;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.ArrayList;
 
 @Slf4j
 public class ResultsController {
@@ -72,5 +75,14 @@ public class ResultsController {
     public void initialize() throws FileNotFoundException {
         //TODO implement filling of the result tables
         return;
+    }
+
+    public void displayTopFive() throws FileNotFoundException {
+        File file = new File("daogame.json");
+        ArrayList<GameResult> resultList = GameResultJson.readJson(file);
+        ObservableList<GameResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(resultList);
+
+        resultTable2.setItems(observableResult);
     }
 }
