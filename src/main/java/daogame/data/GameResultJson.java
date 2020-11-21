@@ -39,6 +39,19 @@ public class GameResultJson {
         Collections.sort(resultList, pointOrder);
     }
 
+    public static void writeJson(File file, ArrayList<GameResult> data) throws IOException {
+
+        Gson gson = getGson();
+        try (FileWriter writer = new FileWriter(file, false)) {
+            if(data.size() > 5) {
+                gson.toJson(new ArrayList<>(data.subList(0, 5)), writer);
+            } else {
+                gson.toJson(data, writer);
+            }
+        }
+
+    }
+
     public static Gson getGson() {
         return new GsonBuilder()
                 .registerTypeAdapter(ZonedDateTime.class, new TypeAdapter<ZonedDateTime>() {
