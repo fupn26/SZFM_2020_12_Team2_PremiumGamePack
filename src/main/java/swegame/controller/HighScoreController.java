@@ -189,4 +189,12 @@ public class HighScoreController {
 
         highScoreTable.setItems(observableResult);
     }
+
+    public void handleRestartButton(ActionEvent actionEvent) throws IOException {
+        fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/launch.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }
