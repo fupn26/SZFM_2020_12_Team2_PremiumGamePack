@@ -6,6 +6,7 @@ import com.google.inject.AbstractModule;
 import com.jfoenix.controls.JFXAlert;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
+import daogame.data.GameResultDao;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
@@ -26,6 +27,19 @@ import java.util.List;
 
 @Slf4j
 public class WelcomeController {
+
+    private final GuiceContext context = new GuiceContext(this, () -> List.of(
+            new AbstractModule() {
+                @Override
+                protected void configure() {
+                    install(new PersistenceModule("dao"));
+                    bind(GameResultDao.class);
+                }
+            }
+    ));
+
+    @Inject
+    private FXMLLoader fxmlLoader;
 
     @FXML
     private JFXTextField player1Input;
