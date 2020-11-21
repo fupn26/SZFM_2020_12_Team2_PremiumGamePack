@@ -175,6 +175,8 @@ public class HighScoreController {
         observableResult.addAll(highScoreList);
 
         highScoreTable.setItems(observableResult);
+
+        displayTopFive();
     }
 
     public void handleRestartButton(ActionEvent actionEvent) throws IOException {
