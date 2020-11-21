@@ -21,6 +21,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import puckg.data.GameDataDao;
 import puckg.state.TableState;
 
 import javax.inject.Inject;
@@ -33,6 +34,9 @@ public class GameController {
 
     @Inject
     private FXMLLoader fxmlLoader;
+
+    @Inject
+    private GameDataDao gameDataDao;
 
     private String[] players = new String[2];
     private int[] points = new int[2];
