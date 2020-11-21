@@ -17,14 +17,17 @@ import javafx.stage.Stage;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import puckg.data.GameData;
 import puckg.data.GameDataDao;
+import puckg.data.GameDataJson;
 
 import javax.inject.Inject;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HighScoreController {
@@ -203,5 +206,14 @@ public class HighScoreController {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    public void displayTopFive() throws FileNotFoundException {
+        File file = new File("puckg.json");
+        ArrayList<GameData> dataList = GameDataJson.readJson(file);
+        ObservableList<GameData> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(dataList);
+
+        highScoreTable2.setItems(observableResult);
     }
 }
