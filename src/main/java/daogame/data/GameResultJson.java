@@ -11,6 +11,8 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GameResultJson {
 
@@ -24,6 +26,17 @@ public class GameResultJson {
         Type dataType = new TypeToken<ArrayList<GameResult>>(){}.getType();
 
         return gson.fromJson(reader, dataType);
+    }
+
+    public static void addAndSortData(ArrayList<GameResult> resultList, GameResult newResult) {
+
+        resultList.add(newResult);
+        Comparator<GameResult> pointOrder = new Comparator<GameResult>() {
+            public int compare(GameResult gr1, GameResult gr2) {
+                return gr2.getDuration().compareTo(gr1.getDuration()) * -1;
+            }
+        };
+        Collections.sort(resultList, pointOrder);
     }
 
     public static Gson getGson() {
