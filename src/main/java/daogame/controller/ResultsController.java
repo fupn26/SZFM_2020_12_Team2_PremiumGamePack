@@ -188,4 +188,14 @@ public class ResultsController {
         stage.centerOnScreen();
         stage.show();
     }
+
+    public void onHomeButtonClicked(MouseEvent mouseEvent) throws IOException {
+        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
+        fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/welcome.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.centerOnScreen();
+        stage.show();
+    }
 }
