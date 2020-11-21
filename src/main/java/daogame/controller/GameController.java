@@ -185,6 +185,7 @@ public class GameController {
             gameState.op(from, to);
             if (gameState.isGameEnded()) {
                 gameOver.setValue(true);
+                openResults(source);
             }
         } else {
             log.info("Not permitted movement!");
