@@ -49,6 +49,8 @@ public class WelcomeController {
 
     @FXML
     public void initialize() {
+        context.init();
+
         RequiredFieldValidator player1Validator = new RequiredFieldValidator();
         player1Validator.setMessage("Input Required");
         RequiredFieldValidator player2Validator = new RequiredFieldValidator();
@@ -74,7 +76,6 @@ public class WelcomeController {
         }
         String player1Name = player1Input.getText();
         String player2Name = player2Input.getText();
-        FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
         fxmlLoader.<daogame.controller.GameController>getController().setPlayerNames(player1Name,
