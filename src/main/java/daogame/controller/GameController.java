@@ -1,5 +1,6 @@
 package daogame.controller;
 
+import daogame.data.GameResult;
 import daogame.data.GameResultDao;
 import daogame.state.GameState;
 import daogame.state.Position;
@@ -29,7 +30,9 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class GameController {
@@ -180,6 +183,25 @@ public class GameController {
         to = null;
         displayGameState();
         setTurnIndicator();
+    }
+
+    private GameResult createGameResult() {
+        int winnerID = gameState.getWinnerID();
+        String winner;
+        if (winnerID == 1) {
+            winner = player1Name.getValue();
+        }
+        else {
+            winner = player2Name.getValue();
+        }
+
+        return GameResult.builder().
+                player1(player1Name.getValue()).
+                player2(player2Name.getValue()).
+                duration(Duration.ofSeconds(elapsedTime)).
+                winner(winner).
+                turnID(gameState.getTurnID()).
+                build();
     }
 
     public void onRestartButtonClicked(MouseEvent mouseEvent) {
