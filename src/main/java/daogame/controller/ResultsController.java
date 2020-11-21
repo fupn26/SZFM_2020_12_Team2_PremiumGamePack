@@ -6,6 +6,7 @@ import daogame.data.GameResultJson;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import swegame.data.GResult;
 
 import javax.inject.Inject;
 import java.io.File;
@@ -27,6 +29,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 public class ResultsController {
@@ -204,5 +207,14 @@ public class ResultsController {
         log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
         log.info("Program closing...");
         Platform.exit();
+    }
+
+    public void handleDeleteButtonClicked(ActionEvent actionEvent) {
+        gameResultDao.deleteData();
+
+        ObservableList<GameResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(new ArrayList<GameResult>());
+
+        resultTable.setItems(observableResult);
     }
 }
