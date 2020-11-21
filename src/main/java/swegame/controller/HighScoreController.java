@@ -197,4 +197,13 @@ public class HighScoreController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void handleRematchButton(ActionEvent actionEvent) throws IOException {
+        fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/game.fxml"));
+        Parent root = fxmlLoader.load();
+        fxmlLoader.<GameController>getController().setPlayerNames(redPlayerName,bluePlayerName);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }
