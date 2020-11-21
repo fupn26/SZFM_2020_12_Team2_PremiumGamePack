@@ -23,7 +23,11 @@ public class LaunchController {
 
     private GuiceContext context = new GuiceContext(this, () -> List.of(
             new AbstractModule() {
-
+                @Override
+                protected void configure() {
+                    install(new PersistenceModule("swegame"));
+                    //TODO: bind(GameDataDao.class);
+                }
             }
     ));
 
