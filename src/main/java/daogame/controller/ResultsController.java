@@ -2,16 +2,24 @@ package daogame.controller;
 
 import daogame.data.GameResult;
 import daogame.data.GameResultDao;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import javax.inject.Inject;
+import java.io.FileNotFoundException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 @Slf4j
 public class ResultsController {
@@ -59,4 +67,10 @@ public class ResultsController {
 
     @FXML
     private TableColumn<GameResult, ZonedDateTime> dateColumn2;
+
+    @FXML
+    public void initialize() throws FileNotFoundException {
+        //TODO implement filling of the result tables
+        return;
+    }
 }
