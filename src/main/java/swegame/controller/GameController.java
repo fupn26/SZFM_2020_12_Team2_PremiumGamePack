@@ -178,7 +178,7 @@ public class GameController {
         }
         else {
 
-            fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/highscores.fxml"));
             Parent root = fxmlLoader.load();
             
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
