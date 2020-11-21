@@ -21,11 +21,15 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import puckg.data.GameData;
+import puckg.data.GameDataDao;
+import puckg.data.GameDataJson;
 import puckg.state.TableState;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
@@ -33,6 +37,9 @@ public class GameController {
 
     @Inject
     private FXMLLoader fxmlLoader;
+
+    @Inject
+    private GameDataDao gameDataDao;
 
     private String[] players = new String[2];
     private int[] points = new int[2];
@@ -98,6 +105,12 @@ public class GameController {
             if(newValue) {
                 calculatePoints();
                 points[oppositePlayer(player) - 1] += tableState.numberOfEmptyCells();
+                gameDataDao.persist(createGameData());
+                try {
+                    updateTopFive();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 stopWatchTimeLine.stop();
                 player1Label.setVisible(false);
                 player2Label.setVisible(false);
@@ -141,7 +154,7 @@ public class GameController {
         String buttonText = ((Button) actionEvent.getSource()).getText();
         playerGaveUp = player;
         gameOver.setValue(true);
-        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/puck/highscores.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -215,6 +228,17 @@ public class GameController {
         stopWatchTimeLine.play();
     }
 
+    private GameData createGameData () {
+        GameData data = GameData.builder()
+                .winner(players[winner(playerGaveUp)])
+                .winnerPoints(points[winner(playerGaveUp)])
+                .second(players[oppositePlayer(winner(playerGaveUp)+ 1 )- 1])
+                .secondPoints(points[oppositePlayer(winner(playerGaveUp)+ 1 )- 1])
+                .duration(java.time.Duration.between(startTime, Instant.now()))
+                .build();
+        return data;
+    }
+
     private void calculatePoints () {
         this.points[0] = tableState.pointsOfPlayer(1);
         this.points[1] = tableState.pointsOfPlayer(2);
@@ -237,5 +261,11 @@ public class GameController {
         if(player == 1) {
             return 2;
         } else return 1;
+    }
+
+    public void updateTopFive() throws IOException {
+        GameData newData = createGameData();
+        newData.setCreated(ZonedDateTime.now());
+        GameDataJson.execute(newData);
     }
 }
