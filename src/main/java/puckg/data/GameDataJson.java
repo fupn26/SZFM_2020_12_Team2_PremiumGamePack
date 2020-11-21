@@ -59,4 +59,17 @@ public class GameDataJson {
         };
         Collections.sort(dataList, pointOrder);
     }
+
+    public static void writeJson(File file, ArrayList<GameData> data) throws IOException {
+
+        Gson gson = getGson();
+        try (FileWriter writer = new FileWriter(file, false)) {
+            if(data.size() > 5) {
+                gson.toJson(new ArrayList<>(data.subList(0, 5)), writer);
+            } else {
+                gson.toJson(data, writer);
+            }
+        }
+
+    }
 }
