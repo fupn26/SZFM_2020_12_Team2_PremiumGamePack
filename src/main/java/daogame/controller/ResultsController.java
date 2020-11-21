@@ -192,7 +192,7 @@ public class ResultsController {
 
     public void onHomeButtonClicked(MouseEvent mouseEvent) throws IOException {
         log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
-        fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/welcome.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
