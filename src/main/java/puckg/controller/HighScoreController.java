@@ -90,7 +90,7 @@ public class HighScoreController {
     private Button mainMenuButton;
 
     @FXML
-    private void initialize() {
+    private void initialize() throws FileNotFoundException {
         List<GameData> highScoreList = gameDataDao.findBestByTime(30);
 
         winner.setCellValueFactory(new PropertyValueFactory<>("winner"));
