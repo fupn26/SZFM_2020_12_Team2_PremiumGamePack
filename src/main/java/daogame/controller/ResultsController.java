@@ -7,17 +7,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
 import javax.inject.Inject;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -171,5 +174,18 @@ public class ResultsController {
         observableResult.addAll(resultList);
 
         resultTable2.setItems(observableResult);
+    }
+
+    public void onRematchButtonClicked(MouseEvent mouseEvent) throws IOException {
+        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
+        log.info("Game launching...");
+        fxmlLoader.setLocation(getClass().getResource("/fxml/game.fxml"));
+        Parent root = fxmlLoader.load();
+        fxmlLoader.<daogame.controller.GameController>getController().setPlayerNames(gameResultDao.findLast(1).get(0).getPlayer1(),
+                gameResultDao.findLast(1).get(0).getPlayer2());
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.centerOnScreen();
+        stage.show();
     }
 }
