@@ -251,15 +251,10 @@ public class GameController {
     }
 
     public void onGiveUpButtonClicked(MouseEvent mouseEvent) throws IOException {
-        log.debug("{} is pressed", ((Button) mouseEvent.getSource()).getText());
+        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
         gameState.playerGaveUp();
         gameOver.setValue(true);
-        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-//        stage.centerOnScreen();
-        stage.show();
+        openResults((Node)mouseEvent.getSource());
     }
 
     private void openResults(Node source) throws IOException {
@@ -267,7 +262,6 @@ public class GameController {
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.centerOnScreen();
         stage.show();
     }
 }
