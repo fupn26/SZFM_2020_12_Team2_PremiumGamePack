@@ -215,4 +215,14 @@ public class HighScoreController {
         stage.show();
     }
 
+
+    public void handleDeleteButton (ActionEvent actionEvent) {
+        gameResultDao.deleteData();
+        List<GResult> highScoreList = gameResultDao.findLast(10);
+
+        ObservableList<GResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(highScoreList);
+
+        highScoreTable.setItems(observableResult);
+    }
 }
