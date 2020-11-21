@@ -260,6 +260,14 @@ public class GameController {
         stage.setScene(new Scene(root));
 //        stage.centerOnScreen();
         stage.show();
+    }
 
+    private void openResults(Node source) throws IOException {
+        fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/results.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.centerOnScreen();
+        stage.show();
     }
 }
