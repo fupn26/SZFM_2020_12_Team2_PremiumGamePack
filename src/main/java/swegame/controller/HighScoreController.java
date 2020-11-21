@@ -95,4 +95,8 @@ public class HighScoreController {
     private String redPlayerName;
     private String bluePlayerName;
 
+    public void setPlayerNames(String redPlayerName, String bluePlayerName) {
+        this.redPlayerName = redPlayerName;
+        this.bluePlayerName = bluePlayerName;
+    }
 }
