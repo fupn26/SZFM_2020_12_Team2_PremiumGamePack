@@ -21,6 +21,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import puckg.data.GameData;
 import puckg.data.GameDataDao;
 import puckg.state.TableState;
 
@@ -217,6 +218,17 @@ public class GameController {
         }), new KeyFrame(Duration.seconds(1)));
         stopWatchTimeLine.setCycleCount(Animation.INDEFINITE);
         stopWatchTimeLine.play();
+    }
+
+    private GameData createGameData () {
+        GameData data = GameData.builder()
+                .winner(players[winner(playerGaveUp)])
+                .winnerPoints(points[winner(playerGaveUp)])
+                .second(players[oppositePlayer(winner(playerGaveUp)+ 1 )- 1])
+                .secondPoints(points[oppositePlayer(winner(playerGaveUp)+ 1 )- 1])
+                .duration(java.time.Duration.between(startTime, Instant.now()))
+                .build();
+        return data;
     }
 
     private void calculatePoints () {
