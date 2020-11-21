@@ -99,4 +99,33 @@ public class HighScoreController {
         this.redPlayerName = redPlayerName;
         this.bluePlayerName = bluePlayerName;
     }
+
+    @FXML
+    private void initialize() throws FileNotFoundException {
+        List<GResult> highScoreList = gameResultDao.findLast(10);
+
+
+        redplayer.setCellValueFactory(new PropertyValueFactory<>("redplayer"));
+        blueplayer.setCellValueFactory(new PropertyValueFactory<>("blueplayer"));
+        winner.setCellValueFactory(new PropertyValueFactory<>("winner"));
+        steps.setCellValueFactory(new PropertyValueFactory<>("steps"));
+        duration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        created.setCellValueFactory(new PropertyValueFactory<>("created"));
+
+
+        duration.setCellFactory(column -> {
+            TableCell<GResult, Duration> cell = new TableCell<GResult, Duration>() {
+                @Override
+                protected void updateItem(Duration item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if(empty) {
+                        setText(null);
+                    } else {
+                        setText(DurationFormatUtils.formatDuration(item.toMillis(),"H:mm:ss"));
+                    }
+                }
+            };
+            return cell;
+        });
+    }
 }
