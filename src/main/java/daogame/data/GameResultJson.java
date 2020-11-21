@@ -19,8 +19,11 @@ public class GameResultJson {
     }
 
     public static ArrayList<GameResult> readJson(File file) throws FileNotFoundException {
-        //TODO read data from json file in an Array list
-        return null;
+        Reader reader = new FileReader(file);
+        Gson gson = getGson();
+        Type dataType = new TypeToken<ArrayList<GameResult>>(){}.getType();
+
+        return gson.fromJson(reader, dataType);
     }
 
     public static Gson getGson() {
