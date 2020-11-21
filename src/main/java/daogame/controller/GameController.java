@@ -1,5 +1,6 @@
 package daogame.controller;
 
+import daogame.data.GameResultDao;
 import daogame.state.GameState;
 import daogame.state.Position;
 import javafx.animation.Animation;
@@ -32,6 +33,12 @@ import java.util.List;
 
 @Slf4j
 public class GameController {
+
+    @Inject
+    private FXMLLoader fxmlLoader;
+
+    @Inject
+    private GameResultDao gameResultDao;
 
     @FXML
     private Label player1Label;
@@ -209,7 +216,6 @@ public class GameController {
         log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
         gameState.playerGaveUp();
         gameOver.setValue(true);
-        FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
