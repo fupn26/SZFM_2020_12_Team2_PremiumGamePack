@@ -73,8 +73,95 @@ public class ResultsController {
 
     @FXML
     public void initialize() throws FileNotFoundException {
-        //TODO implement filling of the result tables
-        return;
+        var prevResults = gameResultDao.findAllDateOrdered();
+        winnerLabel.setText("The winner is " + prevResults.get(0).getWinner());
+
+        log.debug("Loading high scores...");
+        player1Column.setCellValueFactory(new PropertyValueFactory<>("player1"));
+        player2Column.setCellValueFactory(new PropertyValueFactory<>("player2"));
+        winnerColumn.setCellValueFactory(new PropertyValueFactory<>("winner"));
+        durationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("created"));
+
+
+        durationColumn.setCellFactory(column -> {
+            TableCell<GameResult, Duration> cell = new TableCell<>() {
+                @Override
+                protected void updateItem(Duration item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setText(null);
+                    } else {
+                        setText(DurationFormatUtils.formatDuration(item.toMillis(), "H:mm:ss"));
+                    }
+                }
+            };
+            return cell;
+        });
+
+        dateColumn.setCellFactory(column -> {
+            TableCell<GameResult, ZonedDateTime> cell = new TableCell<>() {
+                private final DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+
+                @Override
+                protected void updateItem(ZonedDateTime item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setText(null);
+                    } else {
+                        setText(item.format(formatter));
+                    }
+                }
+            };
+            return cell;
+        });
+
+        player1Column2.setCellValueFactory(new PropertyValueFactory<>("player1"));
+        player2Column2.setCellValueFactory(new PropertyValueFactory<>("player2"));
+        winnerColumn2.setCellValueFactory(new PropertyValueFactory<>("winner"));
+        durationColumn2.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        dateColumn2.setCellValueFactory(new PropertyValueFactory<>("created"));
+
+
+        durationColumn2.setCellFactory(column -> {
+            TableCell<GameResult, Duration> cell = new TableCell<>() {
+                @Override
+                protected void updateItem(Duration item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setText(null);
+                    } else {
+                        setText(DurationFormatUtils.formatDuration(item.toMillis(), "H:mm:ss"));
+                    }
+                }
+            };
+            return cell;
+        });
+
+        dateColumn2.setCellFactory(column -> {
+            TableCell<GameResult, ZonedDateTime> cell = new TableCell<>() {
+                private final DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+
+                @Override
+                protected void updateItem(ZonedDateTime item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setText(null);
+                    } else {
+                        setText(item.format(formatter));
+                    }
+                }
+            };
+            return cell;
+        });
+
+
+        ObservableList<GameResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(prevResults);
+
+        resultTable.setItems(observableResult);
+
+        displayTopFive();
     }
 
     public void displayTopFive() throws FileNotFoundException {
