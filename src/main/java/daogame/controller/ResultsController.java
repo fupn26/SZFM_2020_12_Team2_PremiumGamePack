@@ -3,6 +3,7 @@ package daogame.controller;
 import daogame.data.GameResult;
 import daogame.data.GameResultDao;
 import daogame.data.GameResultJson;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -197,5 +198,11 @@ public class ResultsController {
         stage.setScene(new Scene(root));
         stage.centerOnScreen();
         stage.show();
+    }
+
+    public void onExitButtonClicked(MouseEvent mouseEvent) {
+        log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
+        log.info("Program closing...");
+        Platform.exit();
     }
 }
