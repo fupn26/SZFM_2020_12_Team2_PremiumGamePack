@@ -180,7 +180,7 @@ public class ResultsController {
     public void onRematchButtonClicked(MouseEvent mouseEvent) throws IOException {
         log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
         log.info("Game launching...");
-        fxmlLoader.setLocation(getClass().getResource("/fxml/game.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
         fxmlLoader.<daogame.controller.GameController>getController().setPlayerNames(gameResultDao.findLast(1).get(0).getPlayer1(),
                 gameResultDao.findLast(1).get(0).getPlayer2());
