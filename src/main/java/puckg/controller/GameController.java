@@ -103,6 +103,7 @@ public class GameController {
             if(newValue) {
                 calculatePoints();
                 points[oppositePlayer(player) - 1] += tableState.numberOfEmptyCells();
+                gameDataDao.persist(createGameData());
                 stopWatchTimeLine.stop();
                 player1Label.setVisible(false);
                 player2Label.setVisible(false);
