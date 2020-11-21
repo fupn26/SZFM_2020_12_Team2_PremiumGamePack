@@ -23,11 +23,13 @@ import javafx.util.Duration;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import puckg.data.GameData;
 import puckg.data.GameDataDao;
+import puckg.data.GameDataJson;
 import puckg.state.TableState;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
@@ -104,6 +106,11 @@ public class GameController {
                 calculatePoints();
                 points[oppositePlayer(player) - 1] += tableState.numberOfEmptyCells();
                 gameDataDao.persist(createGameData());
+                try {
+                    updateTopFive();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 stopWatchTimeLine.stop();
                 player1Label.setVisible(false);
                 player2Label.setVisible(false);
@@ -254,5 +261,11 @@ public class GameController {
         if(player == 1) {
             return 2;
         } else return 1;
+    }
+
+    public void updateTopFive() throws IOException {
+        GameData newData = createGameData();
+        newData.setCreated(ZonedDateTime.now());
+        GameDataJson.execute(newData);
     }
 }
