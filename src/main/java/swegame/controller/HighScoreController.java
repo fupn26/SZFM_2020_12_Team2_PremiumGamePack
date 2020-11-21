@@ -206,4 +206,13 @@ public class HighScoreController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void handleMainMenuButton (ActionEvent actionEvent) throws IOException {
+        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
 }
