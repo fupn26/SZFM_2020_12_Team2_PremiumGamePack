@@ -225,4 +225,9 @@ public class HighScoreController {
 
         highScoreTable.setItems(observableResult);
     }
+
+    public void handleExitButton (ActionEvent actionEvent) {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
 }
