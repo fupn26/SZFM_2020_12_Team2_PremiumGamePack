@@ -17,7 +17,16 @@ import java.util.Comparator;
 public class GameResultJson {
 
     public static void execute(GameResult newResult) throws IOException {
-        //TODO handle new result
+        File file = new File("daogame.json");
+        if (file.exists() && !file.isDirectory()) {
+            ArrayList<GameResult> resultList = readJson(file);
+            addAndSortData(resultList, newResult);
+            writeJson(file, resultList);
+        } else {
+            ArrayList<GameResult> resultList = new ArrayList<>();
+            addAndSortData(resultList, newResult);
+            writeJson(file, resultList);
+        }
     }
 
     public static ArrayList<GameResult> readJson(File file) throws FileNotFoundException {
