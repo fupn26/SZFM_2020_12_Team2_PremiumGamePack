@@ -1,5 +1,6 @@
 package daogame.controller;
 
+import com.jfoenix.controls.JFXToggleButton;
 import daogame.data.GameResult;
 import daogame.data.GameResultDao;
 import daogame.data.GameResultJson;
@@ -15,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
@@ -77,6 +79,12 @@ public class ResultsController {
 
     @FXML
     private TableColumn<GameResult, ZonedDateTime> dateColumn2;
+
+    @FXML
+    private VBox previousResultsView;
+
+    @FXML
+    private VBox top5ResultsView;
 
     @FXML
     public void initialize() throws FileNotFoundException {
@@ -216,5 +224,15 @@ public class ResultsController {
         observableResult.addAll(new ArrayList<GameResult>());
 
         resultTable.setItems(observableResult);
+    }
+
+    public void handleResultViewSwitch(ActionEvent actionEvent) {
+        if (((JFXToggleButton)(actionEvent.getSource())).isSelected()) {
+            previousResultsView.setVisible(true);
+            top5ResultsView.setVisible(false);
+        } else {
+            previousResultsView.setVisible(false);
+            top5ResultsView.setVisible(true);
+        }
     }
 }

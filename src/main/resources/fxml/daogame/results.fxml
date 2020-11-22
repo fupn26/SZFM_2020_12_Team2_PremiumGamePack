@@ -43,7 +43,7 @@
             <HBox alignment="CENTER" prefWidth="200.0">
                <children>
                   <JFXButton text="TOP" />
-                  <JFXToggleButton onAction="#handleresultViewSwitch" selected="true" text="" toggleColor="#fafafa" toggleLineColor="#999999" />
+                  <JFXToggleButton onAction="#handleResultViewSwitch" selected="true" text="" toggleColor="#fafafa" toggleLineColor="#999999" />
                   <JFXButton text="ALL" />
                </children>
             </HBox>
