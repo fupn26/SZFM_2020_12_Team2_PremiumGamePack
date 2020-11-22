@@ -11,8 +11,29 @@
 	<developers>
 		<developer>
 			<id>benedek99</id>
-			<name>Benedek Szabó</name>
-			<email>szabobenedek99@gmail.com</email>
+			<name></name>
+			<email>example@gmail.com</email>
+			<organization>Faculty of Informatics, University of Debrecen</organization>
+			<organizationUrl>https://inf.unideb.hu/</organizationUrl>
+		</developer>
+		<developer>
+			<id>bombifighter</id>
+			<name></name>
+			<email>example@gmail.com</email>
+			<organization>Faculty of Informatics, University of Debrecen</organization>
+			<organizationUrl>https://inf.unideb.hu/</organizationUrl>
+		</developer>
+		<developer>
+			<id>fupn26</id>
+			<name></name>
+			<email>example@gmail.com</email>
+			<organization>Faculty of Informatics, University of Debrecen</organization>
+			<organizationUrl>https://inf.unideb.hu/</organizationUrl>
+		</developer>
+		<developer>
+			<id>Penguinvader</id>
+			<name></name>
+			<email>example@gmail.com</email>
 			<organization>Faculty of Informatics, University of Debrecen</organization>
 			<organizationUrl>https://inf.unideb.hu/</organizationUrl>
 		</developer>
