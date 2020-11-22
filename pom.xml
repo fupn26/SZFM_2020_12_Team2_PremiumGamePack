@@ -8,6 +8,16 @@
 	<artifactId>PremiumGames</artifactId>
 	<version>1.0</version>
 
+	<developers>
+		<developer>
+			<id>benedek99</id>
+			<name>Benedek Szabó</name>
+			<email>szabobenedek99@gmail.com</email>
+			<organization>Faculty of Informatics, University of Debrecen</organization>
+			<organizationUrl>https://inf.unideb.hu/</organizationUrl>
+		</developer>
+	</developers>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
