@@ -1,5 +1,8 @@
 package daogame.controller;
 
+import daogame.data.GameResult;
+import daogame.data.GameResultDao;
+import daogame.data.GameResultJson;
 import daogame.state.GameState;
 import daogame.state.Position;
 import javafx.animation.Animation;
@@ -27,11 +30,20 @@ import org.apache.commons.lang3.time.DurationFormatUtils;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class GameController {
+
+    @Inject
+    private FXMLLoader fxmlLoader;
+
+    @Inject
+    private GameResultDao gameResultDao;
 
     @FXML
     private Label player1Label;
@@ -83,7 +95,15 @@ public class GameController {
         redTurnIndicator.getStylesheets().add(getClass().getResource("/css/redindicator.css").toExternalForm());
 
         gameOver.addListener((observable, oldValue, newValue) -> {
-            stopWatch.stop();
+            if (newValue) {
+                gameResultDao.persist(createGameResult());
+                try {
+                    updateTopFive();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                stopWatch.stop();
+            }
         });
 
         player1Label.textProperty().bind(player1Name);
@@ -165,6 +185,7 @@ public class GameController {
             gameState.op(from, to);
             if (gameState.isGameEnded()) {
                 gameOver.setValue(true);
+                openResults(source);
             }
         } else {
             log.info("Not permitted movement!");
@@ -173,6 +194,31 @@ public class GameController {
         to = null;
         displayGameState();
         setTurnIndicator();
+    }
+
+    private GameResult createGameResult() {
+        int winnerID = gameState.getWinnerID();
+        String winner;
+        if (winnerID == 1) {
+            winner = player1Name.getValue();
+        }
+        else {
+            winner = player2Name.getValue();
+        }
+
+        return GameResult.builder().
+                player1(player1Name.getValue()).
+                player2(player2Name.getValue()).
+                duration(Duration.ofSeconds(elapsedTime)).
+                winner(winner).
+                turnID(gameState.getTurnID()).
+                build();
+    }
+
+    public void updateTopFive() throws IOException {
+        GameResult newResult = createGameResult();
+        newResult.setCreated(ZonedDateTime.now());
+        GameResultJson.execute(newResult);
     }
 
     public void onRestartButtonClicked(MouseEvent mouseEvent) {
@@ -209,13 +255,14 @@ public class GameController {
         log.debug("{} is pressed", ((Button)mouseEvent.getSource()).getText());
         gameState.playerGaveUp();
         gameOver.setValue(true);
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-//        stage.centerOnScreen();
-        stage.show();
+        openResults((Node)mouseEvent.getSource());
+    }
 
+    private void openResults(Node source) throws IOException {
+        fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/results.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

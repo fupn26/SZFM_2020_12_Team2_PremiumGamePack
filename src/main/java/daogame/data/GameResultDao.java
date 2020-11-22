@@ -41,4 +41,12 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
                 .getResultList();
     }
 
+    /**
+     * Delete all data from the table
+     */
+    @Transactional
+    public void deleteData() {
+        entityManager.createQuery("DELETE FROM GameResult ").executeUpdate();
+    }
+
 }

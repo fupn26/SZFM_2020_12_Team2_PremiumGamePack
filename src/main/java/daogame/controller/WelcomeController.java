@@ -6,6 +6,7 @@ import com.google.inject.AbstractModule;
 import com.jfoenix.controls.JFXAlert;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
+import daogame.data.GameResultDao;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
@@ -27,6 +28,19 @@ import java.util.List;
 @Slf4j
 public class WelcomeController {
 
+    private final GuiceContext context = new GuiceContext(this, () -> List.of(
+            new AbstractModule() {
+                @Override
+                protected void configure() {
+                    install(new PersistenceModule("dao"));
+                    bind(GameResultDao.class);
+                }
+            }
+    ));
+
+    @Inject
+    private FXMLLoader fxmlLoader;
+
     @FXML
     private JFXTextField player1Input;
 
@@ -35,6 +49,8 @@ public class WelcomeController {
 
     @FXML
     public void initialize() {
+        context.init();
+
         RequiredFieldValidator player1Validator = new RequiredFieldValidator();
         player1Validator.setMessage("Input Required");
         RequiredFieldValidator player2Validator = new RequiredFieldValidator();
@@ -60,7 +76,6 @@ public class WelcomeController {
         }
         String player1Name = player1Input.getText();
         String player2Name = player2Input.getText();
-        FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/daogame/game.fxml"));
         Parent root = fxmlLoader.load();
         fxmlLoader.<daogame.controller.GameController>getController().setPlayerNames(player1Name,
