@@ -14,8 +14,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -141,7 +139,7 @@ public class StartController {
                 root = FXMLLoader.load(getClass().getResource("/fxml/puckg/start.fxml"));
                 break;
             case 3:
-                root = FXMLLoader.load(GameApplication.class.getResource("/fxml/swegame/launch.fxml"));
+                root = FXMLLoader.load(GameApplication.class.getResource("/fxml/triplepuck/launch.fxml"));
                 break;
         }
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

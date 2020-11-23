@@ -1,4 +1,4 @@
-package swegame.state;
+package triplepuck.state;
 /**
  * Class representing a cell and its possible content.
  */

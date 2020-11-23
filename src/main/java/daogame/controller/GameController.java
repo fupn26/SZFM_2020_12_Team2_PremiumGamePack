@@ -96,13 +96,13 @@ public class GameController {
 
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
-                gameResultDao.persist(createGameResult());
                 try {
+                    gameResultDao.persist(createGameResult());
                     updateTopFive();
+                    stopWatch.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                stopWatch.stop();
             }
         });
 

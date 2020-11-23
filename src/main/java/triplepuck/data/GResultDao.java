@@ -1,4 +1,4 @@
-package swegame.data;
+package triplepuck.data;
 
 import central.util.jpa.GenericJpaDao;
 import com.google.inject.persist.Transactional;

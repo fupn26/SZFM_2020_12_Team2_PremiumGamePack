@@ -15,7 +15,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
-    <persistence-unit name="swegame" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="triplepuck" transaction-type="RESOURCE_LOCAL">
         <validation-mode>AUTO</validation-mode>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="${db.driver}"/>

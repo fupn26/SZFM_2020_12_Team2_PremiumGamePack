@@ -1,4 +1,4 @@
-package swegame.data;
+package triplepuck.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

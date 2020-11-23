@@ -1,4 +1,4 @@
-package swegame.state;
+package triplepuck.state;
 
 import lombok.AccessLevel;
 import lombok.Data;

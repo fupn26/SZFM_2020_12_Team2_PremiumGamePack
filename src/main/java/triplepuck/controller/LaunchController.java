@@ -1,4 +1,4 @@
-package swegame.controller;
+package triplepuck.controller;
 
 import central.util.guice.PersistenceModule;
 import com.gluonhq.ignite.guice.GuiceContext;
@@ -25,7 +25,7 @@ public class LaunchController {
             new AbstractModule() {
                 @Override
                 protected void configure() {
-                    install(new PersistenceModule("swegame"));
+                    install(new PersistenceModule("triplepuck"));
                     //TODO: bind(GameDataDao.class);
                 }
             }
@@ -51,7 +51,7 @@ public class LaunchController {
         if (RedPlayerNameTextField.getText().isEmpty() || BluePlayerNameTextField.getText().isEmpty()) {
             errorLabel.setText("Enter your name!");
         } else {
-            fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/game.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/fxml/triplepuck/game.fxml"));
             Parent root = fxmlLoader.load();
             fxmlLoader.<GameController>getController().setPlayerNames(RedPlayerNameTextField.getText(),BluePlayerNameTextField.getText());
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

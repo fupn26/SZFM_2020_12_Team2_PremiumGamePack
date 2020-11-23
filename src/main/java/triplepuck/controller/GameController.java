@@ -1,4 +1,4 @@
-package swegame.controller;
+package triplepuck.controller;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -23,15 +23,14 @@ import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
-import swegame.state.SweGameState;
-import swegame.data.GResult;
-import swegame.data.GResultDao;
+import triplepuck.state.SweGameState;
+import triplepuck.data.GResult;
+import triplepuck.data.GResultDao;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
-import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
@@ -92,9 +91,9 @@ public class GameController {
     @FXML
     public void initialize() {
         cellImages = List.of(
-                new Image(getClass().getResource("/images/swegame/cell0.png").toExternalForm()),
-                new Image(getClass().getResource("/images/swegame/cell1.png").toExternalForm()),
-                new Image(getClass().getResource("/images/swegame/cell2.png").toExternalForm())
+                new Image(getClass().getResource("/images/triplepuck/cell0.png").toExternalForm()),
+                new Image(getClass().getResource("/images/triplepuck/cell1.png").toExternalForm()),
+                new Image(getClass().getResource("/images/triplepuck/cell2.png").toExternalForm())
         );
         stepsLabel.textProperty().bind(steps.asString());
         redLabel.setText("Red player starts");
@@ -178,7 +177,7 @@ public class GameController {
         }
         else {
 
-            fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/highscores.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/fxml/triplepuck/highscores.fxml"));
             Parent root = fxmlLoader.load();
             fxmlLoader.<HighScoreController>getController().setPlayerNames(redPlayerName,bluePlayerName);
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

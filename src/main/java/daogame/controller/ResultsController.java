@@ -20,7 +20,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import swegame.data.GResult;
 
 import javax.inject.Inject;
 import java.io.File;
@@ -31,7 +30,6 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 public class ResultsController {

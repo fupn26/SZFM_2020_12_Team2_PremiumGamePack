@@ -1,4 +1,4 @@
-package swegame.controller;
+package triplepuck.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,20 +17,16 @@ import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
-import puckg.data.GameData;
-import puckg.data.GameDataJson;
-import swegame.data.GResult;
-import swegame.data.GResultDao;
+import triplepuck.data.GResult;
+import triplepuck.data.GResultDao;
 
 import javax.inject.Inject;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.ArrayList;
 import java.util.List;
 @Slf4j
 public class HighScoreController {
@@ -191,7 +187,7 @@ public class HighScoreController {
     }
 
     public void handleRestartButton(ActionEvent actionEvent) throws IOException {
-        fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/launch.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/triplepuck/launch.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -199,7 +195,7 @@ public class HighScoreController {
     }
 
     public void handleRematchButton(ActionEvent actionEvent) throws IOException {
-        fxmlLoader.setLocation(getClass().getResource("/fxml/swegame/game.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/triplepuck/game.fxml"));
         Parent root = fxmlLoader.load();
         fxmlLoader.<GameController>getController().setPlayerNames(redPlayerName,bluePlayerName);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
