@@ -25,6 +25,19 @@ public class GResultJson {
         return gson.fromJson(reader, dataType);
     }
 
+    public static void writeJson(File file, ArrayList<GResult> results) throws IOException {
+
+        Gson gson = getGson();
+        try (FileWriter writer = new FileWriter(file, false)) {
+            if(results.size() > 5) {
+                gson.toJson(new ArrayList<>(results.subList(0, 5)), writer);
+            } else {
+                gson.toJson(results, writer);
+            }
+        }
+
+    }
+
     public static Gson getGson() {
         return new GsonBuilder()
                 .registerTypeAdapter(ZonedDateTime.class, new TypeAdapter<ZonedDateTime>() {
