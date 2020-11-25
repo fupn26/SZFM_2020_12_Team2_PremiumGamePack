@@ -71,4 +71,17 @@ public class GResultJson {
                 .setPrettyPrinting()
                 .create();
     }
+
+    public static void execute(GResult newResult) throws IOException {
+        File file = new File("swegame.json");
+        if (file.exists() && !file.isDirectory()) {
+            ArrayList<GResult> resultList = readJson(file);
+            addAndSortResult(resultList, newResult);
+            writeJson(file, resultList);
+        } else {
+            ArrayList<GResult> dataList = new ArrayList<>();
+            addAndSortResult(dataList, newResult);
+            writeJson(file, dataList);
+        }
+    }
 }
