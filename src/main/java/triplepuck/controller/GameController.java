@@ -26,6 +26,7 @@ import org.apache.commons.lang3.time.DurationFormatUtils;
 import triplepuck.state.SweGameState;
 import triplepuck.data.GResult;
 import triplepuck.data.GResultDao;
+import triplepuck.data.GResultJson;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -101,6 +102,12 @@ public class GameController {
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 gameResultDao.persist(createGameResult());
+                gameResultDao.persist(createGameResult());
+                try {
+                    updateTopFive();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 stopWatchTimeline.stop();
                 messageLabel.setText(winner + " is the WINNER!");
                 redLabel.setText("");
@@ -204,5 +211,11 @@ public class GameController {
         }), new KeyFrame(javafx.util.Duration.seconds(1)));
         stopWatchTimeline.setCycleCount(Animation.INDEFINITE);
         stopWatchTimeline.play();
+    }
+
+    public void updateTopFive() throws IOException {
+        GResult newResult = createGameResult();
+        newResult.setCreated(ZonedDateTime.now());
+        GResultJson.execute(newResult);
     }
 }
