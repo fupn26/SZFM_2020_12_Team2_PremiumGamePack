@@ -25,6 +25,22 @@ public class GResultJson {
         return gson.fromJson(reader, dataType);
     }
 
+    public static void addAndSortResult(ArrayList<GResult> resultList, GResult newResult) {
+
+        resultList.add(newResult);
+        Comparator<GResult> pointOrder = new Comparator<GResult>() {
+            public int compare(GResult gr1, GResult gr2) {
+                if (gr2.getDuration().compareTo(gr1.getDuration()) == 0) {
+                    return gr2.getSteps() - gr1.getSteps();
+                } else {
+                    return gr2.getDuration().compareTo(gr1.getDuration()) * -1;
+                }
+            }
+        };
+        Collections.sort(resultList, pointOrder);
+    }
+
+
     public static void writeJson(File file, ArrayList<GResult> results) throws IOException {
 
         Gson gson = getGson();
