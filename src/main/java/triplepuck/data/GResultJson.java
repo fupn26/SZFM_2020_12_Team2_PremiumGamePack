@@ -24,4 +24,22 @@ public class GResultJson {
 
         return gson.fromJson(reader, dataType);
     }
+
+    public static Gson getGson() {
+        return new GsonBuilder()
+                .registerTypeAdapter(ZonedDateTime.class, new TypeAdapter<ZonedDateTime>() {
+                    @Override
+                    public void write(JsonWriter out, ZonedDateTime value) throws IOException {
+                        out.value(value.toString());
+                    }
+
+                    @Override
+                    public ZonedDateTime read(JsonReader in) throws IOException {
+                        return ZonedDateTime.parse(in.nextString());
+                    }
+                })
+                .enableComplexMapKeySerialization()
+                .setPrettyPrinting()
+                .create();
+    }
 }
