@@ -114,7 +114,7 @@
            <children>
                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #00214A;">
                    <children>
-                       <Button fx:id="giveupButton" mnemonicParsing="false" onMouseClicked="#handleGiveUpButton" style="-fx-background-color: lightpink;" text="Give Up" />
+                       <Button fx:id="giveUpButton" mnemonicParsing="false" onAction="#handleGiveUpButton" style="-fx-background-color: lightpink;" text="Give Up" />
                    </children>
                </HBox>
            </children>
