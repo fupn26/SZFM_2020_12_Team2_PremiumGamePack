@@ -197,4 +197,34 @@ public class StartController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    public void handleOpeningRules(ActionEvent actionEvent){
+        if (centreContainer.getChildren().contains(gameRules[titleIndex.get()])) {
+            hideRule();
+        } else {
+            showRule();
+        }
+    }
+
+    private void hideRule() {
+        Parent root = gameRules[titleIndex.get()];
+        Scene scene = centreContainer.getScene();
+
+//        root.translateYProperty().set(scene.getHeight());
+
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateYProperty(), scene.getHeight() - buttonBarContainer.getHeight(), Interpolator.EASE_IN);
+        KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+        timeline.getKeyFrames().add(kf);
+
+        timeline.setOnFinished(event -> {
+            if (titleIndex.get() != 0)
+                previousButton.setVisible(true);
+            if (titleIndex.get() != 3)
+                nextButton.setVisible(true);
+            centreContainer.getChildren().remove(root);
+        });
+
+        timeline.play();
+    }
 }
