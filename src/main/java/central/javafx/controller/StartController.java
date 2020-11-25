@@ -101,6 +101,13 @@ public class StartController {
         stage.close();
     }
 
+    public void handleGameOneButton (ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(GameApplication.class.getResource("/fxml/daogame/welcome.fxml"));
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     public void loadNextGameTitle(ActionEvent actionEvent) throws IOException {
         titleIndex.setValue(titleIndex.get() + 1);
 
