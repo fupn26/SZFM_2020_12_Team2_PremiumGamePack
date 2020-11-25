@@ -41,7 +41,7 @@
                     </columns>
                 </TableView>
                 <!-- <Button  fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" /> -->
-                <JFXButton fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButton" style="-fx-background-color: lightpink;" text="Delete" />
+                <JFXButton fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" style="-fx-background-color: lightpink;" text="Delete" />
                 <Label layoutX="251.0" layoutY="27.0" text="All time top 5">
                     <font>
                         <Font size="22.0" />
