@@ -227,4 +227,22 @@ public class StartController {
 
         timeline.play();
     }
+
+    private void showRule() {
+        Parent root = gameRules[titleIndex.get()];
+        Scene scene = centreContainer.getScene();
+
+        root.translateYProperty().set(scene.getHeight() - buttonBarContainer.getHeight());
+        centreContainer.getChildren().add(root);
+
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+        KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+        timeline.getKeyFrames().add(kf);
+
+        previousButton.setVisible(false);
+        nextButton.setVisible(false);
+
+        timeline.play();
+    }
 }
