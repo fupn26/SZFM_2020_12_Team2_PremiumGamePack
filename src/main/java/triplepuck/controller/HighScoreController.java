@@ -1,5 +1,6 @@
 package triplepuck.controller;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -228,8 +229,9 @@ public class HighScoreController {
     }
 
     public void handleExitButton (ActionEvent actionEvent) {
-        Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.close();
+        //Stage stage = (Stage) exitButton.getScene().getWindow();
+        //stage.close();
+        Platform.exit();
     }
 
     public void displayTopFive() throws FileNotFoundException {

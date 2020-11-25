@@ -69,7 +69,7 @@
                         <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#handleRematchButton" style="-fx-background-color: aquamarine;" text="Rematch" />
                         <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#handleRestartButton" style="-fx-background-color: aquamarine;" text="Restart" />
                         <JFXButton fx:id="mainMenuButton" buttonType="RAISED" mnemonicParsing="false" onAction="#handleMainMenuButton" style="-fx-background-color: aquamarine;" text="Jump to Home Screen" />
-                        <JFXButton fx:id="exitButton" buttonType="RAISED" mnemonicParsing="false" onMouseClicked="#handleExitButton" style="-fx-background-color: lightpink;" text="Exit" />
+                        <JFXButton fx:id="exitButton" buttonType="RAISED" mnemonicParsing="false" onAction="#handleExitButton" style="-fx-background-color: lightpink;" text="Exit" />
                         <!--<Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
                         <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="100.0" text="Restart" />
                         <Button mnemonicParsing="false" onAction="#handleRematchButton" prefHeight="40.0" prefWidth="100.0" text="Rematch" />
