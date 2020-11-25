@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextArea editable="false" prefHeight="260.0" prefWidth="200.0" text="Given a 5x4 table, each of the two players has 4 pucks at the beginning of the game. The players move after each other, and they can move their pucks to one of the four neighbouring fields. The goal is to have three of your pucks next to each other, in a row, in a column, or diagonal. Good luck!" wrapText="true" />
+    </children>
+</VBox>
