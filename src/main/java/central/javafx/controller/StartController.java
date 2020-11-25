@@ -9,11 +9,14 @@ import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -32,6 +35,10 @@ public class StartController {
 //
 //    @FXML
 //    private Button gameFourButton;
+
+    @FXML
+    private BorderPane frontBorderPane;
+
     @FXML
     private JFXButton startButton;
 
@@ -47,8 +54,13 @@ public class StartController {
     @FXML
     private JFXButton exitButton;
 
+    @FXML
+    private HBox buttonBarContainer;
+
+
     private final IntegerProperty titleIndex = new SimpleIntegerProperty();
     private Parent[] gameTitles;
+    private Parent[] gameRules;
 
     @FXML
     public void initialize() throws IOException {
@@ -57,6 +69,12 @@ public class StartController {
         gameTitles[1] = FXMLLoader.load(getClass().getResource("/fxml/central/minesweeper.fxml"));
         gameTitles[2] = FXMLLoader.load(getClass().getResource("/fxml/central/puckg.fxml"));
         gameTitles[3] = FXMLLoader.load(getClass().getResource("/fxml/central/triplepuck.fxml"));
+
+        gameRules = new Parent[4];
+        gameRules[0] = FXMLLoader.load(getClass().getResource("/fxml/daogame/dao_rules.fxml"));
+        gameRules[1] = FXMLLoader.load(getClass().getResource("/fxml/minesweeper/minesweeper_rules.fxml"));
+        gameRules[2] = FXMLLoader.load(getClass().getResource("/fxml/puckg/puckg_rules.fxml"));
+        gameRules[3] = FXMLLoader.load(getClass().getResource("/fxml/triplepuck/triplepuck_rules.fxml"));
 
         titleIndex.addListener((observable, oldValue, newValue) -> {
             if (newValue.intValue() == 0) {
@@ -71,6 +89,11 @@ public class StartController {
         titleIndex.setValue(0);
 
         centreContainer.getChildren().add(0, gameTitles[titleIndex.get()]);
+        frontBorderPane.addEventHandler(EventType.ROOT, event -> {
+            int size = centreContainer.getChildren().size();
+            if (size > 0)
+                centreContainer.getChildren().get(size - 1).fireEvent(event);
+        });
     }
 
     public void handleExit (ActionEvent actionEvent) {

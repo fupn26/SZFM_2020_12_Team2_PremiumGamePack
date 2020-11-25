@@ -16,18 +16,21 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-
 import triplepuck.data.GResult;
 import triplepuck.data.GResultDao;
+import triplepuck.data.GResultJson;
 
 import javax.inject.Inject;
 import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.List;
+import java.util.ArrayList;
+
 @Slf4j
 public class HighScoreController {
 
@@ -184,6 +187,8 @@ public class HighScoreController {
         observableResult.addAll(highScoreList);
 
         highScoreTable.setItems(observableResult);
+
+        displayTopFive();
     }
 
     public void handleRestartButton(ActionEvent actionEvent) throws IOException {
@@ -225,5 +230,14 @@ public class HighScoreController {
     public void handleExitButton (ActionEvent actionEvent) {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+
+    public void displayTopFive() throws FileNotFoundException {
+        File file = new File("triplepuck.json");
+        ArrayList<GResult> resultList = GResultJson.readJson(file);
+        ObservableList<GResult> observableResult = FXCollections.observableArrayList();
+        observableResult.addAll(resultList);
+
+        highScoreTable2.setItems(observableResult);
     }
 }
