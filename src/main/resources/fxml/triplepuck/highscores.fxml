@@ -9,7 +9,9 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="triplepuck.controller.HighScoreController">
+<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="triplepuck.controller.HighScoreController">
     <center>
         <Pane>
             <children>
@@ -28,14 +30,6 @@
                         <Font size="22.0" />
                     </font>
                 </Label>
-                <HBox alignment="CENTER" layoutX="43.0" layoutY="610.0" prefHeight="100.0" prefWidth="563.0" spacing="40.0">
-                    <children>
-                        <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="100.0" text="Restart" />
-                        <Button mnemonicParsing="false" onAction="#handleRematchButton" prefHeight="40.0" prefWidth="100.0" text="Rematch" />
-                        <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
-                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />
-                    </children>
-                </HBox>
                 <TableView fx:id="highScoreTable2" editable="true" layoutX="7.0" layoutY="72.0" prefHeight="145.0" prefWidth="639.0" stylesheets="@../../css/no-scroll.css">
                     <columns>
                         <TableColumn fx:id="redplayer2" prefWidth="85.0" text="Red" />
@@ -46,7 +40,8 @@
                         <TableColumn fx:id="created2" prefWidth="249.0" text="Date" />
                     </columns>
                 </TableView>
-                <Button fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" />
+                <!-- <Button  fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" /> -->
+                <JFXButton fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButton" style="-fx-background-color: lightpink;" text="Delete" />
                 <Label layoutX="251.0" layoutY="27.0" text="All time top 5">
                     <font>
                         <Font size="22.0" />
@@ -55,4 +50,33 @@
             </children>
         </Pane>
     </center>
+    <top>
+        <VBox alignment="CENTER" prefHeight="90.0" prefWidth="100.0" style="-fx-background-color: #00214A;" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="TriplePuck" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #00214A;">
+                    <children>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#handleRematchButton" style="-fx-background-color: aquamarine;" text="Rematch" />
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#handleRestartButton" style="-fx-background-color: aquamarine;" text="Restart" />
+                        <JFXButton fx:id="mainMenuButton" buttonType="RAISED" mnemonicParsing="false" onAction="#handleMainMenuButton" style="-fx-background-color: aquamarine;" text="Jump to Home Screen" />
+                        <JFXButton fx:id="exitButton" buttonType="RAISED" mnemonicParsing="false" onMouseClicked="#handleExitButton" style="-fx-background-color: lightpink;" text="Exit" />
+                        <!--<Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="100.0" text="Restart" />
+                        <Button mnemonicParsing="false" onAction="#handleRematchButton" prefHeight="40.0" prefWidth="100.0" text="Rematch" />
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />  -->
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
 </BorderPane>
