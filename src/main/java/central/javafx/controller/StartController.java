@@ -245,4 +245,7 @@ public class StartController {
 
         timeline.play();
     }
+
+    public void handleResultButtonAction(ActionEvent actionEvent) {
+    }
 }
