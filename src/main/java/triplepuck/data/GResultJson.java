@@ -73,7 +73,7 @@ public class GResultJson {
     }
 
     public static void execute(GResult newResult) throws IOException {
-        File file = new File("swegame.json");
+        File file = new File("triplepuck.json");
         if (file.exists() && !file.isDirectory()) {
             ArrayList<GResult> resultList = readJson(file);
             addAndSortResult(resultList, newResult);
