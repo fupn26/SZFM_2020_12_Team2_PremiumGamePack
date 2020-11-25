@@ -8,46 +8,51 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="triplepuck.controller.HighScoreController">
-    <children>
-        <TableView fx:id="highScoreTable" editable="true" layoutX="6.0" layoutY="300.0" prefHeight="310.0" prefWidth="639.0">
-            <columns>
-                <TableColumn fx:id="redplayer" prefWidth="85.0" text="Red" />
-                <TableColumn fx:id="blueplayer" prefWidth="85.0" text="Blue" />
-                <TableColumn fx:id="winner" prefWidth="85.0" text="Winner" />
-                <TableColumn fx:id="steps" prefWidth="59.0" text="Steps" />
-                <TableColumn fx:id="duration" prefWidth="75.0" text="Duration" />
-                <TableColumn fx:id="created" prefWidth="249.0" text="Date" />
-            </columns>
-        </TableView>
-        <Label layoutX="234.0" layoutY="266.0" text="Previous Results">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-        <HBox alignment="CENTER" layoutX="43.0" layoutY="610.0" prefHeight="100.0" prefWidth="563.0" spacing="40.0">
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="triplepuck.controller.HighScoreController">
+    <center>
+        <Pane>
             <children>
-                <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="100.0" text="Restart" />
-                <Button mnemonicParsing="false" onAction="#handleRematchButton" prefHeight="40.0" prefWidth="100.0" text="Rematch" />
-                <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
-                <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />
+                <TableView fx:id="highScoreTable" editable="true" layoutX="6.0" layoutY="300.0" prefHeight="310.0" prefWidth="639.0">
+                    <columns>
+                        <TableColumn fx:id="redplayer" prefWidth="85.0" text="Red" />
+                        <TableColumn fx:id="blueplayer" prefWidth="85.0" text="Blue" />
+                        <TableColumn fx:id="winner" prefWidth="85.0" text="Winner" />
+                        <TableColumn fx:id="steps" prefWidth="59.0" text="Steps" />
+                        <TableColumn fx:id="duration" prefWidth="75.0" text="Duration" />
+                        <TableColumn fx:id="created" prefWidth="249.0" text="Date" />
+                    </columns>
+                </TableView>
+                <Label layoutX="234.0" layoutY="266.0" text="Previous Results">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" layoutX="43.0" layoutY="610.0" prefHeight="100.0" prefWidth="563.0" spacing="40.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="100.0" text="Restart" />
+                        <Button mnemonicParsing="false" onAction="#handleRematchButton" prefHeight="40.0" prefWidth="100.0" text="Rematch" />
+                        <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-font-weight: bold;" text="MAIN MENU" textFill="WHITE" />
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />
+                    </children>
+                </HBox>
+                <TableView fx:id="highScoreTable2" editable="true" layoutX="7.0" layoutY="72.0" prefHeight="145.0" prefWidth="639.0" stylesheets="@../../css/no-scroll.css">
+                    <columns>
+                        <TableColumn fx:id="redplayer2" prefWidth="85.0" text="Red" />
+                        <TableColumn fx:id="blueplayer2" prefWidth="85.0" text="Blue" />
+                        <TableColumn fx:id="winner2" prefWidth="85.0" text="Winner" />
+                        <TableColumn fx:id="steps2" prefWidth="59.0" text="Steps" />
+                        <TableColumn fx:id="duration2" prefWidth="75.0" text="Duration" />
+                        <TableColumn fx:id="created2" prefWidth="249.0" text="Date" />
+                    </columns>
+                </TableView>
+                <Button fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" />
+                <Label layoutX="251.0" layoutY="27.0" text="All time top 5">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
             </children>
-        </HBox>
-        <TableView fx:id="highScoreTable2" editable="true" layoutX="7.0" layoutY="72.0" prefHeight="145.0" prefWidth="639.0" stylesheets="@../../css/no-scroll.css">
-            <columns>
-                <TableColumn fx:id="redplayer2" prefWidth="85.0" text="Red" />
-                <TableColumn fx:id="blueplayer2" prefWidth="85.0" text="Blue" />
-                <TableColumn fx:id="winner2" prefWidth="85.0" text="Winner" />
-                <TableColumn fx:id="steps2" prefWidth="59.0" text="Steps" />
-                <TableColumn fx:id="duration2" prefWidth="75.0" text="Duration" />
-                <TableColumn fx:id="created2" prefWidth="249.0" text="Date" />
-            </columns>
-        </TableView>
-        <Button fx:id="deleteButton" layoutX="563.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete" />
-        <Label layoutX="251.0" layoutY="27.0" text="All time top 5">
-            <font>
-                <Font size="22.0" />
-            </font>
-        </Label>
-    </children>
-</Pane>
+        </Pane>
+    </center>
+</BorderPane>
