@@ -115,6 +115,13 @@ public class StartController {
         stage.show();
     }
 
+    public void handleGameThreeButton (ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(GameApplication.class.getResource("/fxml/triplepuck/launch.fxml"));
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     public void loadNextGameTitle(ActionEvent actionEvent) throws IOException {
         titleIndex.setValue(titleIndex.get() + 1);
 
