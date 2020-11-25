@@ -122,6 +122,13 @@ public class StartController {
         stage.show();
     }
 
+    public void handleGameFourButton (ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/puckg/start.fxml"));
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     public void loadNextGameTitle(ActionEvent actionEvent) throws IOException {
         titleIndex.setValue(titleIndex.get() + 1);
 
