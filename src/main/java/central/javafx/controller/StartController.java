@@ -89,6 +89,7 @@ public class StartController {
         titleIndex.setValue(0);
 
         centreContainer.getChildren().add(0, gameTitles[titleIndex.get()]);
+
         frontBorderPane.addEventHandler(EventType.ROOT, event -> {
             int size = centreContainer.getChildren().size();
             if (size > 0)
@@ -177,6 +178,7 @@ public class StartController {
         nextButton.setDisable(true);
         timeline.play();
     }
+
     public void handleGameStart(ActionEvent actionEvent) throws IOException{
         Parent root = null;
         switch (titleIndex.get()) {

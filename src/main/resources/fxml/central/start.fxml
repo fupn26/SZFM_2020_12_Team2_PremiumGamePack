@@ -1,54 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="central.javafx.controller.StartController">
-   <top>
-      <VBox alignment="CENTER" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #00214A;" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Premium Games" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="30.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <VBox prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #00214A;">
+<StackPane fx:id="mainStackPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="central.javafx.controller.StartController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <StackPane fx:id="centreContainer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="startButton" buttonType="RAISED" onAction="#handleGameStart" style="-fx-background-color: aquamarine;" text="Start" />
-                  <JFXButton fx:id="resultsButton" buttonType="RAISED" style="-fx-background-color: aquamarine;" text="Results" />
-                  <JFXButton fx:id="rulesButton" buttonType="RAISED" style="-fx-background-color: aquamarine;" text="Rules" />
-                  <JFXButton fx:id="exitButton" buttonType="RAISED" onAction="#handleExit" style="-fx-background-color: lightpink;" text="Exit" />
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" />
                </children>
-            </HBox>
-         </children>
-      </VBox>
-   </bottom>
-   <center>
-      <StackPane fx:id="centreContainer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <BorderPane prefHeight="200.0" prefWidth="200.0">
-               <left>
-                  <JFXButton fx:id="previousButton" onAction="#loadPreviousGameTitle" text="&lt;" visible="false" BorderPane.alignment="CENTER">
+            </StackPane>
+         </center>
+         <top>
+            <VBox prefHeight="90.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <BorderPane fx:id="frontBorderPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <VBox alignment="CENTER" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #00214A;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Premium Games" textFill="WHITE">
                      <font>
-                        <Font size="40.0" />
+                        <Font name="System Bold" size="30.0" />
                      </font>
-                  </JFXButton>
-               </left>
-               <right>
-                  <JFXButton fx:id="nextButton" onAction="#loadNextGameTitle" text="&gt;" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                  </JFXButton>
-               </right></BorderPane>
-         </children></StackPane>
-   </center>
-</BorderPane>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="buttonBarContainer" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" spacing="20.0" style="-fx-background-color: #00214A;">
+                     <children>
+                        <JFXButton fx:id="startButton" buttonType="RAISED" onAction="#handleGameStart" style="-fx-background-color: aquamarine;" text="Start" />
+                        <JFXButton fx:id="resultsButton" buttonType="RAISED" onAction="#handleResultButtonAction" style="-fx-background-color: aquamarine;" text="Results" />
+                        <JFXButton fx:id="rulesButton" buttonType="RAISED" onAction="#handleOpeningRules" style="-fx-background-color: aquamarine;" text="Rules" />
+                        <JFXButton fx:id="exitButton" buttonType="RAISED" onAction="#handleExit" style="-fx-background-color: lightpink;" text="Exit" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <left>
+            <JFXButton fx:id="previousButton" onAction="#loadPreviousGameTitle" text="&lt;" visible="false" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </JFXButton>
+         </left>
+         <right>
+            <JFXButton fx:id="nextButton" onAction="#loadNextGameTitle" text="&gt;" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </JFXButton>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>
