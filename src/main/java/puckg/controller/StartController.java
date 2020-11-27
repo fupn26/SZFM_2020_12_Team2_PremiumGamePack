@@ -3,6 +3,8 @@ package puckg.controller;
 import central.util.guice.PersistenceModule;
 import com.gluonhq.ignite.guice.GuiceContext;
 import com.google.inject.AbstractModule;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,52 +38,43 @@ public class StartController {
     private FXMLLoader fxmlLoader;
 
     @FXML
-    private TextField player1NameTextField;
+    private JFXTextField player1NameTextField;
 
     @FXML
-    private TextField player2NameTextField;
-
-    @FXML
-    private Label errorLabel1;
-
-    @FXML
-    private Label errorLabel2;
-
-    @FXML
-    private TextArea ruleArea;
-
-    @FXML
-    private Button rulesButton;
+    private JFXTextField player2NameTextField;
 
     @FXML
     public void initialize() {
-        ruleArea.setVisible(false);
         context.init();
+
+        RequiredFieldValidator player1Validator = new RequiredFieldValidator();
+        player1Validator.setMessage("Input Required");
+        RequiredFieldValidator player2Validator = new RequiredFieldValidator();
+        player2Validator.setMessage("Input Required");
+
+
+        player1NameTextField.getValidators().add(player1Validator);
+        player2NameTextField.getValidators().add(player2Validator);
+
+        player1NameTextField.focusedProperty().addListener((o,oldVal,newVal)->{
+            if(!newVal) player1NameTextField.validate();
+        });
+
+        player2NameTextField.focusedProperty().addListener((o,oldVal,newVal)->{
+            if(!newVal) player2NameTextField.validate();
+        });
     }
 
     public void startAction(ActionEvent actionEvent) throws IOException {
-        if(player1NameTextField.getText().isEmpty()) {
-            errorLabel1.setText("Enter Player1's name!");
-        } else if(player2NameTextField.getText().isEmpty()) {
-            errorLabel2.setText("Enter Player2's name!");
-        } else {
-            fxmlLoader.setLocation(getClass().getResource("/fxml/puckg/game.fxml"));
-            Parent root = fxmlLoader.load();
-            fxmlLoader.<GameController>getController().setPlayer1Name(player1NameTextField.getText());
-            fxmlLoader.<GameController>getController().setPlayer2Name(player2NameTextField.getText());
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+        if (!player1NameTextField.validate() || !player2NameTextField.validate()) {
+            return;
         }
-    }
-
-    public void handleRules(ActionEvent actionEvent) {
-        if(!ruleArea.visibleProperty().getValue()) {
-            ruleArea.setVisible(true);
-            rulesButton.setText("Hide rules");
-        } else {
-            ruleArea.setVisible(false);
-            rulesButton.setText("Show rules");
-        }
+        fxmlLoader.setLocation(getClass().getResource("/fxml/puckg/game.fxml"));
+        Parent root = fxmlLoader.load();
+        fxmlLoader.<GameController>getController().setPlayer1Name(player1NameTextField.getText());
+        fxmlLoader.<GameController>getController().setPlayer2Name(player2NameTextField.getText());
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
