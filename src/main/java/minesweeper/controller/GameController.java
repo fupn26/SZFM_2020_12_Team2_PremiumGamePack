@@ -21,8 +21,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import minesweeper.data.Result;
+import minesweeper.data.ResultDao;
+import minesweeper.data.ResultJson;
 import minesweeper.state.MsweeperState;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import puckg.data.GameData;
+import puckg.data.GameDataJson;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -35,8 +40,11 @@ import java.util.List;
 @Slf4j
 public class GameController {
 
+    @Inject
+    private FXMLLoader fxmlLoader;
 
-    private FXMLLoader fxmlLoader = new FXMLLoader();
+    @Inject
+    private ResultDao resultDao;
 
     private String playerName;
     private MsweeperState gameState;
@@ -82,6 +90,12 @@ public class GameController {
         );
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
+                resultDao.persist(createGameResult());
+                try {
+                    updateTopFive();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 stopwatchTimeline.stop();
             }
         });
@@ -151,11 +165,20 @@ public class GameController {
     public void handleGiveUpButton(ActionEvent actionEvent) throws IOException {
         String buttonText = ((Button) actionEvent.getSource()).getText();
         gameOver.setValue(true);
-        fxmlLoader.setLocation(getClass().getResource("/fxml/central/start.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/minesweeper/highscores.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    private Result createGameResult() {
+        Result result = Result.builder()
+                .playerName(playerName)
+                .solved(gameState.isWon())
+                .duration(Duration.between(startTime, Instant.now()))
+                .build();
+        return result;
     }
 
     private void createStopWatch() {
@@ -165,5 +188,13 @@ public class GameController {
         }), new KeyFrame(javafx.util.Duration.seconds(1)));
         stopwatchTimeline.setCycleCount(Animation.INDEFINITE);
         stopwatchTimeline.play();
+    }
+
+    public void updateTopFive() throws IOException {
+        Result newResult = createGameResult();
+        if(newResult.isSolved()) {
+            newResult.setCreated(ZonedDateTime.now());
+            ResultJson.execute(newResult);
+        }
     }
 }
