@@ -154,7 +154,7 @@ public class GameController {
         String buttonText = ((Button) actionEvent.getSource()).getText();
         playerGaveUp = player;
         gameOver.setValue(true);
-        fxmlLoader.setLocation(getClass().getResource("/fxml/puck/highscores.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/fxml/puckg/highscores.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
