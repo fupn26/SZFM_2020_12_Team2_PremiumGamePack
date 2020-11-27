@@ -1,5 +1,6 @@
 package puckg.controller;
 
+import central.util.guice.PersistenceModule;
 import com.gluonhq.ignite.guice.GuiceContext;
 import com.google.inject.AbstractModule;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import puckg.data.GameDataDao;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -21,7 +23,13 @@ import java.util.List;
 public class StartController {
 
     private GuiceContext context = new GuiceContext(this, () -> List.of(
-            new AbstractModule() {}
+            new AbstractModule() {
+                @Override
+                protected void configure() {
+                    install(new PersistenceModule("puckgame"));
+                    bind(GameDataDao.class);
+                }
+            }
     ));
 
     @Inject
