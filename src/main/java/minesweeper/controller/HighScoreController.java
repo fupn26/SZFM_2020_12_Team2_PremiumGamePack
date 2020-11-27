@@ -1,5 +1,6 @@
 package minesweeper.controller;
 
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import minesweeper.data.Result;
@@ -74,6 +76,12 @@ public class HighScoreController {
 
     @FXML
     private Button exitButton;
+
+    @FXML
+    private VBox previousResultsView;
+
+    @FXML
+    private VBox top5ResultsView;
 
     @FXML
     private void initialize() throws FileNotFoundException {
@@ -195,5 +203,15 @@ public class HighScoreController {
         observableResult.addAll(resultList);
 
         highScoreTable2.setItems(observableResult);
+    }
+
+    public void handleResultViewSwitch(ActionEvent actionEvent) {
+        if (((JFXToggleButton)(actionEvent.getSource())).isSelected()) {
+            previousResultsView.setVisible(true);
+            top5ResultsView.setVisible(false);
+        } else {
+            previousResultsView.setVisible(false);
+            top5ResultsView.setVisible(true);
+        }
     }
 }
