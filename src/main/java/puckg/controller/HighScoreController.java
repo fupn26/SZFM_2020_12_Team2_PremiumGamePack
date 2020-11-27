@@ -1,5 +1,6 @@
 package puckg.controller;
 
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import puckg.data.GameData;
@@ -88,6 +90,15 @@ public class HighScoreController {
 
     @FXML
     private Button mainMenuButton;
+
+    @FXML
+    private Button restartButton;
+
+    @FXML
+    private VBox previousResultsView;
+
+    @FXML
+    private VBox top5ResultsView;
 
     @FXML
     private void initialize() throws FileNotFoundException {
@@ -217,5 +228,15 @@ public class HighScoreController {
         observableResult.addAll(dataList);
 
         highScoreTable2.setItems(observableResult);
+    }
+
+    public void handleResultViewSwitch(ActionEvent actionEvent) {
+        if (((JFXToggleButton)(actionEvent.getSource())).isSelected()) {
+            previousResultsView.setVisible(true);
+            top5ResultsView.setVisible(false);
+        } else {
+            previousResultsView.setVisible(false);
+            top5ResultsView.setVisible(true);
+        }
     }
 }
