@@ -95,4 +95,20 @@ public class SweGameStateTest {
     }
 
 
+    @Test
+    void testCanMoveTo(){
+        SweGameState state = new SweGameState();
+        assertFalse(state.canMoveTo(-1,0,3 ,5));
+        assertFalse(state.canMoveTo(6,0,3 ,5));
+        assertFalse(state.canMoveTo(0,0,5 ,5));
+        assertFalse(state.canMoveTo(0,0,-4 ,5));
+        assertFalse(state.canMoveTo(0,0,1 ,0));
+        assertFalse(state.canMoveTo(0,0,0 ,1));
+        assertFalse(state.canMoveTo(0,0,0 ,0));
+        assertTrue(state.canMoveTo(0,0,1,0));
+        assertTrue(state.canMoveTo(4,0,3,0));
+    }
+
+
+
 }
