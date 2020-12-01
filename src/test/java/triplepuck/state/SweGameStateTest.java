@@ -131,4 +131,13 @@ public class SweGameStateTest {
                 }, state.getBoard());
         }
 
+    @Test
+    void testToString() {
+        SweGameState state = new SweGameState();
+        assertEquals("2 1 2 1 \n"
+                + "0 0 0 0 \n"
+                + "0 0 0 0 \n"
+                + "0 0 0 0 \n"
+                + "1 2 1 2 \n", state.toString());
+    }
 }
