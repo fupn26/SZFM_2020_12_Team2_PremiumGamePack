@@ -48,5 +48,24 @@ public class SweGameStateTest {
         );
     }
 
+    @Test
+    void testOneArgConstructor_ValidArg() {
+        int[][] a = new int[][] {
+                {2, 1, 2, 1},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {1, 2, 1, 2}
+        };
+        SweGameState state = new SweGameState(a);
+        assertArrayEquals(new Cell[][] {
+                {Cell.BLUE,Cell.RED,Cell.BLUE,Cell.RED},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.RED,Cell.BLUE,Cell.RED,Cell.BLUE}
+        }, state.getBoard());
+    }
+
 
 }
