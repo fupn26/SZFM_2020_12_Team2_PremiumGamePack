@@ -1,4 +1,4 @@
-package swegame.state;
+package triplepuck.state;
 
 import org.junit.jupiter.api.Test;
 
@@ -103,30 +103,30 @@ public class SweGameStateTest {
         assertFalse(state.canMoveTo(0,0,1 ,0));
         assertFalse(state.canMoveTo(0,0,0 ,1));
         assertFalse(state.canMoveTo(0,0,0 ,0));
-        assertTrue(state.canMoveTo(0,0,1,0));
         assertTrue(state.canMoveTo(4,0,3,0));
     }
 
     @Test
     void testMove(){
         SweGameState state = new SweGameState();
-        state.move(0,0,1,0);
-        assertArrayEquals(new Cell[][] {
-                {Cell.EMPTY,Cell.RED,Cell.BLUE,Cell.RED},
-                {Cell.BLUE,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
-                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
-                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
-                {Cell.RED,Cell.BLUE,Cell.RED,Cell.BLUE}
-        }, state.getBoard());
         state.move(4,0,3,0);
+        assertArrayEquals(new Cell[][] {
+                {Cell.BLUE,Cell.RED,Cell.BLUE,Cell.RED},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.RED,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.BLUE,Cell.RED,Cell.BLUE}
+        }, state.getBoard());
+        state.move(0,0,1,0);
         assertArrayEquals(new Cell[][] {
                 {Cell.EMPTY,Cell.RED,Cell.BLUE,Cell.RED},
                 {Cell.BLUE,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
                 {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
                 {Cell.RED,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
                 {Cell.EMPTY,Cell.BLUE,Cell.RED,Cell.BLUE}
-                }, state.getBoard());
-        }
+        }, state.getBoard());
+
+    }
 
     @Test
     void testToString() {
