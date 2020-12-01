@@ -67,7 +67,6 @@ public class SweGameStateTest {
         }, state.getBoard());
     }
 
-
     @Test
     void testIsGoal(){
         assertFalse(new SweGameState().isGoal());
@@ -94,7 +93,6 @@ public class SweGameStateTest {
         }).isGoal());
     }
 
-
     @Test
     void testCanMoveTo(){
         SweGameState state = new SweGameState();
@@ -108,7 +106,6 @@ public class SweGameStateTest {
         assertTrue(state.canMoveTo(0,0,1,0));
         assertTrue(state.canMoveTo(4,0,3,0));
     }
-
 
     @Test
     void testMove(){
