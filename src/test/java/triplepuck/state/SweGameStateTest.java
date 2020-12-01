@@ -110,5 +110,25 @@ public class SweGameStateTest {
     }
 
 
+    @Test
+    void testMove(){
+        SweGameState state = new SweGameState();
+        state.move(0,0,1,0);
+        assertArrayEquals(new Cell[][] {
+                {Cell.EMPTY,Cell.RED,Cell.BLUE,Cell.RED},
+                {Cell.BLUE,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.RED,Cell.BLUE,Cell.RED,Cell.BLUE}
+        }, state.getBoard());
+        state.move(4,0,3,0);
+        assertArrayEquals(new Cell[][] {
+                {Cell.EMPTY,Cell.RED,Cell.BLUE,Cell.RED},
+                {Cell.BLUE,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.RED,Cell.EMPTY,Cell.EMPTY,Cell.EMPTY},
+                {Cell.EMPTY,Cell.BLUE,Cell.RED,Cell.BLUE}
+                }, state.getBoard());
+        }
 
 }
