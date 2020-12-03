@@ -20,7 +20,8 @@ public class ResultJson {
 
         Reader reader = new FileReader(file);
         Gson gson = getGson();
-        Type dataType = new TypeToken<ArrayList<Result>>(){}.getType();
+        Type dataType = new TypeToken<ArrayList<Result>>() {
+        }.getType();
 
         return gson.fromJson(reader, dataType);
     }
@@ -40,7 +41,7 @@ public class ResultJson {
 
         Gson gson = getGson();
         try (FileWriter writer = new FileWriter(file, false)) {
-            if(data.size() > 5) {
+            if (data.size() > 5) {
                 gson.toJson(new ArrayList<>(data.subList(0, 5)), writer);
             } else {
                 gson.toJson(data, writer);

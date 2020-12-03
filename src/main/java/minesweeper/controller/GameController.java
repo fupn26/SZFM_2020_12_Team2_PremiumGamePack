@@ -70,7 +70,9 @@ public class GameController {
 
     private BooleanProperty gameOver = new SimpleBooleanProperty();
 
-    public void setPlayerName(String playerName) {this.playerName = playerName;}
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
 
     @FXML
     public void initialize() {
@@ -102,8 +104,8 @@ public class GameController {
         resetGame();
     }
 
-    private void resetGame(){
-        gameState = new MsweeperState(5,10,10);
+    private void resetGame() {
+        gameState = new MsweeperState(5, 10, 10);
         startTime = Instant.now();
         gameOver.setValue(false);
         displayGameState();
@@ -113,10 +115,10 @@ public class GameController {
         resetButton.setText("Reset");
     }
 
-    private void displayGameState(){
-        for (int i = 0; i < 5; i++){
-            for (int j = 0; j < 10; j++){
-                ImageView view = (ImageView) gameGrid.getChildren().get(i * 10+ j);
+    private void displayGameState() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                ImageView view = (ImageView) gameGrid.getChildren().get(i * 10 + j);
                 view.setImage(imageList.get(gameState.displayGrid()[i][j]));
             }
         }
@@ -126,26 +128,25 @@ public class GameController {
         int row = GridPane.getRowIndex((Node) mouseEvent.getSource());
         int col = GridPane.getColumnIndex((Node) mouseEvent.getSource());
         log.debug("Square ({}, {}) is pressed", row, col);
-        if (! gameState.isWon() && ! gameState.isLost()) {
-            while(gameState.isHidden() && gameState.getMinegrid()[row][col]==1) {
-                gameState = new MsweeperState(5,10,10);
+        if (!gameState.isWon() && !gameState.isLost()) {
+            while (gameState.isHidden() && gameState.getMinegrid()[row][col] == 1) {
+                gameState = new MsweeperState(5, 10, 10);
             }
-            if(mouseEvent.getButton() == MouseButton.PRIMARY) gameState.reveal(row,col);
-            if(mouseEvent.getButton() == MouseButton.SECONDARY) gameState.putFlag(row,col);
+            if (mouseEvent.getButton() == MouseButton.PRIMARY) gameState.reveal(row, col);
+            if (mouseEvent.getButton() == MouseButton.SECONDARY) gameState.putFlag(row, col);
             if (gameState.isLost()) {
                 gameOver.setValue(true);
-                for(int i=0; i<5; i++){
-                    for(int j=0; j<10; j++){
-                        if(gameState.getFlaggrid()[i][j] == 1) gameState.putFlag(i,j);
-                        gameState.reveal(i,j);
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 0; j < 10; j++) {
+                        if (gameState.getFlaggrid()[i][j] == 1) gameState.putFlag(i, j);
+                        gameState.reveal(i, j);
                     }
                 }
                 displayGameState();
                 giveUpButton.setDisable(true);
                 resetButton.setText("Retry");
                 messageLabel.setText("Game Over. Try again?");
-            }
-            else if (gameState.isWon()) {
+            } else if (gameState.isWon()) {
                 gameOver.setValue(true);
                 log.info("Player {} has solved the game", playerName);
                 messageLabel.setText("Congratulations, " + playerName + "!");
@@ -157,7 +158,7 @@ public class GameController {
         displayGameState();
     }
 
-    public void handleResetButton(ActionEvent actionEvent)  {
+    public void handleResetButton(ActionEvent actionEvent) {
         stopwatchTimeline.stop();
         resetGame();
     }
@@ -192,9 +193,7 @@ public class GameController {
 
     public void updateTopFive() throws IOException {
         Result newResult = createGameResult();
-        if(newResult.isSolved()) {
-            newResult.setCreated(ZonedDateTime.now());
-            ResultJson.execute(newResult);
-        }
+        newResult.setCreated(ZonedDateTime.now());
+        ResultJson.execute(newResult);
     }
 }
