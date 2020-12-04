@@ -34,6 +34,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 @Slf4j
 public class HighScoreController {
@@ -199,6 +200,7 @@ public class HighScoreController {
     public void displayTopFive() throws FileNotFoundException {
         File file = new File("minesweeper.json");
         ArrayList<Result> resultList = ResultJson.readJson(file);
+        resultList.removeIf(Predicate.not(Result::isSolved));
         ObservableList<Result> observableResult = FXCollections.observableArrayList();
         observableResult.addAll(resultList);
 
