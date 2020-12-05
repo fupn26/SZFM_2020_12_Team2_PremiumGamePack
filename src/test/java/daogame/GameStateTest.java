@@ -75,4 +75,44 @@ class GameStateTest {
         state = new GameState(new int[][]{{2, 0, 0, 1}, {0, 2, 1, 0}, {0, 1, 0, 2}, {1, 0, 0, 2}}, 2);
         assertFalse(state.isApplicable(new Position(0, 0), new Position(2, 2)));
     }
+
+    @Test
+    void testIsGameEnded() {
+        GameState state = new GameState();
+        state.op(new Position(0,3), new Position(3, 3));
+        state.op(new Position(1, 2), new Position(3, 2));
+        state.op(new Position(2, 1), new Position(3, 1));
+        assertTrue(state.isGameEnded());
+        assertEquals(1,state.getWinnerID());
+
+        state = new GameState();
+        state.op(new Position(1,1), new Position(1, 0));
+        state.op(new Position(2, 2), new Position(2, 0));
+        state.op(new Position(3, 3), new Position(3, 0));
+        assertTrue(state.isGameEnded());
+        assertEquals(2,state.getWinnerID());
+
+        state = new GameState();
+        state.op(new Position(0,3), new Position(2, 0));
+        state.op(new Position(1, 2), new Position(3, 1));
+        assertTrue(state.isGameEnded());
+        assertEquals(1,state.getWinnerID());
+
+        state = new GameState();
+        state.op(new Position(1,2), new Position(0, 0));
+        state.op(new Position(1, 1), new Position(0, 1));
+        state.op(new Position(2, 1), new Position(3, 3));
+        assertTrue(state.isGameEnded());
+        assertEquals(1,state.getWinnerID());
+
+        state = new GameState();
+        state.op(new Position(0,0), new Position(0, 2));
+        state.op(new Position(1, 1), new Position(1, 2));
+        state.op(new Position(3, 3), new Position(1, 3));
+        assertTrue(state.isGameEnded());
+        assertEquals(1,state.getWinnerID());
+
+        state = new GameState();
+        assertFalse(state.isGameEnded());
+    }
 }
