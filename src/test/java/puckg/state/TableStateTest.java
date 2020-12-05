@@ -178,4 +178,16 @@ public class TableStateTest {
                 {0, 0, 0, 0, 1, 2},
                 {2, 0, 0, 2, 2, 1}}).isMovableTo(1, 5, 5, 3, 5));
     }
+
+    @Test
+    void testNumberOfEmptyCells() {
+        assertEquals(31, new TableState().numberOfEmptyCells());
+        assertEquals(0, new TableState(new int[][] {
+                {2, 2, 2, 2, 2, 2},
+                {2, 2, 1, 1, 2, 1},
+                {2, 1, 2, 2, 1, 2},
+                {2, 1, 2, 3, 1, 2},
+                {2, 1, 2, 2, 1, 2},
+                {2, 2, 2, 2, 2, 1}}).numberOfEmptyCells());
+    }
 }
