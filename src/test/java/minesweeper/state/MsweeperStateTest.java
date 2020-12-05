@@ -71,4 +71,8 @@ public class MsweeperStateTest {
                 {1, 2, 1}
         });
     }
+
+    @Test
+    void testPutFlag(){
+    }
 }
