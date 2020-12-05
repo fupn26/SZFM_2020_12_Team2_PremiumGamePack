@@ -114,4 +114,8 @@ public class MsweeperStateTest {
     @Test
     void testIsLost(){
     }
+
+    @Test
+    void testIsWon(){
+    }
 }
