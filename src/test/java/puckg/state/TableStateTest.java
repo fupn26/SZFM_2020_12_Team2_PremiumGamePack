@@ -301,4 +301,15 @@ public class TableStateTest {
         assertEquals(3, state.pointsOfPlayer(1));
         assertEquals(2, state.pointsOfPlayer(2));
     }
+
+    @Test
+    void testToString() {
+        TableState state = new TableState();
+        assertEquals("1 0 0 0 0 2 \n"
+                + "0 0 0 0 0 0 \n"
+                + "0 0 0 0 0 0 \n"
+                + "0 0 0 3 0 0 \n"
+                + "0 0 0 0 0 0 \n"
+                + "2 0 0 0 0 1 \n", state.toString());
+    }
 }
