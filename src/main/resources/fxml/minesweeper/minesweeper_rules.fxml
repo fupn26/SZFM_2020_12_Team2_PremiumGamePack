@@ -8,6 +8,7 @@
         <TextArea editable="false" prefHeight="260.0" prefWidth="200.0" text="In this game, you see a minefield of hidden blocks, and don't know which ones have mines under them.
         To reveal a block, use left click.
         To flag a block you think has a mine under it, use right click.
+        Flagged blocks can't be revealed, to prevent accidnetal clicks.
         The numbers on the blocks represent the number of adjacent mines to said block.
         You win once you reveal every non-mine block." wrapText="true" />
     </children>
