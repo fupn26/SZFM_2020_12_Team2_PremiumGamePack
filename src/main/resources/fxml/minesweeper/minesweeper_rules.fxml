@@ -7,10 +7,10 @@
       prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <TextArea editable="false" prefHeight="260.0" prefWidth="200.0" text="In this game, you see a minefield of hidden blocks, and don't know which ones have mines under them.
-        To reveal a block, use left click.
-        To flag a block you think has a mine under it, use right click.
-        Flagged blocks can't be revealed, to prevent accidental clicks.
-        The numbers on the blocks represent the number of adjacent mines to said block.
-        You win once you reveal every non-mine block." wrapText="true"/>
+        &#10;To reveal a block, use left click.
+        &#10;To flag a block you think has a mine under it, use right click.
+        &#10;Flagged blocks can't be revealed, to prevent accidental clicks.
+        &#10;The numbers on the blocks represent the number of adjacent mines to said block.
+        &#10;You win once you reveal every non-mine block." wrapText="true"/>
     </children>
 </VBox>
