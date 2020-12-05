@@ -110,4 +110,8 @@ public class MsweeperStateTest {
                 {0, 1, 1}
         });
     }
+
+    @Test
+    void testIsLost(){
+    }
 }
