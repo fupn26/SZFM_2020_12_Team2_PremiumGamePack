@@ -135,4 +135,9 @@ public class MsweeperStateTest {
         state.reveal(2,0);
         assertTrue(state.isWon());
     }
+
+    @Test
+    void testDisplayGrid(){
+
+    }
 }
