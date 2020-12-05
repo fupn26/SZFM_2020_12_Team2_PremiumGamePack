@@ -1,7 +1,6 @@
-package java.puckg.state;
+package puckg.state;
 
 import org.junit.jupiter.api.Test;
-import puckg.state.Cell;
 
 import static org.junit.jupiter.api.Assertions.*;
 
