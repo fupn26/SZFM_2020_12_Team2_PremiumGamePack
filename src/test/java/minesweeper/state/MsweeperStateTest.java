@@ -125,5 +125,14 @@ public class MsweeperStateTest {
 
     @Test
     void testIsWon(){
+        int[][] minefield = {
+                {1, 1, 1},
+                {1, 0, 1},
+                {0, 1, 1}
+        };
+        MsweeperState state = new MsweeperState(minefield);
+        state.reveal(1,1);
+        state.reveal(2,0);
+        assertTrue(state.isWon());
     }
 }
