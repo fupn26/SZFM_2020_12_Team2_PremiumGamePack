@@ -74,5 +74,24 @@ public class MsweeperStateTest {
 
     @Test
     void testPutFlag(){
+        int[][] minefield = {
+                {1, 0, 0},
+                {1, 0, 1},
+                {0, 0, 0}
+        };
+        MsweeperState state = new MsweeperState(minefield);
+        assertThrows(IllegalArgumentException.class, () -> state.putFlag(3,2));
+        state.putFlag(2,2);
+        assertArrayEquals(state.getFlaggrid(),new int[][]{
+                {0, 0, 0},
+                {0, 0, 0},
+                {0, 0, 1}
+        });
+        state.putFlag(2,2);
+        assertArrayEquals(state.getFlaggrid(),new int[][]{
+                {0, 0, 0},
+                {0, 0, 0},
+                {0, 0, 0}
+        });
     }
 }
