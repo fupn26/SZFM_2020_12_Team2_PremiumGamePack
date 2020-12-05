@@ -9,4 +9,8 @@ public class MsweeperStateTest {
     void testThreeArgConstructor_InvalidArg(){
     }
 
+    @Test
+    void testThreeArgConstructor_ValidArg(){
+    }
+
 }
