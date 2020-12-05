@@ -234,4 +234,20 @@ public class TableStateTest {
         assertEquals(Cell.RED, state.getTable()[2][0]);
         assertThrows(IllegalArgumentException.class, () -> state.movePuck(2, 0, 5, 3, 5));
     }
+
+    @Test
+    void testAfterStep() {
+        TableState state = new TableState(new int[][] {
+                {2, 2, 2, 0, 0, 2},
+                {2, 1, 2, 0, 2, 0},
+                {2, 2, 2, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}});
+        state.afterStep(1,1,1);
+        assertEquals(Cell.RED, state.getTable()[0][0]);
+        assertEquals(Cell.RED, state.getTable()[2][2]);
+        assertEquals(Cell.RED, state.getTable()[0][1]);
+        assertEquals(Cell.RED, state.getTable()[1][2]);
+    }
 }
