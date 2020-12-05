@@ -2,7 +2,8 @@ package puckg.state;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TableStateTest {
 
@@ -15,5 +16,46 @@ public class TableStateTest {
                 {0, 0, 0, 3, 0, 0, 0},
                 {0, 0, 0, 0, 2, 2, 0},
                 {2, 0, 0, 0, 2, 2, 0}}));
+    }
+
+    @Test
+    void testIsValidTable() {
+        assertTrue(new TableState().isValidTable(TableState.INITIAL));
+        assertFalse(new TableState().isValidTable(new int[][] {
+                {2, 2, 0, 0, 0, 2, 0},
+                {0, 2, 0, 0, 2, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 0, 0},
+                {0, 0, 0, 0, 2, 2, 0},
+                {2, 0, 0, 0, 2, 2, 0}}));
+        assertFalse(new TableState().isValidTable(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 0},
+                {0, 0, 0, 0, 2, 2},
+                {2, 0, 0, 0, 2, 2},
+                {0, 0, 0, 0, 0, 0}}));
+        assertFalse(new TableState().isValidTable(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 2, 2},
+                {2, 0, 0, 0, 2, 2}}));
+        assertFalse(new TableState().isValidTable(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 2, 2},
+                {2, 0, 0, 0, 2, -1}}));
+        assertFalse(new TableState().isValidTable(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 0},
+                {0, 0, 0, 3, 2, 2},
+                {2, 0, 0, 0, 2, 2}}));
     }
 }
