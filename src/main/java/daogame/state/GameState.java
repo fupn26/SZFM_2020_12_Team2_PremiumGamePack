@@ -47,6 +47,23 @@ public class GameState {
     }
 
     /**
+     * Constructs a {@link GameState} object with the given {@code board} and {@code startID}.
+     * @param board the actual state of the game
+     * @param startID the actual {@code turnID}
+     * @throws IllegalArgumentException if the {@code board} or the {@code startID} is not valid
+     * @throws NullPointerException if the {@code board} is {@code null}
+     */
+    public GameState(int[][] board, int startID) {
+        if (board == null) throw new NullPointerException("The board is null");
+        if (!isValidBoard(board)) throw new IllegalArgumentException("Invalid board");
+        if (!isValidID(startID)) throw new IllegalArgumentException("Invalid startID");
+        log.info("TurnID = {}", turnID);
+        actualState = board;
+        turnID = startID;
+        winnerID = -1;
+    }
+
+    /**
      * Move the piece from the {@code from} position to the {@code to} position.
      * @param from the actual position of the piece
      * @param to the new position of the piece
