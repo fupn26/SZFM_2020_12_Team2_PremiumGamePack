@@ -283,4 +283,12 @@ public class TableStateTest {
         assertEquals(Cell.RED, state.getTable()[0][1]);
         assertThrows(IllegalArgumentException.class, () -> state.newPuck(2, 5, 3));
     }
+
+    @Test
+    void testIsPuckOfPlayer() {
+        assertTrue(new TableState().isPuckOfPlayer(1,0,0));
+        assertFalse(new TableState().isPuckOfPlayer(2,0,0));
+        assertFalse(new TableState().isPuckOfPlayer(1,3,3));
+        assertFalse(new TableState().isPuckOfPlayer(2,3,3));
+    }
 }
