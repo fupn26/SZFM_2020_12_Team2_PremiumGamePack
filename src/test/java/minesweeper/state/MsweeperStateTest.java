@@ -96,6 +96,18 @@ public class MsweeperStateTest {
     }
     @Test
     void testReveal(){
-
+        int[][] minefield = {
+                {1, 0, 0},
+                {1, 0, 1},
+                {0, 0, 0}
+        };
+        MsweeperState state = new MsweeperState(minefield);
+        assertThrows(IllegalArgumentException.class, () -> state.reveal(3,2));
+        state.reveal(1,2);
+        assertArrayEquals(state.getRevealgrid(), new int[][]{
+                {0, 1, 1},
+                {0, 1, 1},
+                {0, 1, 1}
+        });
     }
 }
