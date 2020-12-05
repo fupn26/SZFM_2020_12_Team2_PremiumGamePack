@@ -21,7 +21,7 @@ public class MsweeperStateTest {
                 if (state.getMinegrid()[i][j] == 1) counter++;
             }
         }
-        assertEquals(counter, 30);
+        assertEquals(30, counter);
     }
 
     @Test
