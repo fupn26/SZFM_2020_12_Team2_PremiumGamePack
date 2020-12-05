@@ -26,6 +26,8 @@ import minesweeper.data.ResultDao;
 import minesweeper.data.ResultJson;
 import minesweeper.state.MsweeperState;
 import org.apache.commons.lang3.time.DurationFormatUtils;
+import puckg.data.GameData;
+import puckg.data.GameDataJson;
 
 import javax.inject.Inject;
 import java.io.IOException;
