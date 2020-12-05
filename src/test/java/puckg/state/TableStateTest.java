@@ -250,4 +250,29 @@ public class TableStateTest {
         assertEquals(Cell.RED, state.getTable()[0][1]);
         assertEquals(Cell.RED, state.getTable()[1][2]);
     }
+
+    @Test
+    void testIsNewPuckAvailable() {
+        assertTrue(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}}).isNewPuckAvailable(1, 4, 3));
+        assertFalse(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}}).isNewPuckAvailable(1, 5, 2));
+        assertFalse(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}}).isNewPuckAvailable(2, 0, 5));
+    }
 }
