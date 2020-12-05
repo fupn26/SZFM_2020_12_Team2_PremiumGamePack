@@ -226,4 +226,12 @@ public class TableStateTest {
                 {0, 0, 0, 0, 1, 2},
                 {2, 0, 0, 2, 2, 1}}).isBlackCell(2, 2));
     }
+
+    @Test
+    void testMovePuck() {
+        TableState state = new TableState();
+        state.movePuck(1,0,0,2,0);
+        assertEquals(Cell.RED, state.getTable()[2][0]);
+        assertThrows(IllegalArgumentException.class, () -> state.movePuck(2, 0, 5, 3, 5));
+    }
 }
