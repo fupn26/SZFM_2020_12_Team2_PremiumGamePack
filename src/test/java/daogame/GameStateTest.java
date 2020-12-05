@@ -115,4 +115,12 @@ class GameStateTest {
         state = new GameState();
         assertFalse(state.isGameEnded());
     }
+
+    @Test
+    void testPlayerGaveUp() {
+        GameState state = new GameState();
+        state.playerGaveUp();
+        if (state.getTurnID() == 1) assertEquals(2, state.getWinnerID());
+        else assertEquals(1, state.getWinnerID());
+    }
 }
