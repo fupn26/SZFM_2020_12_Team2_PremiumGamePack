@@ -16,4 +16,12 @@ class CellTest {
         assertThrows(IllegalArgumentException.class, () -> Cell.of(4));
         assertThrows(IllegalArgumentException.class, () -> Cell.of(-1));
     }
+
+    @Test
+    void testOpposite() {
+        assertEquals(Cell.RED, Cell.BLUE.opposite());
+        assertEquals(Cell.BLUE, Cell.RED.opposite());
+        assertThrows(AssertionError.class, () -> Cell.BLACK.opposite());
+        assertThrows(AssertionError.class, () -> Cell.EMPTY.opposite());
+    }
 }
