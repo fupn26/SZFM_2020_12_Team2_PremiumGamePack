@@ -140,4 +140,10 @@ public class MsweeperStateTest {
     void testDisplayGrid(){
 
     }
+
+
+    @Test
+    void testIsHidden(){
+
+    }
 }
