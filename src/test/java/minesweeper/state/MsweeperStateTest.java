@@ -113,6 +113,14 @@ public class MsweeperStateTest {
 
     @Test
     void testIsLost(){
+        int[][] minefield = {
+                {1, 0, 0},
+                {1, 0, 1},
+                {0, 0, 0}
+        };
+        MsweeperState state = new MsweeperState(minefield);
+        state.reveal(1,2);
+        assertTrue(state.isLost());
     }
 
     @Test
