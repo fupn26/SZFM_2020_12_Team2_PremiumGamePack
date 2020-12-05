@@ -26,6 +26,34 @@ public class MsweeperStateTest {
 
     @Test
     void testOneArgConstructor_InvalidArg() {
+        assertThrows(IllegalArgumentException.class, () -> new MsweeperState(new int[][] {
+                {2,0,1},
+                {0,0,1},
+                {1,0,0}})
+        );
+        assertThrows(IllegalArgumentException.class, () -> new MsweeperState(new int[][] {
+                {1,0,1},
+                {0,0,1,1},
+                {1,0,0}})
+        );
+
+        assertThrows(IllegalArgumentException.class, () -> new MsweeperState(new int[][] {
+                {0,1},
+                {0,0,1},
+                {1,0,0}})
+        );
+
+        assertThrows(IllegalArgumentException.class, () -> new MsweeperState(new int[][] {
+                {1,0,1},
+                {0,-1,1},
+                {1,0,0}})
+        );
+
+        assertThrows(IllegalArgumentException.class, () -> new MsweeperState(new int[][] {
+                {},
+                {},
+                {}})
+        );
     }
 
     @Test
