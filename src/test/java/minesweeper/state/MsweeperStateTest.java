@@ -16,4 +16,8 @@ public class MsweeperStateTest {
     @Test
     void testOneArgConstructor_InvalidArg() {
     }
+
+    @Test
+    void testOneArgConstructor_ValidArg() {
+    }
 }
