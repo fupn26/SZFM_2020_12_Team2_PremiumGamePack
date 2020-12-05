@@ -291,4 +291,14 @@ public class TableStateTest {
         assertFalse(new TableState().isPuckOfPlayer(1,3,3));
         assertFalse(new TableState().isPuckOfPlayer(2,3,3));
     }
+
+    @Test
+    void testPointsOfPlayer() {
+        TableState state = new TableState();
+        assertEquals(2, state.pointsOfPlayer(1));
+        assertEquals(2, state.pointsOfPlayer(2));
+        state.newPuck(1,0,1);
+        assertEquals(3, state.pointsOfPlayer(1));
+        assertEquals(2, state.pointsOfPlayer(2));
+    }
 }
