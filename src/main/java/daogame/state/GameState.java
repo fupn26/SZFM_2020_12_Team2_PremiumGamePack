@@ -91,6 +91,15 @@ public class GameState {
     }
 
     /**
+     * Checks whether the given {@code turnID} is valid.
+     * @param turnID the ID which is checked
+     * @return {@code true} if the {@code turnID} is valid, {@code false} otherwise
+     */
+    private boolean isValidID(int turnID) {
+        return turnID == 1 || turnID == 2;
+    }
+
+    /**
      * Move the piece from the {@code from} position to the {@code to} position.
      * @param from the actual position of the piece
      * @param to the new position of the piece
