@@ -179,6 +179,8 @@ public class GameController {
                 .solved(gameState.isWon())
                 .duration(Duration.between(startTime, Instant.now()))
                 .build();
+        if (!result.isSolved())
+            result.setDuration(Duration.ofSeconds(9999));
         return result;
     }
 
