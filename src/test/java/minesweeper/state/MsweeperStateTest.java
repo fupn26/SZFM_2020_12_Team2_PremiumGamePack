@@ -138,7 +138,25 @@ public class MsweeperStateTest {
 
     @Test
     void testDisplayGrid(){
-
+        int[][] minefield = {
+                {1, 1, 1},
+                {1, 0, 1},
+                {0, 1, 1}
+        };
+        MsweeperState state = new MsweeperState(minefield);
+        state.putFlag(2,2);
+        state.reveal(1,1);
+        assertArrayEquals(state.displayGrid(), new int[][]{
+                {0, 0, 0},
+                {0, 10, 0},
+                {0, 0, 1}
+        });
+        state.reveal(0,0);
+        assertArrayEquals(state.displayGrid(), new int[][]{
+                {2, 0, 0},
+                {0, 10, 0},
+                {0, 0, 1}
+        });
     }
 
 
