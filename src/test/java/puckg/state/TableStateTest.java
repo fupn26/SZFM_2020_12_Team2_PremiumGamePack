@@ -58,4 +58,24 @@ public class TableStateTest {
                 {0, 0, 0, 3, 2, 2},
                 {2, 0, 0, 0, 2, 2}}));
     }
+
+    @Test
+    void testIsFinished() {
+        assertFalse(new TableState().isFinished(1));
+        assertTrue(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 0},
+                {0, 0, 0, 0, 2, 2},
+                {2, 0, 0, 0, 2, 2}}).isFinished(1));
+        assertFalse(new TableState(new int[][] {
+                {1, 0, 0, 0, 0, 2},
+                {2, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 0},
+                {0, 0, 0, 0, 2, 2},
+                {2, 0, 0, 0, 2, 2}}).isFinished(1));
+
+    }
 }
