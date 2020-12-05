@@ -64,6 +64,33 @@ public class GameState {
     }
 
     /**
+     * Checks if the given board is valid.
+     * @param board the board which is checked
+     * @return {@code true} if the {@code board} is valid, {@code false} otherwise
+     */
+    private boolean isValidBoard(int[][] board) {
+        if (board.length != 4) return false;
+        else if (board[0].length != 4) return false;
+
+        int player1Pieces = 0;
+        int player2Pieces = 0;
+        for (int i = 0; i < 4; ++i) {
+            for (int j = 0; j < 4; ++j) {
+                switch (board[i][j]) {
+                    case 1:
+                        player1Pieces++;
+                        break;
+                    case 2:
+                        player2Pieces++;
+                        break;
+                }
+            }
+        }
+
+        return player1Pieces == 4 && player2Pieces == 4;
+    }
+
+    /**
      * Move the piece from the {@code from} position to the {@code to} position.
      * @param from the actual position of the piece
      * @param to the new position of the piece
