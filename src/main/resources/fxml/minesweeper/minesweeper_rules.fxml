@@ -5,6 +5,10 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <TextArea editable="false" prefHeight="260.0" prefWidth="200.0" text="In this game, you see a minefield of hidden blocks, and don't know which ones have mines under them. To reveal a block, use left click. To flag a block you think has a mine under it, use right click. The numbers on the blocks represent the number of adjacent mines to said block. You win once you reveal every non-mine block." wrapText="true" />
+        <TextArea editable="false" prefHeight="260.0" prefWidth="200.0" text="In this game, you see a minefield of hidden blocks, and don't know which ones have mines under them.
+        To reveal a block, use left click.
+        To flag a block you think has a mine under it, use right click.
+        The numbers on the blocks represent the number of adjacent mines to said block.
+        You win once you reveal every non-mine block." wrapText="true" />
     </children>
 </VBox>
