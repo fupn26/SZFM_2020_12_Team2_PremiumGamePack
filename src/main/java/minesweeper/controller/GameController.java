@@ -174,11 +174,12 @@ public class GameController {
     }
 
     private Result createGameResult() {
-        return Result.builder()
+        Result result = Result.builder()
                 .playerName(playerName)
                 .solved(gameState.isWon())
                 .duration(Duration.between(startTime, Instant.now()))
                 .build();
+        return result;
     }
 
     private void createStopWatch() {
