@@ -7,6 +7,45 @@ import static org.junit.jupiter.api.Assertions.*;
 class GameStateTest {
 
     @Test
+    void testGameStateIntArrayInt() {
+        assertThrows(NullPointerException.class,() -> new GameState(null, 1));
+        IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
+                () -> {
+                    new GameState(new int[][]{{0, 1, 1, 0}, {0, 2, 2, 0}, {0, 1, 1, 0}, {0, 2, 2, 0}}, 0);
+                });
+        assertEquals("Invalid startID", e.getMessage());
+
+        e = assertThrows(IllegalArgumentException.class,
+                () -> {
+                    new GameState(new int[][]{{0, 1, 1, 0}, {0, 2, 2, 0}, {0, 1, 1, 0}}, 1);
+                });
+        assertEquals("Invalid board", e.getMessage());
+
+        e = assertThrows(IllegalArgumentException.class,
+                () -> {
+                    new GameState(new int[][]{{0, 1, 1, 0}, {0, 2, 2, 0}, {0, 1, 1, 0}, {0, 1, 1, 0}}, 2);
+                });
+        assertEquals("Invalid board", e.getMessage());
+
+        e = assertThrows(IllegalArgumentException.class,
+                () -> {
+                    new GameState(new int[][]{{0, 2, 2, 0}, {0, 2, 2, 0}, {0, 0, 1, 0}, {0, 1, 1, 0}}, 2);
+                });
+        assertEquals("Invalid board", e.getMessage());
+
+        e = assertThrows(IllegalArgumentException.class,
+                () -> {
+                    new GameState(new int[][]{{1, 1, 1}, {2, 2, 0}, {1, 2, 0}, {2, 0, 0}}, 2);
+                });
+        assertEquals("Invalid board", e.getMessage());
+
+        assertDoesNotThrow(
+                () -> {
+                    new GameState(new int[][]{{1, 1, 1, 0}, {2, 2, 0, 0}, {1, 2, 0, 0}, {2, 0, 0, 0}}, 2);
+                });
+    }
+
+    @Test
     void testOp() {
         GameState state = new GameState();
         Position from = new Position(0, 0);
