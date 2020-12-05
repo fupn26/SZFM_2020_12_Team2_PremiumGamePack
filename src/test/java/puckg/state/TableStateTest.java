@@ -208,4 +208,22 @@ public class TableStateTest {
                 {0, 0, 0, 0, 1, 2},
                 {2, 0, 0, 2, 2, 1}}).isEmptyCell(0, 0));
     }
+
+    @Test
+    void testIsBlackCell() {
+        assertTrue(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}}).isBlackCell(3, 3));
+        assertFalse(new TableState(new int[][] {
+                {2, 2, 0, 0, 0, 2},
+                {0, 2, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 3, 0, 2},
+                {0, 0, 0, 0, 1, 2},
+                {2, 0, 0, 2, 2, 1}}).isBlackCell(2, 2));
+    }
 }
