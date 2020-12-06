@@ -56,7 +56,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:55 | 7c21548 | Jobb klikkelés rejtett mezőre | A mezőn megjelenik a flagged.png | Igen | Zászlórakás működése |
 | Bartha Balázs | 2020.12.6. 15:57 | 7c21548 | Bal klikkelés zászlós mezőre | Semmi | Igen | Zászlózott mezők működése |
 | Bartha Balázs | 2020.12.6. 15:57 | 7c21548 | Jobb klikkelés felfedett mezőre | Semmi | Igen | Zászlólerakás működése |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 15:57 | 7c21548 | Jobb klikkelés zászlózott mezőre | A zászló eltűnik | Igen | Zászlóeltávolítás működése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
