@@ -58,7 +58,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:58 | 7c21548 | Jobb klikkelés felfedett mezőre | Semmi | Igen | Zászlólerakás működése |
 | Bartha Balázs | 2020.12.6. 16:00 | 7c21548 | Jobb klikkelés zászlózott mezőre | A zászló eltűnik | Igen | Zászlóeltávolítás működése |
 | Bartha Balázs | 2020.12.6. 16:02 | 7c21548 | Bal klikkelés mezőre, mely körül nincs bomba | Felfedésre kerül a zóna, és minden körülötte lévő zóna, és az azok körüli összes, míg olyanba nem ütközik, mely körül van bomba. | Igen | Rekurzív felfedés működése |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 16:04 | 7c21548 | Minden bomba nélküli zóna felfedése | Megjelenik a finish gomb, és a gratuláló szöveg. | Igen | Minesweeper: Játék megnyerése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
