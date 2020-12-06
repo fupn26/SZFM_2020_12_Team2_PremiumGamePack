@@ -25,6 +25,7 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Szabó Benedek | 2020.12.06 07:25| d25abbb | Főmenü: Játékok közötti navigáció az oldalsó nyilak használatával, mind a két irányba | Sikeres váltás a játékok között, szép átvezető animáció | Igen | Főmenü: Játékok közötti navigáció |
 | Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Dao játék alatt | Kilépés | Igen | Főmenü: Dao exit gomb |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Minesweeper játék alatt | Kilépés | Igen | Főmenü: Minesweeper exit gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
