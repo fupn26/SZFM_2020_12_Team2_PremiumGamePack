@@ -6,20 +6,20 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 17:47 | d25abbb | 'Rules' gomb lenyomása a főképernyőn a Dao játéknál | Megjelennek a Dao játék szabályai | Igen | A Dao játékhoz tartozó 'Rules' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 17:50 | d25abbb | 'Rules' gomb lenyomása a főképernyőn úgy, hogy a szabályok meg vannak jelenítve. | A játék szabályai eltűnnek. | Igen | 'Rules' gomb helyes működése a főképernyőn.  |
 | Fürjes-Benke Péter | 2020.12.06. 17:55 | c9c4216 | 'Start' gomb lenyomása a főképernyőn a Dao játéknál | Megjelenik a Dao játék előképernyője | Igen | A 'Start' gomb helyes működésének tesztelése |
-| Fürjes-Benke Péter | 2020.12.06. 18:00 | 1c98b0e | Az első input mezőről való átlépés a következő input mezőre anélkül, hogy nevet adnánk meg | Megjelenik az 'Input Required' szöveg az input mező alatt. | Igen | Az első input mező üresen hagyásának helyes kezelése  |
+| Fürjes-Benke Péter | 2020.12.06. 18:00 | 1c98b0e | Az első input mezőről való átlépés a következő input mezőre anélkül, hogy nevet adnánk meg | Megjelenik az 'Input Required' szöveg az input mező alatt. | Igen | Az első input mező üresen hagyásának helyes kezelése |
 | Fürjes-Benke Péter | 2020.12.06. 18:04 | 1c98b0e | A második input mezőről való átlépés az első input mezőre anélkül, hogy nevet adnánk meg | A második input mező alatt megjelenik az 'Input Required' figeylmeztetés | Igen | A második input mező üresen hagyásának helyes kezelése. |
 | Fürjes-Benke Péter | 2020.12.06. 18:07 | 1c98b0e | Az első input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | Az első input mező kitöltésébnek helyes kezelése |
 | Fürjes-Benke Péter | 2020.12.06. 18:11 | 1c98b0e | A második input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | A második input mező kitöltésébnek helyes kezelése |
-| Fürjes-Benke Péter | 2020.12.06. 18:16 | 11b8612 | 'Start' gomb lenyomása úgy, hogy valamelyik input mező nincs kitöltve | Az input mezők alatt megjelenik az 'Input Required' figyelmeztetés | Igen | A 'Start' gomb helyes működése, ha valamelyik input mező nincs kitöltve |
-| Fürjes-Benke Péter | 2020.12.06. 18:20 | 11b8612 | 'Start' gomb lenyomása úgy, hogy input mindkét mező ki van töltve  | Elindul a játék | Igen | A 'Start' gomb helyes működése, ha az input mezők ki vannak töltve |
+| Fürjes-Benke Péter | 2020.12.06. 18:16 | 11b8612 | 'Start' gomb lenyomása úgy, hogy valamelyik input mező nincs kitöltve a Dao játéknál| Az input mezők alatt megjelenik az 'Input Required' figyelmeztetés | Igen | A 'Start' gomb helyes működése, ha valamelyik input mező nincs kitöltve |
+| Fürjes-Benke Péter | 2020.12.06. 18:20 | 11b8612 | 'Start' gomb lenyomása úgy, hogy input mindkét mező ki van töltve a Dao játéknál | Elindul a játék | Igen | A 'Start' gomb helyes működése, ha az input mezők ki vannak töltve |
 | Fürjes-Benke Péter | 2020.12.06. 18:26 | c8be3b4 | 'Pause' gomb lenyomása a Dao játék ablakában | A stopper megáll és a játéktér elszürkül | Igen | A 'Pause' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:28 | c8be3b4 | 'Play' gomb lenyomása, amikor a játék meg van állítva | A stopper elindul és a játéktér aktiválódik | Igen | A 'Play' gomb helyes működése, ha a játék szünetel. |
-| Fürjes-Benke Péter | 2020.12.06. 18:32 | e6b0cd9 | 'Restart' gomb lenyomása | A játék újraindul. | Igen | A 'Restart' gomb helyes működése |
-| Fürjes-Benke Péter | 2020.12.06. 18:34 | bbad640 | Bábura kattintás | Az üres mezők aktiválódnak | Igen | A Bábura kattintás helyes működése |
-| Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy nincs kiválasztva egy bábu sem | Nem történik semmi | Igen | Az üres mezőre kattintás helyes működése |
-| Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy van kiválasztva bábu | A bábu áthelyeződik az üres mezőre | Igen | Az üres mezőre kattintás helyes működése |
-| Fürjes-Benke Péter | 2020.12.06. 18:43 | 5d7e1fa | 'Give up' gomb lenyomása | Megjelenik az eredményeket összegző ablak | Igen | 'Give up' gomb helyes működése |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 18:32 | e6b0cd9 | 'Restart' gomb lenyomása a Dao játéknál | A játék újraindul. | Igen | A 'Restart' gomb helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 18:34 | bbad640 | Bábura kattintás a Dao játéknál | Az üres mezők aktiválódnak | Igen | A Bábura kattintás helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy nincs kiválasztva egy bábu sem a Dao játéknál | Nem történik semmi | Igen | Az üres mezőre kattintás helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy van kiválasztva bábu a Dao játéknál| A bábu áthelyeződik az üres mezőre | Igen | Az üres mezőre kattintás helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 18:43 | 5d7e1fa | 'Give up' gomb lenyomása a Dao játéknál | Megjelenik az eredményeket összegző ablak | Igen | 'Give up' gomb helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 18:45 | 0ded313 | 'Rematch' gomb lenyomása az eredmény képernyőn a Dao játéknál | Elindul a játék a korábbi nevekkel | Igen | 'Rematch' gomb tesztelése a Dao játék eredményjelzőjénél |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
