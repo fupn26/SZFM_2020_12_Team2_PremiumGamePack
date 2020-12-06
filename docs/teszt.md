@@ -46,6 +46,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Idő | Eltelt idő kijelzése | Igen | TriplePuck: Eltelt idő kijelzése |
 | Szabó Benedek | 2020.12.06 17:53 | d25abbb | TriplePuck: Give up gomb megnyomása| Győztes kijelzés, Finish gomb, stopper leáll | Igen | TriplePuck: Give up gomb |
 | Szabó Benedek | 2020.12.06 17:53 | d25abbb | TriplePuck: Finish up gomb megnyomása| Eredményekhez navigálunk | Igen | TriplePuck: Finish gomb |
+| Szabó Benedek | 2020.12.06 17:58 | d25abbb | TriplePuck: Lépések a táblán| Csak a soron következő játékos tud lépni, illetve csak a megfelelő mezők egyikére | Igen | TriplePuck: Korongok mozgatása |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
