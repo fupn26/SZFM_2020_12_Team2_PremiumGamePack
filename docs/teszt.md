@@ -54,21 +54,6 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Restart gomb lenyomása| Újbóli játék, más játékosnevekkel | Igen | TriplePuck: Restart gomb |
 | Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: "Jump to home screen" gomb lenyomása| Visszaugrunk a kezdőképernyőre | Igen | TriplePuck: Home gomb |
 | Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: Exit gomb lenyomása| Kilép az alkalmazás | Igen | TriplePuck: Exit gomb |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
 | Bartha Balázs | 2020.12.6. 14:58 | b9a03de | 'Rules' gomb lenyomása a főmenüben, a minesweeper menüpont alatt | Megjelennek a játék szabályai | Igen | Minesweeper: Rules gomb működése |
 | Bartha Balázs | 2020.12.6. 15:00 | b9a03de | 'Rules' gomb lenyomása a főmenüben, úgy, hogy a minesweeper szabályok vannak megjelenítve | Eltűnnek a játék szabályai | Igen | Minesweeper: Rules gomb működése |
 | Bartha Balázs | 2020.12.6. 15:03 | b9a03de | 'Start' gomb lenyomása a főmenüben, a minesweeper menüpont alatt | Betölt a minesweeper launch.fxml | Igen | Minesweeper: Start gomb működése |
