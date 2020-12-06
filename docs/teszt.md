@@ -54,6 +54,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:15 | b9a03de | Retry gomb lenyomása | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Retry gomb működése |
 | Bartha Balázs | 2020.12.6. 15:17 | b9a03de | Reset gomb lenyomása megkezdett játék közben | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Reset gomb működése |
 | Bartha Balázs | 2020.12.6. 15:55 | 7c21548 | Jobb klikkelés rejtett mezőre | A mezőn megjelenik a flagged.png | Igen | Zászlórakás működése |
+| Bartha Balázs | 2020.12.6. 15:55 | 7c21548 | Bal klikkelés zászlós mezőre | Semmi | Igen | Zászlózott mezők működése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
