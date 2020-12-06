@@ -36,7 +36,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a PuckG játék alatt | Szabályok eltűnése | Igen | Főmenü: PuckG Rules gomb |
 | Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a Minesweeper játék alatt | Szabályok eltűnése | Igen | Főmenü: Minesweeper Rules gomb |
 | Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a Dao játék alatt | Szabályok eltűnése | Igen | Főmenü: Dao Rules gomb |
-| Szabó Benedek |  |  |  |  |  |  |
+| Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Intuitív grafikus felület | A felületen könnyedén el lehet igazodni, minden logikus, magától értetődő. | Igen | Főmenü: intuitív felület |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
