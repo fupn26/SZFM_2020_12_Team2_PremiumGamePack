@@ -63,21 +63,21 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
+| Mezei Botond | 2020.12.06. 15:34 | 7c21548 | PuckG Rules gomb lenyomása | PuckG játék szabályainak megjelenése | Igen | A PuckG Rules gomb előhozza a játék szabályait |
+| Mezei Botond | 2020.12.06. 15:36 | 7c21548 | PuckG Rules gomb lenyomása a szabály jelenlétében | PuckG játék szabályainak elrejtése | Igen | A szabály ablak eltűnése a Rules gomb ismételt lenyomásával |
+| Mezei Botond | 2020.12.06. 15:41 | 7c21548 | PuckG Start gomb lenyomása | PuckG játék elindulása | Igen | PuckG játék elindul-e a Start gomb lenyomására |
+| Mezei Botond | 2020.12.06. 15:44 | 7c21548 | PuckG - Start Game gomb lenyomása nevek nélkül | "Input required" hibaüzenet megjelenése | Igen | PuckG - játékosnév mezők állapotának ellenőrzése |
+| Mezei Botond | 2020.12.06. 15:46 | 7c21548 | PuckG - Start Game gomb lenyomása az első játékos nevének megadása nélkül | "Input required" hibaüzenet megjelenése | Igen | PuckG - az első játékosnév mező állapotának ellenőrzése |
+| Mezei Botond | 2020.12.06. 15:47 | 7c21548 | PuckG - Start Game gomb lenyomása a második játékos nevének megadása nélkül | "Input required" hibaüzenet megjelenése | Igen | PuckG - a második játékosnév mező állapotának ellenőrzése |
+| Mezei Botond | 2020.12.06. 15:49 | 7c21548 | PuckG - Start Game gomb lenyomása megadott játékos nevekkel | Játék elindulása | Igen | PuckG - játék sikeres elindítása a megadott nevekkel |
+| Mezei Botond | 2020.12.06. 15:51 | 7c21548 | PuckG - Reset gomb lenyomása | Játékállás, pontok és az időzítő alaphelyzetbe állása | Igen | PuckG - Reset gomb működése |
+| Mezei Botond | 2020.12.06. 15:53 | 7c21548 | PuckG - Give Up gomb lenyomása | Váltás az eredmények képernyőre és az aktuális eredmény perzisztálása | Igen | PuckG - Give Up gomb működése |
+| Mezei Botond | 2020.12.06. 15:54 | 7c21548 | PuckG - Új korong elhelyezése lehetséges mezőre | Új korong megjelenése | Igen | PuckG - korong elhelyezésének helyessége |
+| Mezei Botond | 2020.12.06. 15:55 | 7c21548 | PuckG - Meglévő korong kijelölése és áthelyezése | Korong áthelyeződik a kívánt helyre | Igen | PuckG - korong áthelyezésének helyessége |
+| Mezei Botond | 2020.12.06. 15:56 | 7c21548 | PuckG - Új korong elhelyezése nem elérhető mezőre | Nem kerül korong a mezőre, újra az aktuális játékos következik | Igen | PuckG - új korong elhelyezése nem elérhető mezőre |
+| Mezei Botond | 2020.12.06. 15:58 | 7c21548 | PuckG - Korong áthelyezése nem elérhető mezőre | A korong nem helyeződik át, újra az aktuális játékos következik | Igen | PuckG - korong áthelyezése nem elérhető mezőre |
+| Mezei Botond | 2020.12.06. 15:58 | 7c21548 | PuckG - Új korong elhelyezése az ellenfél korongjainak közelében | Új korong megjelenése és az ellenfél 8-szomszédos korongjai átszíneződnek | Igen | PuckG - Az ellenfél 8-szomszédos korongjainak átszínezése új korong elhelyezése esetén |
+| Mezei Botond | 2020.12.06. 16:01 | 7c21548 | PuckG - Korong áthelyezése az ellenfél korongjainak közelébe | Korong áthelyezése és az ellenfél 8-szomszédos korongjai átszíneződnek | Igen | PuckG - Az ellenfél 8-szomszédos korongjainak átszínezése korong áthelyezése esetén |
 | Mezei Botond |  |  |  |  |  |  |
 | Mezei Botond |  |  |  |  |  |  |
 | Mezei Botond |  |  |  |  |  |  |
