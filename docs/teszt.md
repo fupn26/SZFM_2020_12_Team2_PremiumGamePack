@@ -27,6 +27,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Dao játék alatt | Kilépés | Igen | Főmenü: Dao exit gomb |
 | Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Minesweeper játék alatt | Kilépés | Igen | Főmenü: Minesweeper exit gomb |
 | Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a PuckG játék alatt | Kilépés | Igen | Főmenü: PuckG exit gomb |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a TriplePuck játék alatt | Kilépés | Igen | Főmenü: TriplePuck exit gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
