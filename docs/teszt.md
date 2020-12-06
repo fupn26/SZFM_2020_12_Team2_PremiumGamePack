@@ -53,6 +53,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Rematch gomb lenyomása| Visszavágó, az előbbi játékosnevekkel | Igen | TriplePuck: Rematch gomb |
 | Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Restart gomb lenyomása| Újbóli játék, más játékosnevekkel | Igen | TriplePuck: Restart gomb |
 | Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: "Jump to home screen" gomb lenyomása| Visszaugrunk a kezdőképernyőre | Igen | TriplePuck: Home gomb |
+| Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: Exit gomb lenyomása| Kilép az alkalmazás | Igen | TriplePuck: Exit gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
