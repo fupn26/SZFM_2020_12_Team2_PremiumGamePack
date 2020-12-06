@@ -18,7 +18,7 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 18:34 | bbad640 | Bábura kattintás | Az üres mezők aktiválódnak | Igen | A Bábura kattintás helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy nincs kiválasztva egy bábu sem | Nem történik semmi | Igen | Az üres mezőre kattintás helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:37 | bbad640 | Üres mezőre kattintás úgy, hogy van kiválasztva bábu | A bábu áthelyeződik az üres mezőre | Igen | Az üres mezőre kattintás helyes működése |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 18:43 | 5d7e1fa | 'Give up' gomb lenyomása | Megjelenik az eredményeket összegző ablak | Igen | 'Give up' gomb helyes működése |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
