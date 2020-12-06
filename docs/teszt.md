@@ -40,6 +40,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Kellemes színvilág | A felületen színvilága modern, egymással összhangban lévő árnyalatokkal. | Igen | Főmenü: Színvilág |
 | Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start gomb lenyomása | A játék kezdőképernyőjén találjuk magunkat | Igen | TriplePuck: Start gomb |
 | Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start ame gomb lenyomása, nevek nékül | A játék nem indul el | Igen | TriplePuck: Start game gomb |
+| Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start ame gomb lenyomása, a nevek megadása után | A játék elindul| Igen | TriplePuck: Start game gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
