@@ -3,8 +3,8 @@ Tesztelési jegyzőkönyv
 
 | Tesztelő  | Időpont | Utolsó commit | Elvégzett művelet | Eredmény | Helyes-e a működés? | Mit tesztelt ezzel? |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06 17:47 | d25abbb | 'Rules' gomb lenyomása a főképernyőn a Dao játéknál | Megjelennek a Dao játék szabályai | Igen | A Dao játékhoz tartozó 'Rules' gomb helyes működése |
+| Fürjes-Benke Péter | 2020.12.06 17:50 | d25abbb | 'Rules' gomb lenyomása a főképernyőn úgy, hogy a szabályok meg vannak jelenítve. | A játék szabályai eltűnnek. | Igen | 'Rules' gomb helyes működése a főképernyőn. |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
