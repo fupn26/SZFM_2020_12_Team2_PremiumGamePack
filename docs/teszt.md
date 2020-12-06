@@ -38,7 +38,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a Dao játék alatt | Szabályok eltűnése | Igen | Főmenü: Dao Rules gomb |
 | Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Intuitív grafikus felület | A felületen könnyedén el lehet igazodni, minden logikus, magától értetődő. | Igen | Főmenü: intuitív felület |
 | Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Kellemes színvilág | A felületen színvilága modern, egymással összhangban lévő árnyalatokkal. | Igen | Főmenü: Színvilág |
-| Szabó Benedek |  |  |  |  |  |  |
+| Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start gomb lenyomása | A játék kezdőképernyőjén találjuk magunkat | Igen | TriplePuck: Start gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
