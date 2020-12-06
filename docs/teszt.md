@@ -31,6 +31,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a TriplePuck játék alatt | Szabályok megjelenítése | Igen | Főmenü: TriplePuck Rules gomb |
 | Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a PuckG játék alatt | Szabályok megjelenítése | Igen | Főmenü: PuckG Rules gomb |
 | Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a Minesweeper játék alatt | Szabályok megjelenítése | Igen | Főmenü: Minesweeper Rules gomb |
+| Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a Dao játék alatt | Szabályok megjelenítése | Igen | Főmenü: Dao Rules gomb |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
