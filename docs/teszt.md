@@ -3,13 +3,13 @@ Tesztelési jegyzőkönyv
 
 | Tesztelő  | Időpont | Utolsó commit | Elvégzett művelet | Eredmény | Helyes-e a működés? | Mit tesztelt ezzel? |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Fürjes-Benke Péter | 2020.12.06 17:47 | d25abbb | 'Rules' gomb lenyomása a főképernyőn a Dao játéknál | Megjelennek a Dao játék szabályai | Igen | A Dao játékhoz tartozó 'Rules' gomb helyes működése |
-| Fürjes-Benke Péter | 2020.12.06 17:50 | d25abbb | 'Rules' gomb lenyomása a főképernyőn úgy, hogy a szabályok meg vannak jelenítve. | A játék szabályai eltűnnek. | Igen | 'Rules' gomb helyes működése a főképernyőn.  |
-| Fürjes-Benke Péter | 2020.12.06 | c9c4216 | 'Start' gomb lenyomása a főképernyőn a Dao játéknál | Megjelenik a Dao játék előképernyője | Igen | A 'Start' gomb helyes működésének tesztelése |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 17:47 | d25abbb | 'Rules' gomb lenyomása a főképernyőn a Dao játéknál | Megjelennek a Dao játék szabályai | Igen | A Dao játékhoz tartozó 'Rules' gomb helyes működése |
+| Fürjes-Benke Péter | 2020.12.06. 17:50 | d25abbb | 'Rules' gomb lenyomása a főképernyőn úgy, hogy a szabályok meg vannak jelenítve. | A játék szabályai eltűnnek. | Igen | 'Rules' gomb helyes működése a főképernyőn.  |
+| Fürjes-Benke Péter | 2020.12.06. 17:55 | c9c4216 | 'Start' gomb lenyomása a főképernyőn a Dao játéknál | Megjelenik a Dao játék előképernyője | Igen | A 'Start' gomb helyes működésének tesztelése |
+| Fürjes-Benke Péter | 2020.12.06. 18:00 | 1c98b0e | Az első input mezőről való átlépés a következő input mezőre anélkül, hogy nevet adnánk meg | Megjelenik az 'Input Required' szöveg az input mező alatt. | Igen | Az első input mező üresen hagyásának helyes kezelése  |
+| Fürjes-Benke Péter | 2020.12.06. 18:04 | 1c98b0e | A második input mezőről való átlépés az első input mezőre anélkül, hogy nevet adnánk meg | A második input mező alatt megjelenik az 'Input Required' figeylmeztetés | Igen | A második input mező üresen hagyásának helyes kezelése. |
+| Fürjes-Benke Péter | 2020.12.06. 18:07 | 1c98b0e | Az első input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | Az első input mező kitöltésébnek helyes kezelése |
+| Fürjes-Benke Péter | 2020.12.06. 18:11 | 1c98b0e | A második input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | A második input mező kitöltésébnek helyes kezelése |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
