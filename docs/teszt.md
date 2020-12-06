@@ -23,26 +23,37 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 18:50 | a8458bd | 'Jump to home screen' gomb lenyomása az eredmény képernyőn a Dao játéknál | Megjelenik a főképernyő | Igen | A 'Jump to home screen' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:53 | 55be30d | 'Delete' gomb lenyomása a Dao játék eredmény képernyőjén | Eltűnnek a korábbi eredmények | Igen | 'Delete' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:55 | 25ddeaf | TOP 5/ALL gomb lenyomsáa | Az gomb aktuális állása szerint megjelenik a Top 5 vagy All eredménylista | Igen | TOP 5/ALL gomb helyes működése |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
+| Szabó Benedek | 2020.12.06 07:25| d25abbb | Főmenü: Játékok közötti navigáció az oldalsó nyilak használatával, mind a két irányba | Sikeres váltás a játékok között, szép átvezető animáció | Igen | Főmenü: Játékok közötti navigáció |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Dao játék alatt | Kilépés | Igen | Főmenü: Dao exit gomb |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a Minesweeper játék alatt | Kilépés | Igen | Főmenü: Minesweeper exit gomb |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a PuckG játék alatt | Kilépés | Igen | Főmenü: PuckG exit gomb |
+| Szabó Benedek | 2020.12.06 17:29| d25abbb | Főmenü: Exit gomb lenyomása a TriplePuck játék alatt | Kilépés | Igen | Főmenü: TriplePuck exit gomb |
+| Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a TriplePuck játék alatt | Szabályok megjelenítése | Igen | Főmenü: TriplePuck Rules gomb |
+| Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a PuckG játék alatt | Szabályok megjelenítése | Igen | Főmenü: PuckG Rules gomb |
+| Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a Minesweeper játék alatt | Szabályok megjelenítése | Igen | Főmenü: Minesweeper Rules gomb |
+| Szabó Benedek | 2020.12.06 17:33| d25abbb | Főmenü: Rules gomb első lenyomása a Dao játék alatt | Szabályok megjelenítése | Igen | Főmenü: Dao Rules gomb |
+| Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a TriplePuck játék alatt | Szabályok eltűnése | Igen | Főmenü: TriplePuck Rules gomb |
+| Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a PuckG játék alatt | Szabályok eltűnése | Igen | Főmenü: PuckG Rules gomb |
+| Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a Minesweeper játék alatt | Szabályok eltűnése | Igen | Főmenü: Minesweeper Rules gomb |
+| Szabó Benedek | 2020.12.06 17:38| d25abbb | Főmenü: Rules gomb második lenyomása a Dao játék alatt | Szabályok eltűnése | Igen | Főmenü: Dao Rules gomb |
+| Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Intuitív grafikus felület | A felületen könnyedén el lehet igazodni, minden logikus, magától értetődő. | Igen | Főmenü: intuitív felület |
+| Szabó Benedek | 2020.12.06 17:40 | d25abbb | Főmenü: Kellemes színvilág | A felületen színvilága modern, egymással összhangban lévő árnyalatokkal. | Igen | Főmenü: Színvilág |
+| Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start gomb lenyomása | A játék kezdőképernyőjén találjuk magunkat | Igen | TriplePuck: Start gomb |
+| Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start game gomb lenyomása, nevek nékül | A játék nem indul el | Igen | TriplePuck: Start game gomb |
+| Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start game gomb lenyomása, a nevek megadása után | A játék elindul| Igen | TriplePuck: Start game gomb |
+| Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Ki jön? | Soron következő játékos kijelzése | Igen | TriplePuck: Soron következő játékos jelzése |
+| Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Lépések száma | Lépések számának kijelzése | Igen | TriplePuck: Lépések számának jelzése |
+| Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Idő | Eltelt idő kijelzése | Igen | TriplePuck: Eltelt idő kijelzése |
+| Szabó Benedek | 2020.12.06 17:53 | d25abbb | TriplePuck: Give up gomb megnyomása| Győztes kijelzés, Finish gomb, stopper leáll | Igen | TriplePuck: Give up gomb |
+| Szabó Benedek | 2020.12.06 17:53 | d25abbb | TriplePuck: Finish up gomb megnyomása| Eredményekhez navigálunk | Igen | TriplePuck: Finish gomb |
+| Szabó Benedek | 2020.12.06 17:58 | d25abbb | TriplePuck: Lépések a táblán| Csak a soron következő játékos tud lépni, illetve csak a megfelelő mezők egyikére | Igen | TriplePuck: Korongok mozgatása |
+| Szabó Benedek | 2020.12.06 17:58 | d25abbb | TriplePuck: Győzelem elérése | Győztes neve megjelenik, stopper leáll, finish gomb váltja a give up-ot | Igen | TriplePuck: Győzelem |
+| Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Eredményekhez navigálás | Mind a top5, mind a korábbi erdmények megjelennek | Igen | TriplePuck: Eredmények |
+| Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Delete gomb lenyomása| Törli a korábbi eredményeket | Igen | TriplePuck: Delete gomb |
+| Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Rematch gomb lenyomása| Visszavágó, az előbbi játékosnevekkel | Igen | TriplePuck: Rematch gomb |
+| Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Restart gomb lenyomása| Újbóli játék, más játékosnevekkel | Igen | TriplePuck: Restart gomb |
+| Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: "Jump to home screen" gomb lenyomása| Visszaugrunk a kezdőképernyőre | Igen | TriplePuck: Home gomb |
+| Szabó Benedek | 2020.12.06 18:05 | d25abbb | TriplePuck: Exit gomb lenyomása| Kilép az alkalmazás | Igen | TriplePuck: Exit gomb |
 | Bartha Balázs | 2020.12.6. 14:58 | b9a03de | 'Rules' gomb lenyomása a főmenüben, a minesweeper menüpont alatt | Megjelennek a játék szabályai | Igen | Minesweeper: Rules gomb működése |
 | Bartha Balázs | 2020.12.6. 15:00 | b9a03de | 'Rules' gomb lenyomása a főmenüben, úgy, hogy a minesweeper szabályok vannak megjelenítve | Eltűnnek a játék szabályai | Igen | Minesweeper: Rules gomb működése |
 | Bartha Balázs | 2020.12.6. 15:03 | b9a03de | 'Start' gomb lenyomása a főmenüben, a minesweeper menüpont alatt | Betölt a minesweeper launch.fxml | Igen | Minesweeper: Start gomb működése |
