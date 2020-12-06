@@ -42,6 +42,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start game gomb lenyomása, nevek nékül | A játék nem indul el | Igen | TriplePuck: Start game gomb |
 | Szabó Benedek | 2020.12.06 17:43 | d25abbb | TriplePuck: Start game gomb lenyomása, a nevek megadása után | A játék elindul| Igen | TriplePuck: Start game gomb |
 | Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Ki jön? | Soron következő játékos kijelzése | Igen | TriplePuck: Soron következő játékos jelzése |
+| Szabó Benedek | 2020.12.06 17:49 | d25abbb | TriplePuck: Lépések száma | Lépések számának kijelzése | Igen | TriplePuck: Lépések számának jelzése |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
