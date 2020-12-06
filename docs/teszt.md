@@ -60,8 +60,8 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 16:02 | 7c21548 | Bal klikkelés mezőre, mely körül nincs bomba | Felfedésre kerül a zóna, és minden körülötte lévő zóna, és az azok körüli összes, míg olyanba nem ütközik, mely körül van bomba. | Igen | Rekurzív felfedés működése |
 | Bartha Balázs | 2020.12.6. 16:04 | 7c21548 | Minden bomba nélküli zóna felfedése | Megjelenik a finish gomb, és a gratuláló szöveg. | Igen | Minesweeper: Játék megnyerése |
 | Bartha Balázs | 2020.12.6. 16:07 | 7c21548 | Finish gomb lenyomása | Betölt a minesweeper highscores.fxml | Igen | Minesweeper: Finish gomb működése |
-| Bartha Balázs | 2020.12.6. 16:07 | 7c21548 | Top/All kapcsoló lenyomása | A felsorolt eredmények az összes eredmény helyett csak a legjobb 5-öt tartalmazzák | Igen | Top eredmények és kapcsológomb működése |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 16:10 | 7c21548 | Top/All kapcsoló lenyomása | A felsorolt eredmények az összes eredmény helyett csak a legjobb 5-öt tartalmazzák | Igen | Minesweeper: Top eredmények és kapcsológomb működése |
+| Bartha Balázs | 2020.12.6. 16:11 | 7c21548 | Delete gomb lenyomása | Az "all" adatbázis listája törlődik, de a "top" nem | Igen | Minesweeper: Delete gomb működése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Mezei Botond |  |  |  |  |  |  |
 | Mezei Botond |  |  |  |  |  |  |
