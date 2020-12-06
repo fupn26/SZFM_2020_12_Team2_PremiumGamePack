@@ -52,7 +52,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:12 | b9a03de | Bal klikkelés a 2-es mező körüli mezőkre | Vesztés, 2 bomba volt a mező körül | Igen | Szomszédos bombák számolása |
 | Bartha Balázs | 2020.12.6. 15:13 | b9a03de | Játék szándékos elvesztése | Az összes mező felfedésre kerül, megjelenik a retry gomb és a game over szöveg. | Igen | Minesweeper: Játék elvesztése |
 | Bartha Balázs | 2020.12.6. 15:15 | b9a03de | Retry gomb lenyomása | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Retry gomb működése |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 15:17 | b9a03de | Reset gomb lenyomása megkezdett játék közben | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Reset gomb működése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
