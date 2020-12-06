@@ -10,8 +10,8 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 18:04 | 1c98b0e | A második input mezőről való átlépés az első input mezőre anélkül, hogy nevet adnánk meg | A második input mező alatt megjelenik az 'Input Required' figeylmeztetés | Igen | A második input mező üresen hagyásának helyes kezelése. |
 | Fürjes-Benke Péter | 2020.12.06. 18:07 | 1c98b0e | Az első input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | Az első input mező kitöltésébnek helyes kezelése |
 | Fürjes-Benke Péter | 2020.12.06. 18:11 | 1c98b0e | A második input mező kitöltése úgy, hogy az 'Input Required' figyelmeztetés meg van jelenítve | Az 'Input Required' figyelmeztetés eltűnik | Igen | A második input mező kitöltésébnek helyes kezelése |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 18:16 | 11b8612 | 'Start' gomb lenyomása úgy, hogy valamelyik input mező nincs kitöltve | Az input mezők alatt megjelenik az 'Input Required' figyelmeztetés | Igen | A 'Start' gomb helyes működése, ha valamelyik input mező nincs kitöltve |
+| Fürjes-Benke Péter | 2020.12.06. 18:20 | 11b8612 | 'Start' gomb lenyomása úgy, hogy input mindkét mező ki van töltve  | Elindul a játék | Igen | A 'Start' gomb helyes működése, ha az input mezők ki vannak töltve |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
