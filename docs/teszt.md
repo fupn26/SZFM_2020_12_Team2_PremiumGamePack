@@ -53,16 +53,16 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:13 | b9a03de | Játék szándékos elvesztése | Az összes mező felfedésre kerül, megjelenik a retry gomb és a game over szöveg. | Igen | Minesweeper: Játék elvesztése |
 | Bartha Balázs | 2020.12.6. 15:15 | b9a03de | Retry gomb lenyomása | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Retry gomb működése |
 | Bartha Balázs | 2020.12.6. 15:17 | b9a03de | Reset gomb lenyomása megkezdett játék közben | A játék állapota a kezdőállapot lesz | Igen | Minesweeper: Reset gomb működése |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 15:55 | 7c21548 | Jobb klikkelés rejtett mezőre | A mezőn megjelenik a flagged.png | Igen | Zászlórakás működése |
+| Bartha Balázs | 2020.12.6. 15:57 | 7c21548 | Bal klikkelés zászlós mezőre | Semmi | Igen | Zászlózott mezők működése |
+| Bartha Balázs | 2020.12.6. 15:58 | 7c21548 | Jobb klikkelés felfedett mezőre | Semmi | Igen | Zászlólerakás működése |
+| Bartha Balázs | 2020.12.6. 16:00 | 7c21548 | Jobb klikkelés zászlózott mezőre | A zászló eltűnik | Igen | Zászlóeltávolítás működése |
+| Bartha Balázs | 2020.12.6. 16:02 | 7c21548 | Bal klikkelés mezőre, mely körül nincs bomba | Felfedésre kerül a zóna, és minden körülötte lévő zóna, és az azok körüli összes, míg olyanba nem ütközik, mely körül van bomba. | Igen | Rekurzív felfedés működése |
+| Bartha Balázs | 2020.12.6. 16:04 | 7c21548 | Minden bomba nélküli zóna felfedése | Megjelenik a finish gomb, és a gratuláló szöveg. | Igen | Minesweeper: Játék megnyerése |
+| Bartha Balázs | 2020.12.6. 16:07 | 7c21548 | Finish gomb lenyomása | Betölt a minesweeper highscores.fxml | Igen | Minesweeper: Finish gomb működése |
+| Bartha Balázs | 2020.12.6. 16:10 | 7c21548 | Top/All kapcsoló lenyomása | A felsorolt eredmények az összes eredmény helyett csak a legjobb 5-öt tartalmazzák | Igen | Minesweeper: Top eredmények és kapcsológomb működése |
+| Bartha Balázs | 2020.12.6. 16:11 | 7c21548 | Delete gomb lenyomása | Az "all" adatbázis listája törlődik, de a "top" nem | Igen | Minesweeper: Delete gomb működése |
+| Bartha Balázs | 2020.12.6. 16:11 | 7c21548 | Main Menu gomb lenyomása | Betölt a central start.fxml | Igen | Minesweeper: Main Menu gomb működése |
 | Mezei Botond | 2020.12.06. 15:34 | 7c21548 | PuckG Rules gomb lenyomása | PuckG játék szabályainak megjelenése | Igen | A PuckG Rules gomb előhozza a játék szabályait |
 | Mezei Botond | 2020.12.06. 15:36 | 7c21548 | PuckG Rules gomb lenyomása a szabály jelenlétében | PuckG játék szabályainak elrejtése | Igen | A szabály ablak eltűnése a Rules gomb ismételt lenyomásával |
 | Mezei Botond | 2020.12.06. 15:41 | 7c21548 | PuckG Start gomb lenyomása | PuckG játék elindulása | Igen | PuckG játék elindul-e a Start gomb lenyomására |
