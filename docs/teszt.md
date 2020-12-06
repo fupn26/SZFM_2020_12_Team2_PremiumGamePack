@@ -48,6 +48,7 @@ Tesztelési jegyzőkönyv
 | Szabó Benedek | 2020.12.06 17:53 | d25abbb | TriplePuck: Finish up gomb megnyomása| Eredményekhez navigálunk | Igen | TriplePuck: Finish gomb |
 | Szabó Benedek | 2020.12.06 17:58 | d25abbb | TriplePuck: Lépések a táblán| Csak a soron következő játékos tud lépni, illetve csak a megfelelő mezők egyikére | Igen | TriplePuck: Korongok mozgatása |
 | Szabó Benedek | 2020.12.06 17:58 | d25abbb | TriplePuck: Győzelem elérése | Győztes neve megjelenik, stopper leáll, finish gomb váltja a give up-ot | Igen | TriplePuck: Győzelem |
+| Szabó Benedek | 2020.12.06 18:00 | d25abbb | TriplePuck: Eredményekhez navigálás | Mind a top5, mind a korábbi erdmények megjelennek | Igen | TriplePuck: Eredmények |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
