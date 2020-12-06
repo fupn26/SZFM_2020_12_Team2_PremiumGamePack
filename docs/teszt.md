@@ -14,7 +14,7 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 18:20 | 11b8612 | 'Start' gomb lenyomása úgy, hogy input mindkét mező ki van töltve  | Elindul a játék | Igen | A 'Start' gomb helyes működése, ha az input mezők ki vannak töltve |
 | Fürjes-Benke Péter | 2020.12.06. 18:26 | c8be3b4 | 'Pause' gomb lenyomása a Dao játék ablakában | A stopper megáll és a játéktér elszürkül | Igen | A 'Pause' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:28 | c8be3b4 | 'Play' gomb lenyomása, amikor a játék meg van állítva | A stopper elindul és a játéktér aktiválódik | Igen | A 'Play' gomb helyes működése, ha a játék szünetel. |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 18:32 | e6b0cd9 | 'Restart' gomb lenyomása | A játék újraindul. | Igen | A 'Restart' gomb helyes működése |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
