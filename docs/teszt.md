@@ -78,8 +78,12 @@ Tesztelési jegyzőkönyv
 | Mezei Botond | 2020.12.06. 15:58 | 7c21548 | PuckG - Korong áthelyezése nem elérhető mezőre | A korong nem helyeződik át, újra az aktuális játékos következik | Igen | PuckG - korong áthelyezése nem elérhető mezőre |
 | Mezei Botond | 2020.12.06. 15:58 | 7c21548 | PuckG - Új korong elhelyezése az ellenfél korongjainak közelében | Új korong megjelenése és az ellenfél 8-szomszédos korongjai átszíneződnek | Igen | PuckG - Az ellenfél 8-szomszédos korongjainak átszínezése új korong elhelyezése esetén |
 | Mezei Botond | 2020.12.06. 16:01 | 7c21548 | PuckG - Korong áthelyezése az ellenfél korongjainak közelébe | Korong áthelyezése és az ellenfél 8-szomszédos korongjai átszíneződnek | Igen | PuckG - Az ellenfél 8-szomszédos korongjainak átszínezése korong áthelyezése esetén |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
-| Mezei Botond |  |  |  |  |  |  |
+| Mezei Botond | 2020.12.06. 16:07 | 342bfc2 | PuckG - Kattintás a fekete mezőre | Semmi sem történik, továbbra is az aktuális játékos következik | Igen | PuckG - A fekete mező működése |
+| Mezei Botond | 2020.12.06. 16:09 | 342bfc2 | PuckG - Az utolsó ellenfél számára elérhető mező koronggal való lefedése | Győztes játékos nevének megjelenése, időzítő megállítása, Give Up gomb Finish-re változása | Igen | PuckG - Játék végének helyes detektálása(nincs több elérhető mező) |
+| Mezei Botond | 2020.12.06. 16:12 | 342bfc2 | PuckG - Az ellenfél utolsó korongjának átváltoztatása | Játék vége(eredményjelző, időzítő, Finish gomb) | Igen | PuckG - Játék végének helyes detektálása(nincs több elérhető korong) |
+| Mezei Botond | 2020.12.06. 16:14 | 342bfc2 | PuckG - Játék vége esetén a Finish gomb lenyomása | Eredmény perzisztálása és váltás az eredményjelzőre | Igen | PuckG - Finish gomb működése |
+| Mezei Botond | 2020.12.06. 16:22 | 342bfc2 | PuckG - Eredményjelző Delete gombjának lenyomása | Korábbi eredmények kitörlése az adatbázisból | Igen | PuckG - Delete gomb működése |
+| Mezei Botond | 2020.12.06. 16:25 | 342bfc2 | PuckG - Top 5 és Korábbi eredmény közötti váltógombra kattintás | A másik eredmény táblázat megjelenítése(Top5/Korábbi) | Igen | PuckG - eredményjelző váltókapcsoló működése |
+| Mezei Botond | 2020.12.06. 16:26 | 342bfc2 | PuckG - Eredményjelző Restart gombjának lenyomása | Új játék kezdése az új nevek megadásától | Igen | PuckG - Restart gomb működése |
+| Mezei Botond | 2020.12.06. 16:27 | 342bfc2 | PuckG - Eredményjelző Main Menu gombjának lenyomása | Főmenü megjelenése | Igen | PuckG - Main Menu gomb működése |
+| Mezei Botond | 2020.12.06. 16:28 | 342bfc2 | PuckG - Eredményjelző Exit gombjának lenyomása | Program bezárása | Igen | PuckG - Exit gomb működése |
