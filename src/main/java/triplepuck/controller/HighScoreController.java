@@ -1,5 +1,6 @@
 package triplepuck.controller;
 
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,6 +15,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
@@ -91,6 +93,12 @@ public class HighScoreController {
 
     @FXML
     private Button deleteButton;
+
+    @FXML
+    private VBox previousResultsView;
+
+    @FXML
+    private VBox top5ResultsView;
 
     private String redPlayerName;
     private String bluePlayerName;
@@ -241,5 +249,15 @@ public class HighScoreController {
         observableResult.addAll(resultList);
 
         highScoreTable2.setItems(observableResult);
+    }
+
+    public void handleResultViewSwitch(ActionEvent actionEvent) {
+        if (((JFXToggleButton)(actionEvent.getSource())).isSelected()) {
+            previousResultsView.setVisible(true);
+            top5ResultsView.setVisible(false);
+        } else {
+            previousResultsView.setVisible(false);
+            top5ResultsView.setVisible(true);
+        }
     }
 }
