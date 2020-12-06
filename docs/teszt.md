@@ -22,7 +22,7 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter | 2020.12.06. 18:45 | 0ded313 | 'Rematch' gomb lenyomása az eredmény képernyőn a Dao játéknál | Elindul a játék a korábbi nevekkel | Igen | 'Rematch' gomb tesztelése a Dao játék eredményjelzőjénél |
 | Fürjes-Benke Péter | 2020.12.06. 18:50 | a8458bd | 'Jump to home screen' gomb lenyomása az eredmény képernyőn a Dao játéknál | Megjelenik a főképernyő | Igen | A 'Jump to home screen' gomb helyes működése |
 | Fürjes-Benke Péter | 2020.12.06. 18:53 | 55be30d | 'Delete' gomb lenyomása a Dao játék eredmény képernyőjén | Eltűnnek a korábbi eredmények | Igen | 'Delete' gomb helyes működése |
-| Fürjes-Benke Péter |  |  |  |  |  |  |
+| Fürjes-Benke Péter | 2020.12.06. 18:55 | 25ddeaf | TOP 5/ALL gomb lenyomsáa | Az gomb aktuális állása szerint megjelenik a Top 5 vagy All eredménylista | Igen | TOP 5/ALL gomb helyes működése |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
