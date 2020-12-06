@@ -49,8 +49,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:05 | b9a03de | 'Start Game' gomb lenyomása a minesweeper kezdőképernyőn, beírt név nélkül | Megjelenik a hibaüzenet | Igen | Minesweeper: Start game gomb működése |
 | Bartha Balázs | 2020.12.6. 15:07 | b9a03de | 'Start Game' gomb lenyomása a minesweeper kezdőképernyőn, beírt névvel. | Betölt a minesweeper game.fxml | Igen | Minesweeper: Start game gomb működése, játék betöltése |
 | Bartha Balázs | 2020.12.6. 15:10 | b9a03de | Bal klikkelés az egyik rejtett mezőre | A mezőn megjelenik a revealed2.png | Igen | Felfedés működése |
-| Bartha Balázs |  |  |  |  |  |  |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 15:12 | b9a03de | Bal klikkelés a 2-es mező körüli mezőkre | Vesztés, 2 bomba volt a mező körül | Igen | Szomszédos bombák számolása |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
