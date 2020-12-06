@@ -47,7 +47,7 @@ Tesztelési jegyzőkönyv
 | Bartha Balázs | 2020.12.6. 15:00 | b9a03de | 'Rules' gomb lenyomása a főmenüben, úgy, hogy a minesweeper szabályok vannak megjelenítve | Eltűnnek a játék szabályai | Igen | Minesweeper: Rules gomb működése |
 | Bartha Balázs | 2020.12.6. 15:03 | b9a03de | 'Start' gomb lenyomása a főmenüben, a minesweeper menüpont alatt | Betölt a minesweeper launch.fxml | Igen | Minesweeper: Start gomb működése |
 | Bartha Balázs | 2020.12.6. 15:05 | b9a03de | 'Start Game' gomb lenyomása a minesweeper kezdőképernyőn, beírt név nélkül | Megjelenik a hibaüzenet | Igen | Minesweeper: Start game gomb működése |
-| Bartha Balázs |  |  |  |  |  |  |
+| Bartha Balázs | 2020.12.6. 15:07 | b9a03de | 'Start Game' gomb lenyomása a minesweeper kezdőképernyőn, beírt névvel. | Betölt a minesweeper game.fxml | Igen | Minesweeper: Start game gomb működése, játék betöltése |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
 | Bartha Balázs |  |  |  |  |  |  |
