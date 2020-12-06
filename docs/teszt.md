@@ -23,7 +23,7 @@ Tesztelési jegyzőkönyv
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
 | Fürjes-Benke Péter |  |  |  |  |  |  |
-| Szabó Benedek |  |  |  |  |  |  |
+| Szabó Benedek | 2020.12.06 | d25abbb | Főmenü: Játékok közötti navigáció az oldalsó nyilak használatával, mind a két irányba | Sikeres váltás a játlkok között, szép átvezető animáció | Igen | Főmenü: Játékok közötti navigáció |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
 | Szabó Benedek |  |  |  |  |  |  |
